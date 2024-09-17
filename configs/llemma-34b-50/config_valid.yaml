@@ -1,0 +1,109 @@
+config_name: llemma-34b-top50
+model_name: EleutherAI/llemma_34b
+dataset_path: hoskinson-center/proofnet
+dataset_input_column: nl_statement
+save_dir: results/llemma-34b-top50
+save_dir_suffix: ProofNet_validation_autoformalization
+instructions: |-
+  Natural language version:
+  Let $P$ be a $p$-subgroup of $G$. Then $P$ is contained in a Sylow $p$-subgroup of $G$.
+  Translate the natural language version to a Lean 4 version:
+  theorem exists_le_sylow [Group G] {P : Subgroup G} (hP : IsPGroup p P) : ∃ Q : Sylow p G, P ≤ Q :=
+
+  Natural language version:
+  Let $E$ and $F$ be complex normed spaces and let $f:E\to F$. If $f$ is differentiable and bounded, then $f$ is constant
+  Translate the natural language version to a Lean 4 version:
+  theorem exists_eq_const_of_bounded {E : Type u} [NormedAddCommGroup E] [NormedSpace ℂ E] {F : Type v} [NormedAddCommGroup F] [NormedSpace ℂ F] {f : E → F} (hf : Differentiable ℂ f)(hb : IsBounded (range f)) : ∃ c, f = const E c :=
+
+  Natural language version:
+  Let $X$ be a topological space; let $A$ be a subset of $X$. Suppose that for each $x\in A$ there is an open set $U$ containing $x$ such that $U\subset A$. Then $A$ is open in $X$.
+  Translate the natural language version to a Lean 4 version:
+  theorem subset_of_open_subset_is_open (X : Type*) [TopologicalSpace X]
+  (A : Set X) (hA : ∀ x ∈ A, ∃ U : Set X, IsOpen U ∧ x ∈ U ∧ U ⊆ A):
+    IsOpen A :=
+
+  Natural language version:
+  Two multiplicative functions $f, g:\mathbb{N}\to R$ are equal if and only if $f(p^i)=f(g^i)$ for all primes $p$.
+  Translate the natural language version to a Lean 4 version:
+  theorem eq_iff_eq_on_prime_powers [CommMonoidWithZero R] (f : ArithmeticFunction R)
+  (hf : f.IsMultiplicative) (g : ArithmeticFunction R) (hg : g.IsMultiplicative) :
+  f = g ↔ ∀ p i : ℕ, Nat.Prime p → f (p ^ i) = g (p ^ i) :=
+
+  Natural language version:
+  If $z_1, \\dots, z_n$ are complex, then $|z_1 + z_2 + \\dots + z_n|\\leq |z_1| + |z_2| + \\dots + |z_n|$.
+  Translate the natural language version to a Lean 4 version:
+  theorem abs_sum_leq_sum_abs (n : ℕ) (f : ℕ → ℂ) :
+  abs (∑ i in Finset.range n, f i) ≤ ∑ i in Finset.range n, abs (f i) :=
+
+  Natural language version:
+  If x and y are in $\\mathbb{R}^n$, then $|x+y|^2 + |x-y|^2 = 2|x|^2 + 2|y|^2$.
+  Translate the natural language version to a Lean 4 version:
+  theorem sum_add_square_sub_square_eq_sum_square (n : ℕ) (x y : EuclideanSpace ℝ (Fin n)) :
+  ‖x + y‖^2 + ‖x - y‖^2 = 2*‖x‖^2 + 2*‖y‖ ^2 :=
+
+  Natural language version:
+  If $x$ is an element of infinite order in $G$, prove that the elements $x^n$, $n\\in\\mathbb{Z}$ are all distinct.
+  Translate the natural language version to a Lean 4 version:
+  theorem distinct_powers_of_infinite_order_element (G : Type*) [Group G] (x : G)
+    (hx_inf : ∀ n : ℕ, x ^ n ≠ 1) :
+    ∀ m n : ℤ, m ≠ n → x ^ m ≠ x ^ n :=
+
+  Natural language version:
+  A set of vectors $\{v_i\}_{i\in I}$ orthogonal with respect to some bilinear form $B: V\times V\to K$ is linearly independent if for all $i \in I, B(v_i, v_i)\neq 0$.
+  Translate the natural language version to a Lean 4 version:
+  theorem linear_independent_of_is_Ortho {V K : Type*} [Field K]
+  [AddCommGroup V] [Module K V] {n : Type*} {B : BilinForm K V}
+  {v : n → V} (hv₁ : B.iIsOrtho v)
+  (hv₂ : ∀ (i : n), ¬B.IsOrtho (v i) (v i)) :
+  LinearIndependent K v :=
+
+  Natural language version:
+  Suppose that $V$ is an $n$-dimensional vector space. Then for some set of vectors $\{v_i\}_{i=1}^k$, if $k>n$ then there exist scalars $f_1, \dots, f_k$ such that $\sum_{i=1}^k f_kv_k = 0$.
+  Translate the natural language version to a Lean 4 version:
+  theorem exists_nontrivial_relation_sum_zero_of_dim_succ_lt_card {K V : Type*}
+  [DivisionRing K] [AddCommGroup V] [Module K V] [FiniteDimensional K V]
+  {t : Finset V} (h : FiniteDimensional.finrank K V + 1 < t.card) :
+  ∃ (f : V → K), t.sum (λ (e : V) => f e • e) = 0 ∧ t.sum (λ (e : V) => f e) = 0
+  ∧ ∃ (x : V) (H : x ∈ t), f x ≠ 0 :=
+
+  Natural language version:
+  A group is commutative if the quotient by the center is cyclic.
+  Translate the natural language version to a Lean 4 version:
+  theorem comm_group_of_cycle_center_quotient {G H : Type*} [Group G] [Group H]
+  [IsCyclic H] (f : G →* H) (hf : f.ker ≤ (center G : Subgroup G)):
+  CommGroup G :=
+
+  Natural language version:
+  If $H$ is a $p$-subgroup of $G$, then the index of $H$ inside its normalizer is congruent modulo $p$ to the index of $H$.
+  Translate the natural language version to a Lean 4 version:
+  theorem card_quotient_normalizer_modEq_card_quotient {G : Type*} [Group G] [Fintype G] {p : ℕ} {n : ℕ} [hp : Fact p.Prime]
+  {H : Subgroup G} (hH : Fintype.card H = p ^ n) :
+  Fintype.card (normalizer H ⧸ Subgroup.comap ((normalizer H).subtype : normalizer H →* G) H) ≡
+    Fintype.card (G ⧸ H) [MOD p] :=
+
+  Natural language version:
+  Suppose $X, Y, Z$ are metric spaces, and $Y$ is compact. Let $f$ map $X$ into $Y$, let $g$ be a continuous one-to-one mapping of $Y$ into $Z$, and put $h(x)=g(f(x))$ for $x \in X$. Prove that $f$ is uniformly continuous if $h$ is uniformly continuous.
+  Translate the natural language version to a Lean 4 version:
+  theorem uniform_continuous_of_continuous_injective_uniform_continuous_comp
+  {X Y Z : Type*} [MetricSpace X] [MetricSpace Y] [MetricSpace Z]
+  (hY : CompactSpace Y) (f : X → Y) (g : Y → Z) (hgc : Continuous g)
+  (hgi : Function.Injective g)
+  (h : UniformContinuous (g ∘ f)) : UniformContinuous f :=
+few_shot_examples: null
+input_template: |-
+  Natural language version:
+  {nl_statement}
+  Translate the natural language version to a Lean 4 version:
+dataset_split: validation
+nb_passes: 50
+max_new_tokens: 512
+temperature: 0.7
+stop_words:
+- "\n\n"
+- "\nbegin"
+api_base_url: http://localhost:8080/v1
+api_key: '-'
+endpoint: completions
+concurrency: 10
+max_retries: 1
+seed: 42

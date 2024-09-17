@@ -1,0 +1,20 @@
+{
+  "config_name": "llama3-8b-50-PDA_real_test",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "dataset_path": "data/pda/stmt_only_subsampled/real_test.jsonl",
+  "dataset_input_column": "nl_statement",
+  "save_dir": "results/llama3-8b-50",
+  "save_dir_suffix": "PDA_real_test_subsampled",
+  "instructions": null,
+  "few_shot_examples": "data/12_shot_proofnet_lean4.jsonl",
+  "input_template": "Natural language version:\n{nl_statement}\nTranslate the natural language version to a Lean 4 version:",
+  "nb_passes": 50,
+  "max_new_tokens": 512,
+  "temperature": 0.7,
+  "stop_words": ["<|eot_id|>","\n\n", "Natural language version:", "by\n", "\nbegin"],
+  "api_base_url": "http://localhost:8080/v1",
+  "api_key": "-",
+  "concurrency": 10,
+  "max_retries": 1,
+  "seed": 42
+}

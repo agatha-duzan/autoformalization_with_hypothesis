@@ -1,0 +1,23 @@
+{
+  "config_name": "llemma-7b-few-shot-exp",
+  "model_name": "EleutherAI/llemma_7b",
+  "dataset_path": "hoskinson-center/proofnet",
+  "dataset_input_column": "nl_statement",
+  "save_dir": "results/llemma-7b-few-shot-exp",
+  "save_dir_suffix": "ProofNet_validation_autoformalization_few_shot_12_proofnet",
+  "instructions": null,
+  "few_shot_examples": "data/12_shot_proofnet_lean4.jsonl",
+  "nb_few_shot_examples": 12,
+  "input_template": "Natural language version:\n{nl_statement}\nTranslate the natural language version to a Lean 4 version:",
+  "dataset_split": "validation",
+  "nb_passes": 1,
+  "max_new_tokens": 512,
+  "temperature": 0.0,
+  "stop_words": ["\n\n", "Natural language version:", " by\n", "\nbegin"],
+  "api_base_url": "http://localhost:8080/v1",
+  "api_key": "-",
+  "endpoint": "completions",
+  "concurrency": 10,
+  "max_retries": 1,
+  "seed": 42
+}
