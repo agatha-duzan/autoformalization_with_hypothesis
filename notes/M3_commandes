@@ -1,0 +1,88 @@
+# SLURM:
+
+srun --mem %mem% --cpus-per-task %n% --interactive --pty --gpus 1 /bin/bash
+srun --interactive --pty --gpus 1 /bin/bash # pour interactif
+
+# truc bourrin et pas interactif (qui continue quand tu fermes vscode)
+screen
+cd model/ # sinon pb checks dir
+srun --gpus 1 --mem=64G --time=6:00:00 python dpo.py
+srun --gpus 1 --mem=64G --time=1:00:00 python evaluator.py
+srun --gpus 1 --mem=64G --time=1:00:00 python mcqa_extraction.py
+srun --gpus 1 --mem=64G --time=1:00:00 python mcqa_FT.py
+# sinon go sbatch pour plusieurs commandes
+CTRL+A D  # quitte le screen
+
+# Pour revenir sur le screen:
+screen -ls
+screen -r %numéro%
+CURR: 1155032
+
+# Pour vérifier ce qui tourne:
+squeue -u duzan
+Pour arreter un job:
+scancel %numéro dans squeue%
+
+# HUGGINGFACE
+huggingface-cli upload --repo-type model <model_name> <local_path_to_latest_checkpoint>
+huggingface-cli upload --repo-type model gpt_2_padded gpt_2_padded
+
+# CLUSTER L'X:
+
+srun --mem %mem% --cpus-per-task %n% --interactive --pty --gpus 1 /bin/bash
+srun --interactive --pty --gpus 1 /bin/bash # pour interactif
+
+# truc bourrin et pas interactif (qui continue quand tu fermes vscode)
+screen
+srun --gpus 1 python model/dpo_lora_3.py # ou
+srun --gpus 1 --mem=32G --time=10:00:00 python model/dpo_lora_3.py
+# sinon go sbatch pour plusieurs commandes
+CTRL+A D  # quitte le screen
+
+# Pour revenir sur le screen:
+screen -ls
+screen -r %numéro%
+CURR: 1155032
+
+# Pour vérifier ce qui tourne:
+squeue -u duzan
+Pour arreter un job:
+scancel %numéro dans squeue%
+
+# CLUSTER L'X:
+
+pour les gpus : 
+nvidia-smi doit marcher
+
+pour run en interactif : 
+ipython
+%run fichier.py
+
+# un peu comme screen:
+tmux:
+source .venv/bin/activate
+tmux
+CTRL+B D # pour detacher
+tmux ls # voir les sessions
+tmux attach-session -t %numéro% # revenir sur la session
+
+voir taille des fichiers:
+du -sh */
+
+pour les gpus : 
+nvidia-smi doit marcher
+
+pour run en interactif : 
+ipython
+%run fichier.py
+
+# un peu comme screen:
+tmux:
+source .venv/bin/activate
+tmux
+CTRL+B D # pour detacher
+tmux ls # voir les sessions
+tmux attach-session -t %numéro% # revenir sur la session
+
+voir taille des fichiers:
+du -sh

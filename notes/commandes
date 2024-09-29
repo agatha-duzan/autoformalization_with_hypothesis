@@ -1,0 +1,28 @@
+# RUN AI
+
+# login + check tout ok
+runai login
+runai whoami
+runai version
+
+# liste de mes projets
+runai list project
+# set projet default
+runai config project NAME_PROJ
+
+# submit job
+runai submit --name JOB_NAME -i ubuntu -g NUM_OF_GPUS --interactive --command -- python MY_SCRIPT.py
+# check status
+runai describe job test
+# attach to pod
+runai bash test
+
+# pour les gpus
+nvidia-smi # doit marcher
+
+
+
+# KUBERNETES
+
+# submit job
+kubectl create -f DEFINITION_FILE.yaml
