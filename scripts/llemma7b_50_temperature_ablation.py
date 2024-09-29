@@ -41,7 +41,7 @@ if __name__ == "__main__":
 
     date = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
-    for temperature in [0.3, 0.5, 0.7, 0.9, 1.1, 1.3]:
+    for temperature in [0.3]: #, 0.5, 0.7, 0.9, 1.1, 1.3]:
         eval_config.temperature = temperature
 
         console.print(f"[bold]Generating predictions with temperature {temperature}...[/bold]")
