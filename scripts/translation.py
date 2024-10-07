@@ -5,26 +5,36 @@ import time
 from tqdm import tqdm
 import json
 
-# Load the dataset
 dataset = load_dataset('agatha-duzan/number_theory_af')
 all_data = dataset['test'] + dataset['valid']
 
-def generate_prompt(informal_statement):
-    prompt = f"""You are an expert in formalizing mathematical statements in Lean 4. Given the following informal mathematical statement, write the corresponding formal statement in Lean 4 syntax.
+def load_few_shot_examples(filepath):
+    examples = []
+    with open(filepath, 'r') as f:
+        for line in f:
+            data = json.loads(line)
+            examples.append({
+                'formal_statement': data['formal_statement'],
+                'nl_statement': data['nl_statement']
+            })
+    return examples
 
-Informal statement:
-{informal_statement}
+few_shot_examples = load_few_shot_examples('/home/duzan/autoformalization_with_hypothesis/data/12_shot_proofnet_lean4.jsonl')
 
-Formal statement in Lean 4:
-"""
+# LATER: test adding sorry to fewshot examples
+def generate_prompt(informal_statement, few_shot_examples):
+    examples_text = ""
+    for example in few_shot_examples:
+        examples_text += f"Informal statement:\n{example['nl_statement']}\n\nFormal statement in Lean 4:\n{example['formal_statement']}\n\n---\n\n"
+
+    instruction = "You are an expert in formalizing mathematical statements in Lean 4. Given the following informal mathematical statement, write the corresponding formal statement in Lean 4 syntax."
+
+    prompt = f"{instruction}\n{examples_text}\n\nInformal statement:\n{informal_statement}\n\nFormal statement in Lean 4:"
     return prompt
 
-# Set default model and provider
-DEFAULT_MODEL = 'gpt-3.5-turbo'     # Change this to the desired model
-DEFAULT_PROVIDER = 'openai'         # Change this to the desired provider
 
-# Set your API keys as environment variables or directly in the script
-# For security reasons, it's recommended to set these as environment variables
+DEFAULT_MODEL = 'gpt-3.5-turbo'
+DEFAULT_PROVIDER = 'openai'
 os.environ['OPENAI_API_KEY'] = 'YOUR_OPENAI_API_KEY'
 os.environ['ANTHROPIC_API_KEY'] = 'YOUR_ANTHROPIC_API_KEY'
 os.environ['COHERE_API_KEY'] = 'YOUR_COHERE_API_KEY'
@@ -49,7 +59,6 @@ for item in tqdm(all_data):
     informal_statement = item['informal_statement']
 
     try:
-        # Call the translation function
         formal_statement = translate_statement(
             informal_statement,
             model=DEFAULT_MODEL,
@@ -58,7 +67,6 @@ for item in tqdm(all_data):
             max_tokens=500,
         )
 
-        # Save the result
         results.append({
             'name': item['name'],
             'informal_statement': informal_statement,
@@ -78,10 +86,8 @@ for item in tqdm(all_data):
         print(f"An error occurred for item {item['name']}: {e}")
         continue
 
-# Define the output file path within the 'results' directory
 output_file = os.path.join(results_dir, 'translation_results.json')
 
-# Save the results
 with open(output_file, 'w') as f:
     json.dump(results, f, indent=2)
 
