@@ -8,8 +8,8 @@ import config
 from utils import load_few_shot_examples, translate_statement
 
 os.environ['OPENAI_API_KEY'] = config.OPENAI_API_KEY
-os.environ['ANTHROPIC_API_KEY'] = config.ANTHROPIC_API_KEY
-os.environ['COHERE_API_KEY'] = config.COHERE_API_KEY
+# os.environ['ANTHROPIC_API_KEY'] = config.ANTHROPIC_API_KEY
+# os.environ['COHERE_API_KEY'] = config.COHERE_API_KEY
 
 dataset = load_dataset(config.DATASET_NAME)
 all_data = dataset['test'] + dataset['valid']
