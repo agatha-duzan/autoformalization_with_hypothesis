@@ -32,6 +32,8 @@ for item in tqdm(all_data):
             max_tokens=1000,
         )
 
+        # other passes: hypothesis decomp, REPL feedback, etc
+
         results.append({
             'name': item['name'],
             'informal_statement': informal_statement,
