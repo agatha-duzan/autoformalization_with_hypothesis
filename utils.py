@@ -26,6 +26,10 @@ def generate_prompt(informal_statement, few_shot_examples, instruction=None):
     prompt = f"{instruction}\n\n{examples_text}\n\nInformal statement:\n{informal_statement}\n\nFormal statement in Lean 4:"
     return prompt
 
+# add modularity: many ways to generate prompt and messages
+# few shot : static or NN?
+# messages: all in one prompt or as 'chat history' ?
+
 def translate_statement(informal_statement, few_shot_examples, model=DEFAULT_MODEL, **kwargs):
     prompt = generate_prompt(informal_statement, few_shot_examples)
     messages = [{"role": "user", "content": prompt}]
