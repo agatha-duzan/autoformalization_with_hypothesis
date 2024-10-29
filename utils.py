@@ -15,11 +15,11 @@ def load_few_shot_examples(filepath):
             })
     return examples
 
-# LATER: test adding sorry to fewshot examples
+# test adding sorry to fewshot examples: KEEP
 def generate_prompt(informal_statement, few_shot_examples, instruction=None):
     examples_text = ""
     for example in few_shot_examples:
-        examples_text += f"Informal statement:\n{example['nl_statement']}\n\nFormal statement in Lean 4:\n{example['formal_statement']}\n\n---\n\n"
+        examples_text += f"Informal statement:\n{example['nl_statement']}\n\nFormal statement in Lean 4:\n{example['formal_statement']} sorry\n\n"
     
     instruction = f"You are an expert in formalizing mathematical statements in Lean 4. Given the following informal mathematical statement, write the corresponding formal statement in Lean 4 syntax.\nOutput format: The translated LEAN 4 theorem should be provided as a single cohesive code block, displaying the correct syntax and formatting expected for a LEAN 4 theorem statement. Do not enclose the code block in backticks. write sorry as the proof."
     

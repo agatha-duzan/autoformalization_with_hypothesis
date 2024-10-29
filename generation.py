@@ -13,7 +13,7 @@ os.environ['OPENAI_API_KEY'] = config.OPENAI_API_KEY
 
 dataset = load_dataset(config.DATASET_NAME)
 all_data = concatenate_datasets([dataset['test'], dataset['validation']])
-few_shot_examples = [] # load_few_shot_examples(config.FEW_SHOT_EXAMPLES_PATH)
+few_shot_examples = load_few_shot_examples(config.FEW_SHOT_EXAMPLES_PATH) # []
 
 # create results dir if it doesn't exist
 os.makedirs(config.RESULTS_DIR, exist_ok=True)
