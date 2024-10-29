@@ -1,8 +1,19 @@
 import json
 import re
+import os
+import config
+
+os.environ['OPENAI_API_KEY'] = config.OPENAI_API_KEY
+
+import openai
+openai.api_key = os.environ['OPENAI_API_KEY']
 
 from litellm import completion
-from config import DEFAULT_MODEL, DEFAULT_PROVIDER
+from openai import OpenAI
+from nltk.translate.bleu_score import SmoothingFunction, sentence_bleu
+from sklearn.metrics.pairwise import cosine_similarity
+
+from config import *
 
 def load_few_shot_examples(filepath):
     examples = []
@@ -75,3 +86,26 @@ def clean_theorem_string(theorem_string: str, new_theorem_name: str = "dummy") -
         return f"theorem {new_theorem_name} " + clean_formal + "\nsorry"
     except Exception:
         return None
+
+def bleu_eval(generated_formal_statement, formal_statement):
+    # clean up both statements
+    generated = clean_theorem_string(generated_formal_statement)
+    reference = clean_theorem_string(formal_statement)
+
+    return sentence_bleu(
+        [reference.split()],
+        generated.split(),
+        smoothing_function=SmoothingFunction().method4
+    )
+
+def get_embedding(text, model="text-embedding-ada-002"):
+    client = OpenAI()
+    response = client.embeddings.create(input=text,model=model)
+    return response.data[0].embedding
+
+def cos_similarity(generated_formal_statement, formal_statement, model="text-embedding-ada-002"):
+    generated_embedding = get_embedding(generated_formal_statement, model=model)
+    reference_embedding = get_embedding(formal_statement, model=model)
+
+    cosine_sim = cosine_similarity([generated_embedding], [reference_embedding])
+    return cosine_sim[0][0]

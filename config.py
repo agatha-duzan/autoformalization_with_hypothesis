@@ -21,3 +21,4 @@ DEFAULT_PROVIDER = 'openai'
 # Output config
 RESULTS_DIR = 'results/generations'
 OUTPUT_NAME = 'direct_translation_with_general_fewshot'
+EVAL_RESULTS_DIR = 'results/evaluations'
