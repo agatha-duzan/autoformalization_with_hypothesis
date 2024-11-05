@@ -8,16 +8,13 @@ import config
 from utils import load_few_shot_examples, translate_statement
 
 os.environ['OPENAI_API_KEY'] = config.OPENAI_API_KEY
-# os.environ['ANTHROPIC_API_KEY'] = config.ANTHROPIC_API_KEY
-# os.environ['COHERE_API_KEY'] = config.COHERE_API_KEY
 
 dataset = load_dataset(config.DATASET_NAME)
 all_data = concatenate_datasets([dataset['test'], dataset['validation']])
-few_shot_examples = load_few_shot_examples(config.FEW_SHOT_EXAMPLES_PATH) # []
+few_shot_examples = load_few_shot_examples(config.FEW_SHOT_EXAMPLES_PATH) if config.FEWSHOT else []
 
 # create results dir if it doesn't exist
 os.makedirs(config.RESULTS_DIR, exist_ok=True)
-
 results = []
 
 for item in tqdm(all_data):
@@ -33,6 +30,7 @@ for item in tqdm(all_data):
         )
 
         # other passes: hypothesis decomp, REPL feedback, etc
+        
 
         results.append({
             'name': item['name'],

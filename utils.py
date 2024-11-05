@@ -55,6 +55,9 @@ def translate_statement(informal_statement, few_shot_examples, model=DEFAULT_MOD
     
     return formal_statement
 
+def get_hypothesis_decomp():
+    ...
+
 
 def clean_theorem_string(theorem_string: str, new_theorem_name: str = "dummy") -> str | None:
     try:

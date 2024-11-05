@@ -14,6 +14,10 @@ FEW_SHOT_EXAMPLES_PATH = '/home/agatha/Desktop/MA3/sem proj/autoformalization_wi
 DEFAULT_MODEL = 'gpt-4o'
 DEFAULT_PROVIDER = 'openai'
 
+# Process
+FEWSHOT = True
+HYPOTHESIS_DECOMP = True
+
 # Output config
 RESULTS_DIR = 'results/generations'
 OUTPUT_NAME = 'baseline_direct_translation'
