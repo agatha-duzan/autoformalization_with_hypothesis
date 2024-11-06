@@ -5,35 +5,17 @@ from repl.server import RobustLeanServer
 from utils import bleu_eval, cos_similarity, get_repl_errors
 import config
 
-def load_checkpoint(checkpoint_file):
-    if os.path.exists(checkpoint_file):
-        with open(checkpoint_file, 'r') as f:
-            return json.load(f)
-    return []
-
-def save_checkpoint(results, checkpoint_file):
-    with open(checkpoint_file, 'w') as f:
-        json.dump(results, f, indent=2)
-    print(f"Checkpoint saved to {checkpoint_file}")
-
-def evaluate_results(input_file, output_file, checkpoint_file, save_every=10):
+def evaluate_results(input_file, output_file):
     with open(input_file, 'r') as f:
         data = json.load(f)
-        
-    # Load checkpoint if it exists and get already processed entries
-    results = load_checkpoint(checkpoint_file)
-    processed_entries = {entry["name"] for entry in results}
+    
+    results = []
 
     print("Starting Lean server...")
     lean_server = RobustLeanServer()
     print("Lean server ready!")
     
-    for i, entry in enumerate(tqdm(data, desc="Evaluating entries"), 1):
-        entry_name = entry.get("name")
-
-        if entry_name in processed_entries:
-            continue  # Skip entries that have already been processed
-
+    for entry in tqdm(data, desc="Evaluating entries"):
         generated_formal_statement = entry.get("generated_formal_statement", "")
         formal_statement = entry.get("formal_statement", "")
         
@@ -50,20 +32,15 @@ def evaluate_results(input_file, output_file, checkpoint_file, save_every=10):
         entry["repl_errors"] = repl_errors
         
         results.append(entry)
-        processed_entries.add(entry_name)
 
-        # Save checkpoint
-        if i % save_every == 0:
-            save_checkpoint(results, checkpoint_file)
-
-    # Save final results to output file
     with open(output_file, 'w') as f:
         json.dump(results, f, indent=2)
+
     print(f"Evaluated results have been saved to {output_file}")
 
 input_file = os.path.join(config.RESULTS_DIR, f"{config.OUTPUT_NAME}_{config.DEFAULT_MODEL}.json")
 output_file = os.path.join(config.EVAL_RESULTS_DIR, f"{config.OUTPUT_NAME}_{config.DEFAULT_MODEL}_evaluated.json")
-checkpoint_file = os.path.join(config.EVAL_RESULTS_DIR, f"{config.OUTPUT_NAME}_{config.DEFAULT_MODEL}_checkpoint.json")
 
 os.makedirs(config.EVAL_RESULTS_DIR, exist_ok=True)
-evaluate_results(input_file, output_file, checkpoint_file)
+
+evaluate_results(input_file, output_file)

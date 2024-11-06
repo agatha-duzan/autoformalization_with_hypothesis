@@ -12,6 +12,7 @@ from litellm import completion
 from openai import OpenAI
 from nltk.translate.bleu_score import SmoothingFunction, sentence_bleu
 from sklearn.metrics.pairwise import cosine_similarity
+from repl.server import LeanServer, RobustLeanServer
 
 from config import *
 
@@ -55,9 +56,8 @@ def translate_statement(informal_statement, few_shot_examples, model=DEFAULT_MOD
     
     return formal_statement
 
-def get_hypothesis_decomp():
+def get_hypothesis_decomp(): #TODO
     ...
-
 
 def clean_theorem_string(theorem_string: str, new_theorem_name: str = "dummy") -> str | None:
     try:
@@ -112,3 +112,18 @@ def cos_similarity(generated_formal_statement, formal_statement, model="text-emb
 
     cosine_sim = cosine_similarity([generated_embedding], [reference_embedding])
     return cosine_sim[0][0]
+
+def get_repl_errors(formal_statement, header, lean_server):
+    if not header:
+        header = 'import Mathlib\n\n'
+    full_message = header + clean_theorem_string(formal_statement)
+
+    result = lean_server.run_code(full_message, timeout=60)
+    messages = result['messages']
+
+    error_messages = []
+    for message in messages:
+        if message['severity'] == 'error':
+            error_messages.append(message)
+
+    return error_messages

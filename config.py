@@ -19,6 +19,6 @@ FEWSHOT = True
 HYPOTHESIS_DECOMP = True
 
 # Output config
-RESULTS_DIR = 'results/generations'
-OUTPUT_NAME = 'baseline_direct_translation'
-EVAL_RESULTS_DIR = 'results/evaluations'
+RESULTS_DIR = '/home/agatha/Desktop/MA3/sem proj/autoformalization_with_hypothesis/results/generations'
+OUTPUT_NAME = 'direct_translation_with_general_fewshot'
+EVAL_RESULTS_DIR = '/home/agatha/Desktop/MA3/sem proj/autoformalization_with_hypothesis/results/evaluations'

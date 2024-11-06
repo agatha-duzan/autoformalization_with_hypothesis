@@ -10,7 +10,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.1552046986577469,
-    "cosine_similarity": 0.9020570688686504
+    "cosine_similarity": 0.9020570688686504,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_3",
@@ -23,7 +24,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.39443258294642713,
-    "cosine_similarity": 0.8968311450850488
+    "cosine_similarity": 0.8968311450850488,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 24
+        },
+        "endPos": {
+          "line": 8,
+          "column": 36
+        },
+        "data": "unknown identifier 'finset.range'"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_1124",
@@ -36,7 +51,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.3556521383601747,
-    "cosine_similarity": 0.8975005223227932
+    "cosine_similarity": 0.8975005223227932,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_237",
@@ -49,7 +65,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.5149732203257935,
-    "cosine_similarity": 0.8927781867499225
+    "cosine_similarity": 0.8927781867499225,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 24
+        },
+        "endPos": {
+          "line": 8,
+          "column": 36
+        },
+        "data": "unknown identifier 'finset.range'"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_299",
@@ -62,7 +92,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.7389984311706962,
-    "cosine_similarity": 0.8863769136640641
+    "cosine_similarity": 0.8863769136640641,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_427",
@@ -75,7 +106,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.09429627471628842,
-    "cosine_similarity": 0.8830386888743984
+    "cosine_similarity": 0.8830386888743984,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 51
+        },
+        "endPos": {
+          "line": 8,
+          "column": 52
+        },
+        "data": "unexpected token ','; expected '\u21a6', '=>'"
+      }
+    ]
   },
   {
     "name": "f2f_numbertheory_x5neqy2p4",
@@ -88,7 +133,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.4732901678120695,
-    "cosine_similarity": 0.9209701795062956
+    "cosine_similarity": 0.9209701795062956,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_430",
@@ -101,7 +147,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.1060433720037436,
-    "cosine_similarity": 0.8954961226111287
+    "cosine_similarity": 0.8954961226111287,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_277",
@@ -114,7 +161,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.4401659511741363,
-    "cosine_similarity": 0.9111278570336105
+    "cosine_similarity": 0.9111278570336105,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_559",
@@ -127,7 +175,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.06322328208407124,
-    "cosine_similarity": 0.8379188214618506
+    "cosine_similarity": 0.8379188214618506,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_353",
@@ -140,7 +189,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.22152121615450707,
-    "cosine_similarity": 0.8824595180945292
+    "cosine_similarity": 0.8824595180945292,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 75
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "f2f_numbertheory_notequiv2i2jasqbsqdiv8",
@@ -153,7 +213,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.03770864890008891,
-    "cosine_similarity": 0.9024555387070499
+    "cosine_similarity": 0.9024555387070499,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_12",
@@ -166,7 +227,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.1665240823401981,
-    "cosine_similarity": 0.90179891731428
+    "cosine_similarity": 0.90179891731428,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 59
+        },
+        "endPos": {
+          "line": 8,
+          "column": 60
+        },
+        "data": "unexpected token ','; expected '\u21a6', '=>'"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_345",
@@ -179,7 +254,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 1.0,
-    "cosine_similarity": 0.9202865681120895
+    "cosine_similarity": 0.9202865681120895,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_447",
@@ -192,7 +268,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.15875722180934987,
-    "cosine_similarity": 0.8964611373658311
+    "cosine_similarity": 0.8964611373658311,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 47
+        },
+        "endPos": {
+          "line": 8,
+          "column": 48
+        },
+        "data": "unexpected token ','; expected '\u21a6', '=>'"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_328",
@@ -205,7 +295,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.5452469119630863,
-    "cosine_similarity": 0.8903936932598009
+    "cosine_similarity": 0.8903936932598009,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_451",
@@ -218,7 +309,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.05988964180819258,
-    "cosine_similarity": 0.8767758448674949
+    "cosine_similarity": 0.8767758448674949,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 130
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_227",
@@ -231,7 +333,33 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.07111408717360951,
-    "cosine_similarity": 0.8253354241521056
+    "cosine_similarity": 0.8253354241521056,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 116
+        },
+        "endPos": {
+          "line": 8,
+          "column": 128
+        },
+        "data": "unknown identifier 'finset.range'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 163
+        },
+        "endPos": {
+          "line": 8,
+          "column": 175
+        },
+        "data": "unknown identifier 'finset.range'"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_765",
@@ -244,7 +372,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.06759926455384295,
-    "cosine_similarity": 0.8556176325407209
+    "cosine_similarity": 0.8556176325407209,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_175",
@@ -257,7 +386,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.5452469119630863,
-    "cosine_similarity": 0.9040786858561927
+    "cosine_similarity": 0.9040786858561927,
+    "repl_errors": []
   },
   {
     "name": "f2f_numbertheory_fxeq4powxp6powxp9powx_f2powmdvdf2pown",
@@ -270,7 +400,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.1385504974626469,
-    "cosine_similarity": 0.9246237772058294
+    "cosine_similarity": 0.9246237772058294,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 97
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_728",
@@ -283,7 +424,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.3906864844152217,
-    "cosine_similarity": 0.8837719454983115
+    "cosine_similarity": 0.8837719454983115,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_552",
@@ -296,7 +438,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.17757410343087493,
-    "cosine_similarity": 0.8891367347651405
+    "cosine_similarity": 0.8891367347651405,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 44
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_293",
@@ -309,7 +462,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.11066171274883234,
-    "cosine_similarity": 0.8622462934537521
+    "cosine_similarity": 0.8622462934537521,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_769",
@@ -322,7 +476,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.3906864844152217,
-    "cosine_similarity": 0.9007314134696675
+    "cosine_similarity": 0.9007314134696675,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_5",
@@ -335,7 +490,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.03884198534513185,
-    "cosine_similarity": 0.8588602757023194
+    "cosine_similarity": 0.8588602757023194,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_207",
@@ -348,7 +504,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.19228435969514684,
-    "cosine_similarity": 0.8451056842336525
+    "cosine_similarity": 0.8451056842336525,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_342",
@@ -361,7 +518,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 1.0,
-    "cosine_similarity": 0.8899190268881942
+    "cosine_similarity": 0.8899190268881942,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_483",
@@ -374,7 +532,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.20736401764493012,
-    "cosine_similarity": 0.8545680949652527
+    "cosine_similarity": 0.8545680949652527,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 81
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_495",
@@ -387,7 +556,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.22169662586313604,
-    "cosine_similarity": 0.8843242436808572
+    "cosine_similarity": 0.8843242436808572,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_247",
@@ -400,7 +570,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.341191474032336,
-    "cosine_similarity": 0.8728494185943645
+    "cosine_similarity": 0.8728494185943645,
+    "repl_errors": []
   },
   {
     "name": "f2f_numbertheory_2pownm1prime_nprime",
@@ -413,7 +584,33 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.3641268987601907,
-    "cosine_similarity": 0.910905273537936
+    "cosine_similarity": 0.910905273537936,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 41
+        },
+        "endPos": {
+          "line": 8,
+          "column": 60
+        },
+        "data": "unknown constant 'Nat.prime'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 64
+        },
+        "endPos": {
+          "line": 8,
+          "column": 75
+        },
+        "data": "unknown constant 'Nat.prime'"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_314",
@@ -426,7 +623,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.11722204011051908,
-    "cosine_similarity": 0.8914604117582474
+    "cosine_similarity": 0.8914604117582474,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 35
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_343",
@@ -439,7 +647,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.24835336815593242,
-    "cosine_similarity": 0.8260864363850839
+    "cosine_similarity": 0.8260864363850839,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 72
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_457",
@@ -452,7 +671,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.044430326973744334,
-    "cosine_similarity": 0.8757751879071434
+    "cosine_similarity": 0.8757751879071434,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 74
+        },
+        "endPos": null,
+        "data": "expected interpolated string"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_135",
@@ -465,7 +695,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.17774703859604693,
-    "cosine_similarity": 0.8864691023759147
+    "cosine_similarity": 0.8864691023759147,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 37
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_34",
@@ -478,7 +719,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.24145384320377525,
-    "cosine_similarity": 0.89537443326722
+    "cosine_similarity": 0.89537443326722,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_764",
@@ -491,7 +733,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.1964771343560535,
-    "cosine_similarity": 0.9086666503696896
+    "cosine_similarity": 0.9086666503696896,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 90
+        },
+        "endPos": {
+          "line": 8,
+          "column": 91
+        },
+        "data": "unexpected token ','; expected '\u21a6', '=>'"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_618",
@@ -504,7 +760,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.031646642832063955,
-    "cosine_similarity": 0.8648740531528514
+    "cosine_similarity": 0.8648740531528514,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 46
+        },
+        "endPos": {
+          "line": 8,
+          "column": 47
+        },
+        "data": "unexpected token ','; expected '\u21a6', '=>'"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_435",
@@ -517,7 +787,81 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.256165362024848,
-    "cosine_similarity": 0.8913861156732146
+    "cosine_similarity": 0.8913861156732146,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 43
+        },
+        "endPos": {
+          "line": 8,
+          "column": 78
+        },
+        "data": "unknown constant 'Nat.coprime'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 81
+        },
+        "endPos": {
+          "line": 8,
+          "column": 116
+        },
+        "data": "unknown constant 'Nat.coprime'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 119
+        },
+        "endPos": {
+          "line": 8,
+          "column": 154
+        },
+        "data": "unknown constant 'Nat.coprime'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 186
+        },
+        "endPos": {
+          "line": 8,
+          "column": 221
+        },
+        "data": "unknown constant 'Nat.coprime'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 224
+        },
+        "endPos": {
+          "line": 8,
+          "column": 259
+        },
+        "data": "unknown constant 'Nat.coprime'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 262
+        },
+        "endPos": {
+          "line": 8,
+          "column": 297
+        },
+        "data": "unknown constant 'Nat.coprime'"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_99",
@@ -530,7 +874,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.1477219991186121,
-    "cosine_similarity": 0.8734713991828272
+    "cosine_similarity": 0.8734713991828272,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 42
+        },
+        "endPos": {
+          "line": 8,
+          "column": 47
+        },
+        "data": "type mismatch\n  2 * n\nhas type\n  \u2124 : outParam Type\nbut is expected to have type\n  \u2115 : Type"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_233",
@@ -543,7 +901,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.157188773630212,
-    "cosine_similarity": 0.8869613818996678
+    "cosine_similarity": 0.8869613818996678,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_321",
@@ -556,7 +915,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.1609791748450962,
-    "cosine_similarity": 0.8733842361786143
+    "cosine_similarity": 0.8733842361786143,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_229",
@@ -569,7 +929,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.5387551338654779,
-    "cosine_similarity": 0.8837439300684934
+    "cosine_similarity": 0.8837439300684934,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_100",
@@ -582,7 +943,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.6344528593469496,
-    "cosine_similarity": 0.917491511955346
+    "cosine_similarity": 0.917491511955346,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_551",
@@ -595,7 +957,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 1.0,
-    "cosine_similarity": 0.8827187232081093
+    "cosine_similarity": 0.8827187232081093,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_341",
@@ -608,7 +971,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.06957865629747398,
-    "cosine_similarity": 0.8379157054008985
+    "cosine_similarity": 0.8379157054008985,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 31
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_711",
@@ -621,7 +995,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.5037480890553236,
-    "cosine_similarity": 0.9074338770852245
+    "cosine_similarity": 0.9074338770852245,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_212",
@@ -634,7 +1009,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.3166934923219159,
-    "cosine_similarity": 0.8801543413331162
+    "cosine_similarity": 0.8801543413331162,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 47
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_320",
@@ -647,7 +1033,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.053459335957372234,
-    "cosine_similarity": 0.8602836013152877
+    "cosine_similarity": 0.8602836013152877,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_254",
@@ -660,7 +1047,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.13307637507950737,
-    "cosine_similarity": 0.8240395732290919
+    "cosine_similarity": 0.8240395732290919,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 52
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "f2f_numbertheory_3pow2pownm1mod2pownp3eq2pownp2",
@@ -673,7 +1071,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.24900881977418668,
-    "cosine_similarity": 0.9200533230124608
+    "cosine_similarity": 0.9200533230124608,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_85",
@@ -686,7 +1085,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.1240755029749901,
-    "cosine_similarity": 0.8271142416259375
+    "cosine_similarity": 0.8271142416259375,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_239",
@@ -699,7 +1099,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.1819073390123456,
-    "cosine_similarity": 0.8401613721382498
+    "cosine_similarity": 0.8401613721382498,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_517",
@@ -712,7 +1113,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.5333505353503044,
-    "cosine_similarity": 0.8789635088245763
+    "cosine_similarity": 0.8790461205407532,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_521",
@@ -725,7 +1127,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.1286057341226582,
-    "cosine_similarity": 0.8731076242775315
+    "cosine_similarity": 0.8731076242775315,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_66",
@@ -738,7 +1141,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 1.0,
-    "cosine_similarity": 0.8862824357865688
+    "cosine_similarity": 0.8862824357865688,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_235",
@@ -751,7 +1155,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 1.0,
-    "cosine_similarity": 0.882238815665338
+    "cosine_similarity": 0.882238815665338,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_234",
@@ -764,7 +1169,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.207208593193734,
-    "cosine_similarity": 0.8870592754659428
+    "cosine_similarity": 0.8870592754659428,
+    "repl_errors": []
   },
   {
     "name": "f2f_numbertheory_aoddbdiv4asqpbsqmod8eq1",
@@ -777,7 +1183,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.30230462927066304,
-    "cosine_similarity": 0.901502042585
+    "cosine_similarity": 0.901502042585,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_222",
@@ -790,7 +1197,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.2805767748474474,
-    "cosine_similarity": 0.912870084709166
+    "cosine_similarity": 0.912870084709166,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_127",
@@ -803,7 +1211,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.5052815513370239,
-    "cosine_similarity": 0.9013721436426994
+    "cosine_similarity": 0.9014237174125446,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_541",
@@ -816,7 +1225,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.10847601086097745,
-    "cosine_similarity": 0.869467383461359
+    "cosine_similarity": 0.869467383461359,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_150",
@@ -829,7 +1239,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.08639926822802937,
-    "cosine_similarity": 0.8562189898325638
+    "cosine_similarity": 0.8562189898325638,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_296",
@@ -842,7 +1253,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.03812898541998912,
-    "cosine_similarity": 0.8678667438437135
+    "cosine_similarity": 0.8678667438437135,
+    "repl_errors": []
   },
   {
     "name": "f2f_numbertheory_exk2powkeqapb2mulbpa2_aeq1",
@@ -855,7 +1267,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.2848558810571382,
-    "cosine_similarity": 0.8873367603669615
+    "cosine_similarity": 0.8873367603669615,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_185",
@@ -868,7 +1281,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.5961621647299126,
-    "cosine_similarity": 0.9123942137648458
+    "cosine_similarity": 0.9123942137648458,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_582",
@@ -881,7 +1295,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.4954767452468839,
-    "cosine_similarity": 0.9117082251443553
+    "cosine_similarity": 0.9117082251443553,
+    "repl_errors": []
   },
   {
     "name": "putnam_2002_b5",
@@ -894,7 +1309,69 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.11567956857017102,
-    "cosine_similarity": 0.9165245111463497
+    "cosine_similarity": 0.9165245111463497,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 74
+        },
+        "endPos": {
+          "line": 3,
+          "column": 84
+        },
+        "data": "unknown identifier 'nat.digits'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 91
+        },
+        "endPos": {
+          "line": 3,
+          "column": 103
+        },
+        "data": "unknown identifier 'list.reverse'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 175
+        },
+        "endPos": {
+          "line": 3,
+          "column": 185
+        },
+        "data": "unknown identifier 'nat.digits'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 192
+        },
+        "endPos": {
+          "line": 3,
+          "column": 204
+        },
+        "data": "unknown identifier 'list.reverse'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 132
+        },
+        "endPos": {
+          "line": 3,
+          "column": 140
+        },
+        "data": "function expected at\n  finset\nterm has type\n  ?m.107"
+      }
+    ]
   },
   {
     "name": "putnam_2009_b3",
@@ -907,7 +1384,33 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.297671758254231,
-    "cosine_similarity": 0.8900941650639508
+    "cosine_similarity": 0.8900941650639508,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 1,
+          "column": 33
+        },
+        "endPos": {
+          "line": 1,
+          "column": 38
+        },
+        "data": "function expected at\n  Set\nterm has type\n  ?m.3"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 100
+        },
+        "endPos": {
+          "line": 3,
+          "column": 101
+        },
+        "data": "unexpected token ','; expected '\u21a6', '=>'"
+      }
+    ]
   },
   {
     "name": "putnam_2019_a5",
@@ -920,7 +1423,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.05232533766031592,
-    "cosine_similarity": 0.9124828182502883
+    "cosine_similarity": 0.9124828182502883,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 88
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "putnam_2008_b4",
@@ -933,7 +1447,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.16527558918116125,
-    "cosine_similarity": 0.9212616135505645
+    "cosine_similarity": 0.9212616135505645,
+    "repl_errors": []
   },
   {
     "name": "putnam_1982_b3",
@@ -946,7 +1461,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.03727572271943322,
-    "cosine_similarity": 0.9013673469996193
+    "cosine_similarity": 0.9013673469996193,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 61
+        },
+        "endPos": null,
+        "data": "expected token"
+      }
+    ]
   },
   {
     "name": "putnam_1998_b4",
@@ -959,7 +1485,30 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.04950447434697813,
-    "cosine_similarity": 0.9126314304206167
+    "cosine_similarity": 0.9126314304206167,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 1,
+          "column": 33
+        },
+        "endPos": {
+          "line": 1,
+          "column": 44
+        },
+        "data": "function expected at\n  Set\nterm has type\n  ?m.3"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 53
+        },
+        "endPos": null,
+        "data": "expected token"
+      }
+    ]
   },
   {
     "name": "putnam_1997_a5",
@@ -972,7 +1521,33 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.003170282529846663,
-    "cosine_similarity": 0.8906568712840224
+    "cosine_similarity": 0.8906568712840224,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 16
+        },
+        "endPos": {
+          "line": 3,
+          "column": 27
+        },
+        "data": "function expected at\n  Even\nterm has type\n  ?m.7"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 30
+        },
+        "endPos": {
+          "line": 3,
+          "column": 40
+        },
+        "data": "function expected at\n  Odd\nterm has type\n  ?m.12"
+      }
+    ]
   },
   {
     "name": "putnam_1986_b3",
@@ -985,7 +1560,93 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.11496032992014223,
-    "cosine_similarity": 0.9389525186104662
+    "cosine_similarity": 0.9389525186104662,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 27
+        },
+        "endPos": {
+          "line": 3,
+          "column": 31
+        },
+        "data": "failed to prove index is valid, possible solutions:\n  - Use `have`-expressions to prove the index is valid\n  - Use `a[i]!` notation instead, runtime check is performed, and 'Panic' error message is produced if index is not valid\n  - Use `a[i]?` notation instead, result is an `Option` type\n  - Use `a[i]'h` notation instead, where `h` is a proof that index is valid\nX : ?m.12\n\u22a2 ?m.22 \u2124 X"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 27
+        },
+        "endPos": {
+          "line": 3,
+          "column": 31
+        },
+        "data": "failed to prove index is valid, possible solutions:\n  - Use `have`-expressions to prove the index is valid\n  - Use `a[i]!` notation instead, runtime check is performed, and 'Panic' error message is produced if index is not valid\n  - Use `a[i]?` notation instead, result is an `Option` type\n  - Use `a[i]'h` notation instead, where `h` is a proof that index is valid\nX : ?m.12\nf : \u2124[X]\n\u22a2 ?m.69 \u2124 X"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 27
+        },
+        "endPos": {
+          "line": 3,
+          "column": 31
+        },
+        "data": "failed to prove index is valid, possible solutions:\n  - Use `have`-expressions to prove the index is valid\n  - Use `a[i]!` notation instead, runtime check is performed, and 'Panic' error message is produced if index is not valid\n  - Use `a[i]?` notation instead, result is an `Option` type\n  - Use `a[i]'h` notation instead, where `h` is a proof that index is valid\nX : ?m.12\nf : \u2124[X]\ng : \u2124[X]\n\u22a2 ?m.137 \u2124 X"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 27
+        },
+        "endPos": {
+          "line": 3,
+          "column": 31
+        },
+        "data": "failed to prove index is valid, possible solutions:\n  - Use `have`-expressions to prove the index is valid\n  - Use `a[i]!` notation instead, runtime check is performed, and 'Panic' error message is produced if index is not valid\n  - Use `a[i]?` notation instead, result is an `Option` type\n  - Use `a[i]'h` notation instead, where `h` is a proof that index is valid\nX : ?m.12\nf : \u2124[X]\ng : \u2124[X]\nh : \u2124[X]\n\u22a2 ?m.218 \u2124 X"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 27
+        },
+        "endPos": {
+          "line": 3,
+          "column": 31
+        },
+        "data": "failed to prove index is valid, possible solutions:\n  - Use `have`-expressions to prove the index is valid\n  - Use `a[i]!` notation instead, runtime check is performed, and 'Panic' error message is produced if index is not valid\n  - Use `a[i]?` notation instead, result is an `Option` type\n  - Use `a[i]'h` notation instead, where `h` is a proof that index is valid\nX : ?m.12\nf : \u2124[X]\ng : \u2124[X]\nh : \u2124[X]\nr : \u2124[X]\n\u22a2 ?m.312 \u2124 X"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 131
+        },
+        "endPos": {
+          "line": 3,
+          "column": 135
+        },
+        "data": "failed to prove index is valid, possible solutions:\n  - Use `have`-expressions to prove the index is valid\n  - Use `a[i]!` notation instead, runtime check is performed, and 'Panic' error message is produced if index is not valid\n  - Use `a[i]?` notation instead, result is an `Option` type\n  - Use `a[i]'h` notation instead, where `h` is a proof that index is valid\nX : ?m.12\nf : \u2124[X]\ng : \u2124[X]\nh : \u2124[X]\nr : \u2124[X]\ns : \u2124[X]\np n : \u2115\nhp : Nat.Prime p\nh1 : r * f + s * g \u2261 1 [MOD p]\nh2 : f * g \u2261 ?m.1049 [MOD p]\n\u22a2 ?m.1062 \u2124 X"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 131
+        },
+        "endPos": {
+          "line": 3,
+          "column": 135
+        },
+        "data": "failed to prove index is valid, possible solutions:\n  - Use `have`-expressions to prove the index is valid\n  - Use `a[i]!` notation instead, runtime check is performed, and 'Panic' error message is produced if index is not valid\n  - Use `a[i]?` notation instead, result is an `Option` type\n  - Use `a[i]'h` notation instead, where `h` is a proof that index is valid\nX : ?m.12\nf : \u2124[X]\ng : \u2124[X]\nh : \u2124[X]\nr : \u2124[X]\ns : \u2124[X]\np n : \u2115\nhp : Nat.Prime p\nh1 : r * f + s * g \u2261 1 [MOD p]\nh2 : f * g \u2261 ?m.1049 [MOD p]\nF : \u2124[X]\n\u22a2 ?m.3847 F \u2124 X"
+      }
+    ]
   },
   {
     "name": "putnam_2018_a3",
@@ -998,7 +1659,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.023697067379222222,
-    "cosine_similarity": 0.9039279406777649
+    "cosine_similarity": 0.9039279406777649,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 63
+        },
+        "endPos": null,
+        "data": "expected token"
+      }
+    ]
   },
   {
     "name": "putnam_2014_b6",
@@ -1011,7 +1683,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.39459556242437505,
-    "cosine_similarity": 0.9011348064975815
+    "cosine_similarity": 0.9011348064975815,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 68
+        },
+        "endPos": {
+          "line": 3,
+          "column": 70
+        },
+        "data": "unexpected token '\u2208'; expected ','"
+      }
+    ]
   },
   {
     "name": "putnam_2009_b6",
@@ -1024,7 +1710,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.38908439324658706,
-    "cosine_similarity": 0.9420038088875169
+    "cosine_similarity": 0.9420038088875169,
+    "repl_errors": []
   },
   {
     "name": "putnam_1971_b6",
@@ -1037,7 +1724,33 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.08407383076497399,
-    "cosine_similarity": 0.8758522130092626
+    "cosine_similarity": 0.8758522130092626,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 46
+        },
+        "endPos": {
+          "line": 3,
+          "column": 58
+        },
+        "data": "unknown identifier 'finset.range'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 69
+        },
+        "endPos": {
+          "line": 3,
+          "column": 91
+        },
+        "data": "function expected at\n  greatest_odd_divisor\nterm has type\n  ?m.68"
+      }
+    ]
   },
   {
     "name": "putnam_1971_a6",
@@ -1050,7 +1763,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.43399042556156303,
-    "cosine_similarity": 0.9127672040043168
+    "cosine_similarity": 0.9127672040043168,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 53
+        },
+        "endPos": {
+          "line": 3,
+          "column": 56
+        },
+        "data": "failed to synthesize\n  HPow \u2124 \u211d ?m.847\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      }
+    ]
   },
   {
     "name": "putnam_2019_b5",
@@ -1063,7 +1790,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.12928767861174548,
-    "cosine_similarity": 0.9051348094852528
+    "cosine_similarity": 0.9051348094852528,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 49
+        },
+        "endPos": {
+          "line": 3,
+          "column": 50
+        },
+        "data": "unexpected token ','; expected '\u21a6', '=>'"
+      }
+    ]
   },
   {
     "name": "putnam_2002_a5",
@@ -1076,7 +1817,45 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.05570472952419043,
-    "cosine_similarity": 0.8842224920827558
+    "cosine_similarity": 0.8842224920827558,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 98
+        },
+        "endPos": {
+          "line": 3,
+          "column": 101
+        },
+        "data": "unexpected token ':='; expected '=>'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 51
+        },
+        "endPos": {
+          "line": 3,
+          "column": 60
+        },
+        "data": "function expected at\n  a\nterm has type\n  ?m.54"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 65
+        },
+        "endPos": {
+          "line": 3,
+          "column": 68
+        },
+        "data": "function expected at\n  a\nterm has type\n  ?m.54"
+      }
+    ]
   },
   {
     "name": "putnam_1991_b5",
@@ -1089,7 +1868,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.10447015481416681,
-    "cosine_similarity": 0.8794130297791418
+    "cosine_similarity": 0.8794130297791418,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 79
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "putnam_1969_b1",
@@ -1102,7 +1892,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.15514337075863116,
-    "cosine_similarity": 0.9144426263322558
+    "cosine_similarity": 0.9144426263322558,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 43
+        },
+        "endPos": {
+          "line": 3,
+          "column": 68
+        },
+        "data": "typeclass instance problem is stuck, it is often due to metavariables\n  Dvd ((\u2115 \u2192 ?m.114) \u2192 ?m.114)"
+      }
+    ]
   },
   {
     "name": "putnam_2015_a3",
@@ -1115,7 +1919,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.4099957146431076,
-    "cosine_similarity": 0.9329017064969397
+    "cosine_similarity": 0.9329017064969397,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 29
+        },
+        "endPos": null,
+        "data": "expected token"
+      }
+    ]
   },
   {
     "name": "putnam_1991_b4",
@@ -1128,7 +1943,57 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.17443057668103557,
-    "cosine_similarity": 0.9480133287904859
+    "cosine_similarity": 0.9480133287904859,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 28
+        },
+        "endPos": {
+          "line": 3,
+          "column": 37
+        },
+        "data": "unknown identifier 'nat.prime'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 72
+        },
+        "endPos": {
+          "line": 3,
+          "column": 84
+        },
+        "data": "unknown identifier 'finset.range'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 94
+        },
+        "endPos": {
+          "line": 3,
+          "column": 104
+        },
+        "data": "unknown identifier 'nat.choose'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 111
+        },
+        "endPos": {
+          "line": 3,
+          "column": 121
+        },
+        "data": "unknown identifier 'nat.choose'"
+      }
+    ]
   },
   {
     "name": "putnam_2021_a5",
@@ -1141,7 +2006,33 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.258311944719046,
-    "cosine_similarity": 0.922349193140573
+    "cosine_similarity": 0.922349193140573,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 1,
+          "column": 33
+        },
+        "endPos": {
+          "line": 1,
+          "column": 38
+        },
+        "data": "function expected at\n  Set\nterm has type\n  ?m.3"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 39
+        },
+        "endPos": {
+          "line": 3,
+          "column": 41
+        },
+        "data": "unexpected token '|'; expected '//' or '}'"
+      }
+    ]
   },
   {
     "name": "putnam_2017_a1",
@@ -1154,7 +2045,57 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.005428761541374388,
-    "cosine_similarity": 0.8773805815533142
+    "cosine_similarity": 0.8773805815533142,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 1,
+          "column": 33
+        },
+        "endPos": {
+          "line": 1,
+          "column": 38
+        },
+        "data": "function expected at\n  Set\nterm has type\n  ?m.3"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 27
+        },
+        "endPos": {
+          "line": 3,
+          "column": 32
+        },
+        "data": "failed to synthesize\n  LT \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 31
+        },
+        "endPos": {
+          "line": 3,
+          "column": 32
+        },
+        "data": "failed to synthesize\n  OfNat \u2115 0\nnumerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is\n  \u2115\ndue to the absence of the instance above\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 61
+        },
+        "endPos": {
+          "line": 3,
+          "column": 66
+        },
+        "data": "type expected, got\n  (set \u2115 : ?m.155 PUnit)"
+      }
+    ]
   },
   {
     "name": "putnam_1983_a1",
@@ -1167,7 +2108,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.10228644546118218,
-    "cosine_similarity": 0.8558118521915128
+    "cosine_similarity": 0.8558118521915128,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 46
+        },
+        "endPos": {
+          "line": 3,
+          "column": 48
+        },
+        "data": "unexpected token '|'; expected '//' or '}'"
+      }
+    ]
   },
   {
     "name": "putnam_1976_b6",
@@ -1180,7 +2135,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.04389386752904608,
-    "cosine_similarity": 0.9159458651521677
+    "cosine_similarity": 0.915853075819834,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 27
+        },
+        "endPos": {
+          "line": 3,
+          "column": 30
+        },
+        "data": "function expected at\n  \u03c3\nterm has type\n  ?m.6"
+      }
+    ]
   },
   {
     "name": "putnam_1975_b1",
@@ -1193,7 +2162,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.02452293327310818,
-    "cosine_similarity": 0.8677016509587512
+    "cosine_similarity": 0.8677016509587512,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 105
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "putnam_2014_a3",
@@ -1206,7 +2186,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.11476933167427497,
-    "cosine_similarity": 0.8859219142560413
+    "cosine_similarity": 0.8859219142560413,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 36
+        },
+        "endPos": {
+          "line": 3,
+          "column": 37
+        },
+        "data": "unexpected token ','; expected '\u21a6', '=>'"
+      }
+    ]
   },
   {
     "name": "putnam_2009_b1",
@@ -1219,7 +2213,81 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.03680435645357644,
-    "cosine_similarity": 0.8974077541464536
+    "cosine_similarity": 0.8974077541464536,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 83
+        },
+        "endPos": {
+          "line": 3,
+          "column": 92
+        },
+        "data": "unknown identifier 'nat.prime'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 115
+        },
+        "endPos": {
+          "line": 3,
+          "column": 124
+        },
+        "data": "unknown identifier 'nat.prime'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 142
+        },
+        "endPos": {
+          "line": 3,
+          "column": 154
+        },
+        "data": "unknown identifier 'finset.range'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 159
+        },
+        "endPos": {
+          "line": 3,
+          "column": 172
+        },
+        "data": "unknown identifier 'nat.factorial'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 192
+        },
+        "endPos": {
+          "line": 3,
+          "column": 204
+        },
+        "data": "unknown identifier 'finset.range'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 209
+        },
+        "endPos": {
+          "line": 3,
+          "column": 222
+        },
+        "data": "unknown identifier 'nat.factorial'"
+      }
+    ]
   },
   {
     "name": "putnam_2014_b3",
@@ -1232,7 +2300,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.2202365991906169,
-    "cosine_similarity": 0.9150350789116111
+    "cosine_similarity": 0.9150350789116111,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 83
+        },
+        "endPos": {
+          "line": 3,
+          "column": 84
+        },
+        "data": "unexpected token ','; expected '\u21a6', '=>'"
+      }
+    ]
   },
   {
     "name": "putnam_1989_a1",
@@ -1245,7 +2327,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.06273048068489939,
-    "cosine_similarity": 0.879214545497773
+    "cosine_similarity": 0.879214545497773,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 48
+        },
+        "endPos": {
+          "line": 3,
+          "column": 49
+        },
+        "data": "unexpected token ','; expected '\u21a6', '=>'"
+      }
+    ]
   },
   {
     "name": "putnam_2018_b3",
@@ -1258,7 +2354,141 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.10946744778845356,
-    "cosine_similarity": 0.9024224917759684
+    "cosine_similarity": 0.9024224917759684,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 1,
+          "column": 33
+        },
+        "endPos": {
+          "line": 1,
+          "column": 38
+        },
+        "data": "function expected at\n  Set\nterm has type\n  ?m.3"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 28
+        },
+        "endPos": {
+          "line": 3,
+          "column": 38
+        },
+        "data": "failed to synthesize\n  LT \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 32
+        },
+        "endPos": {
+          "line": 3,
+          "column": 34
+        },
+        "data": "failed to synthesize\n  OfNat \u2115 10\nnumerals are polymorphic in Lean, but the numeral `10` cannot be used in a context where the expected type is\n  \u2115\ndue to the absence of the instance above\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 50
+        },
+        "endPos": {
+          "line": 3,
+          "column": 53
+        },
+        "data": "failed to synthesize\n  HPow \u2115 \u2115 ?m.150\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 46
+        },
+        "endPos": {
+          "line": 3,
+          "column": 53
+        },
+        "data": "failed to synthesize\n  Dvd \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 50
+        },
+        "endPos": {
+          "line": 3,
+          "column": 51
+        },
+        "data": "failed to synthesize\n  OfNat \u2115 2\nnumerals are polymorphic in Lean, but the numeral `2` cannot be used in a context where the expected type is\n  \u2115\ndue to the absence of the instance above\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 32
+        },
+        "endPos": {
+          "line": 3,
+          "column": 38
+        },
+        "data": "failed to synthesize\n  HPow \u2115 Nat \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 61
+        },
+        "endPos": {
+          "line": 3,
+          "column": 66
+        },
+        "data": "failed to synthesize\n  HSub \u2115 Nat ?m.176\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 69
+        },
+        "endPos": {
+          "line": 3,
+          "column": 72
+        },
+        "data": "failed to synthesize\n  HPow Nat \u2115 ?m.332\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 84
+        },
+        "endPos": {
+          "line": 3,
+          "column": 89
+        },
+        "data": "failed to synthesize\n  HSub \u2115 Nat ?m.347\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 92
+        },
+        "endPos": {
+          "line": 3,
+          "column": 95
+        },
+        "data": "failed to synthesize\n  HPow Nat \u2115 ?m.540\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      }
+    ]
   },
   {
     "name": "putnam_1984_a6",
@@ -1271,7 +2501,117 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.04606686157688618,
-    "cosine_similarity": 0.8639749291857277
+    "cosine_similarity": 0.8639749291857277,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 52
+        },
+        "endPos": {
+          "line": 3,
+          "column": 82
+        },
+        "data": "function expected at\n  last_nonzero_digit\nterm has type\n  ?m.34"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 85
+        },
+        "endPos": {
+          "line": 3,
+          "column": 115
+        },
+        "data": "function expected at\n  last_nonzero_digit\nterm has type\n  ?m.34"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 146
+        },
+        "endPos": {
+          "line": 3,
+          "column": 164
+        },
+        "data": "unknown identifier 'last_nonzero_digit'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 199
+        },
+        "endPos": {
+          "line": 3,
+          "column": 204
+        },
+        "data": "failed to synthesize\n  LT \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 244
+        },
+        "endPos": {
+          "line": 3,
+          "column": 249
+        },
+        "data": "failed to synthesize\n  LT \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 203
+        },
+        "endPos": {
+          "line": 3,
+          "column": 204
+        },
+        "data": "failed to synthesize\n  OfNat \u2115 0\nnumerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is\n  \u2115\ndue to the absence of the instance above\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 248
+        },
+        "endPos": {
+          "line": 3,
+          "column": 249
+        },
+        "data": "failed to synthesize\n  OfNat \u2115 0\nnumerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is\n  \u2115\ndue to the absence of the instance above\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 225
+        },
+        "endPos": {
+          "line": 3,
+          "column": 230
+        },
+        "data": "failed to synthesize\n  HAdd Nat \u2115 Nat\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 270
+        },
+        "endPos": {
+          "line": 3,
+          "column": 275
+        },
+        "data": "failed to synthesize\n  HAdd Nat \u2115 Nat\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      }
+    ]
   },
   {
     "name": "putnam_1997_b5",
@@ -1284,7 +2624,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.32665187754616803,
-    "cosine_similarity": 0.9165046523348747
+    "cosine_similarity": 0.9165046523348747,
+    "repl_errors": []
   },
   {
     "name": "putnam_1995_b6",
@@ -1297,7 +2638,45 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.04749449596309697,
-    "cosine_similarity": 0.9160260526690369
+    "cosine_similarity": 0.9160260526690369,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 96
+        },
+        "endPos": {
+          "line": 3,
+          "column": 109
+        },
+        "data": "function expected at\n  floor\nterm has type\n  ?m.168"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 111
+        },
+        "endPos": {
+          "line": 3,
+          "column": 124
+        },
+        "data": "function expected at\n  floor\nterm has type\n  ?m.168"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 126
+        },
+        "endPos": {
+          "line": 3,
+          "column": 139
+        },
+        "data": "function expected at\n  floor\nterm has type\n  ?m.168"
+      }
+    ]
   },
   {
     "name": "putnam_1999_b6",
@@ -1310,7 +2689,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.5302899630291971,
-    "cosine_similarity": 0.9447623421558682
+    "cosine_similarity": 0.9447445799866475,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 116
+        },
+        "endPos": {
+          "line": 3,
+          "column": 118
+        },
+        "data": "unexpected token '\u2208'; expected ','"
+      }
+    ]
   },
   {
     "name": "putnam_1993_b5",
@@ -1323,7 +2716,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.014492186436101947,
-    "cosine_similarity": 0.8973020342417372
+    "cosine_similarity": 0.8973020342417372,
+    "repl_errors": []
   },
   {
     "name": "putnam_2001_a5",
@@ -1336,7 +2730,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.4734490597792576,
-    "cosine_similarity": 0.9494537594372434
+    "cosine_similarity": 0.9494537594372434,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 19
+        },
+        "endPos": {
+          "line": 3,
+          "column": 28
+        },
+        "data": "The `ExistsUnique` notation should not be used with more than one binder.\n\nThe reason for this is that `\u2203! (x : \u03b1), \u2203! (y : \u03b2), p x y` has a completely different meaning from `\u2203! q : \u03b1 \u00d7 \u03b2, p q.1 q.2`. To prevent confusion, this notation requires that you be explicit and use one with the correct interpretation."
+      }
+    ]
   },
   {
     "name": "putnam_1985_a4",
@@ -1349,7 +2757,33 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.123415407284321,
-    "cosine_similarity": 0.8722233555061099
+    "cosine_similarity": 0.8722233555061099,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 1,
+          "column": 33
+        },
+        "endPos": {
+          "line": 1,
+          "column": 46
+        },
+        "data": "function expected at\n  Set\nterm has type\n  ?m.3"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 36
+        },
+        "endPos": {
+          "line": 3,
+          "column": 37
+        },
+        "data": "unexpected token ','; expected '\u21a6', '=>'"
+      }
+    ]
   },
   {
     "name": "putnam_2007_a4",
@@ -1362,7 +2796,105 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.061083762894767725,
-    "cosine_similarity": 0.9017602225787476
+    "cosine_similarity": 0.9017602225787476,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 1,
+          "column": 33
+        },
+        "endPos": {
+          "line": 1,
+          "column": 51
+        },
+        "data": "function expected at\n  Set\nterm has type\n  ?m.3"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 51
+        },
+        "endPos": {
+          "line": 3,
+          "column": 66
+        },
+        "data": "unknown constant 'Nat.digits'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 47
+        },
+        "endPos": {
+          "line": 3,
+          "column": 66
+        },
+        "data": "failed to synthesize\n  LT \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 69
+        },
+        "endPos": {
+          "line": 3,
+          "column": 85
+        },
+        "data": "unknown constant 'Nat.digit'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 107
+        },
+        "endPos": {
+          "line": 3,
+          "column": 131
+        },
+        "data": "unknown constant 'Nat.digits'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 103
+        },
+        "endPos": {
+          "line": 3,
+          "column": 131
+        },
+        "data": "failed to synthesize\n  LT \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 134
+        },
+        "endPos": {
+          "line": 3,
+          "column": 159
+        },
+        "data": "unknown constant 'Nat.digit'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 181
+        },
+        "endPos": {
+          "line": 3,
+          "column": 193
+        },
+        "data": "unknown identifier 'polynomial.C'"
+      }
+    ]
   },
   {
     "name": "putnam_2023_b5",
@@ -1375,7 +2907,93 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.14943852403296376,
-    "cosine_similarity": 0.8955405718882865
+    "cosine_similarity": 0.8955405718882865,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 1,
+          "column": 33
+        },
+        "endPos": {
+          "line": 1,
+          "column": 38
+        },
+        "data": "function expected at\n  Set\nterm has type\n  ?m.3"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 28
+        },
+        "endPos": {
+          "line": 3,
+          "column": 33
+        },
+        "data": "failed to synthesize\n  LT \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 47
+        },
+        "endPos": {
+          "line": 3,
+          "column": 54
+        },
+        "data": "invalid field notation, type is not of the form (C ...) where C is a constant\n  m\nhas type\n  \u2124"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 67
+        },
+        "endPos": {
+          "line": 3,
+          "column": 77
+        },
+        "data": "unknown identifier 'equiv.perm'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 28
+        },
+        "endPos": {
+          "line": 3,
+          "column": 29
+        },
+        "data": "failed to synthesize\n  OfNat \u2115 0\nnumerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is\n  \u2115\ndue to the absence of the instance above\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 93
+        },
+        "endPos": {
+          "line": 3,
+          "column": 98
+        },
+        "data": "function expected at\n  fin\nterm has type\n  ?m.120"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 110
+        },
+        "endPos": {
+          "line": 3,
+          "column": 130
+        },
+        "data": "invalid constructor \u27e8...\u27e9, expected type must be an inductive type \n  ?m.207 m \u03c0 k"
+      }
+    ]
   },
   {
     "name": "putnam_2021_b4",
@@ -1388,7 +3006,45 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.014189375754104144,
-    "cosine_similarity": 0.8687864066419466
+    "cosine_similarity": 0.8687864066419466,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 50
+        },
+        "endPos": {
+          "line": 3,
+          "column": 83
+        },
+        "data": "function expected at\n  product_power\nterm has type\n  ?m.48"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 86
+        },
+        "endPos": {
+          "line": 3,
+          "column": 97
+        },
+        "data": "function expected at\n  fibonacci\nterm has type\n  ?m.90"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 100
+        },
+        "endPos": {
+          "line": 3,
+          "column": 111
+        },
+        "data": "function expected at\n  fibonacci\nterm has type\n  ?m.90"
+      }
+    ]
   },
   {
     "name": "putnam_1994_b6",
@@ -1401,7 +3057,33 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.1012305826248913,
-    "cosine_similarity": 0.9012197103072157
+    "cosine_similarity": 0.9012197103072157,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 138
+        },
+        "endPos": {
+          "line": 3,
+          "column": 141
+        },
+        "data": "failed to synthesize\n  HPow \u2124 \u2124 ?m.450\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 186
+        },
+        "endPos": {
+          "line": 3,
+          "column": 189
+        },
+        "data": "failed to synthesize\n  HPow \u2124 \u2124 ?m.888\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      }
+    ]
   },
   {
     "name": "putnam_2003_b3",
@@ -1414,7 +3096,33 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.017161619427853898,
-    "cosine_similarity": 0.9065256346426009
+    "cosine_similarity": 0.9065256346426009,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 57
+        },
+        "endPos": {
+          "line": 3,
+          "column": 69
+        },
+        "data": "unknown identifier 'finset.range'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 73
+        },
+        "endPos": {
+          "line": 3,
+          "column": 80
+        },
+        "data": "unknown identifier 'nat.lcm'"
+      }
+    ]
   },
   {
     "name": "putnam_1997_b3",
@@ -1427,7 +3135,30 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.18673026059983527,
-    "cosine_similarity": 0.8989350530980877
+    "cosine_similarity": 0.8989350530980877,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 1,
+          "column": 33
+        },
+        "endPos": {
+          "line": 1,
+          "column": 38
+        },
+        "data": "function expected at\n  Set\nterm has type\n  ?m.3"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 46
+        },
+        "endPos": null,
+        "data": "expected token"
+      }
+    ]
   },
   {
     "name": "putnam_2018_a1",
@@ -1440,7 +3171,165 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.07715782669141505,
-    "cosine_similarity": 0.9063424336435149
+    "cosine_similarity": 0.9063424336435149,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 1,
+          "column": 33
+        },
+        "endPos": {
+          "line": 1,
+          "column": 44
+        },
+        "data": "function expected at\n  Set\nterm has type\n  ?m.3"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 29
+        },
+        "endPos": {
+          "line": 3,
+          "column": 34
+        },
+        "data": "failed to synthesize\n  LT \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 37
+        },
+        "endPos": {
+          "line": 3,
+          "column": 42
+        },
+        "data": "failed to synthesize\n  LT \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 50
+        },
+        "endPos": {
+          "line": 3,
+          "column": 57
+        },
+        "data": "type mismatch\n  a\nhas type\n  \u2115 : Type ?u.116\nbut is expected to have type\n  \u211a : Sort ?u.175"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 64
+        },
+        "endPos": {
+          "line": 3,
+          "column": 71
+        },
+        "data": "type mismatch\n  b\nhas type\n  \u2115 : Type ?u.116\nbut is expected to have type\n  \u211a : Sort ?u.175"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 91
+        },
+        "endPos": {
+          "line": 3,
+          "column": 95
+        },
+        "data": "failed to synthesize\n  OfNat \u2115 2019\nnumerals are polymorphic in Lean, but the numeral `2019` cannot be used in a context where the expected type is\n  \u2115\ndue to the absence of the instance above\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 102
+        },
+        "endPos": {
+          "line": 3,
+          "column": 106
+        },
+        "data": "failed to synthesize\n  OfNat \u2115 2019\nnumerals are polymorphic in Lean, but the numeral `2019` cannot be used in a context where the expected type is\n  \u2115\ndue to the absence of the instance above\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 115
+        },
+        "endPos": {
+          "line": 3,
+          "column": 118
+        },
+        "data": "failed to synthesize\n  OfNat \u2115 673\nnumerals are polymorphic in Lean, but the numeral `673` cannot be used in a context where the expected type is\n  \u2115\ndue to the absence of the instance above\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 125
+        },
+        "endPos": {
+          "line": 3,
+          "column": 129
+        },
+        "data": "failed to synthesize\n  OfNat \u2115 2018\nnumerals are polymorphic in Lean, but the numeral `2018` cannot be used in a context where the expected type is\n  \u2115\ndue to the absence of the instance above\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 138
+        },
+        "endPos": {
+          "line": 3,
+          "column": 142
+        },
+        "data": "failed to synthesize\n  OfNat \u2115 2018\nnumerals are polymorphic in Lean, but the numeral `2018` cannot be used in a context where the expected type is\n  \u2115\ndue to the absence of the instance above\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 149
+        },
+        "endPos": {
+          "line": 3,
+          "column": 152
+        },
+        "data": "failed to synthesize\n  OfNat \u2115 673\nnumerals are polymorphic in Lean, but the numeral `673` cannot be used in a context where the expected type is\n  \u2115\ndue to the absence of the instance above\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 29
+        },
+        "endPos": {
+          "line": 3,
+          "column": 30
+        },
+        "data": "failed to synthesize\n  OfNat \u2115 0\nnumerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is\n  \u2115\ndue to the absence of the instance above\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 37
+        },
+        "endPos": {
+          "line": 3,
+          "column": 38
+        },
+        "data": "failed to synthesize\n  OfNat \u2115 0\nnumerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is\n  \u2115\ndue to the absence of the instance above\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      }
+    ]
   },
   {
     "name": "putnam_2015_a2",
@@ -1453,7 +3342,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.04471629957237842,
-    "cosine_similarity": 0.9017024357234894
+    "cosine_similarity": 0.9017024357234894,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 84
+        },
+        "endPos": {
+          "line": 3,
+          "column": 85
+        },
+        "data": "unexpected token ','; expected '\u21a6', '=>'"
+      }
+    ]
   },
   {
     "name": "putnam_1974_b3",
@@ -1466,7 +3369,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.22743363869750483,
-    "cosine_similarity": 0.9287964483421318
+    "cosine_similarity": 0.9287964483421318,
+    "repl_errors": []
   },
   {
     "name": "putnam_2015_a5",
@@ -1479,7 +3383,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.40677152005666223,
-    "cosine_similarity": 0.9446318616607305
+    "cosine_similarity": 0.9446318616607305,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 88
+        },
+        "endPos": {
+          "line": 3,
+          "column": 89
+        },
+        "data": "unexpected token ','; expected '\u21a6', '=>'"
+      }
+    ]
   },
   {
     "name": "putnam_2009_a4",
@@ -1492,7 +3410,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.3965606344993039,
-    "cosine_similarity": 0.8884363526346641
+    "cosine_similarity": 0.8884363526346641,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 19
+        },
+        "endPos": {
+          "line": 3,
+          "column": 24
+        },
+        "data": "function expected at\n  Set\nterm has type\n  ?m.7"
+      }
+    ]
   },
   {
     "name": "putnam_2011_b6",
@@ -1505,7 +3437,57 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.2079700499604598,
-    "cosine_similarity": 0.9401240076685384
+    "cosine_similarity": 0.9401240076685384,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 28
+        },
+        "endPos": {
+          "line": 3,
+          "column": 37
+        },
+        "data": "unknown identifier 'nat.prime'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 142
+        },
+        "endPos": {
+          "line": 3,
+          "column": 155
+        },
+        "data": "unknown identifier 'nat.factorial'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 70
+        },
+        "endPos": {
+          "line": 3,
+          "column": 78
+        },
+        "data": "function expected at\n  finset\nterm has type\n  ?m.100"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 126
+        },
+        "endPos": {
+          "line": 3,
+          "column": 140
+        },
+        "data": "invalid field notation, type is not of the form (C ...) where C is a constant\n  finset\nhas type\n  ?m.100"
+      }
+    ]
   },
   {
     "name": "putnam_1974_a3",
@@ -1518,7 +3500,42 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.2540584246206833,
-    "cosine_similarity": 0.9125622784406433
+    "cosine_similarity": 0.9125622784406433,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 1,
+          "column": 34
+        },
+        "endPos": {
+          "line": 1,
+          "column": 39
+        },
+        "data": "function expected at\n  Set\nterm has type\n  ?m.5"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 1,
+          "column": 44
+        },
+        "endPos": {
+          "line": 1,
+          "column": 49
+        },
+        "data": "function expected at\n  Set\nterm has type\n  ?m.5"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 97
+        },
+        "endPos": null,
+        "data": "expected token"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_780",
@@ -1531,7 +3548,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.21719989910166268,
-    "cosine_similarity": 0.8565932963243911
+    "cosine_similarity": 0.8565932963243911,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_13",
@@ -1544,7 +3562,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.14931668997715694,
-    "cosine_similarity": 0.8830112443873602
+    "cosine_similarity": 0.8830112443873602,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 62
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_169",
@@ -1557,7 +3586,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.587728372510532,
-    "cosine_similarity": 0.9125747306639348
+    "cosine_similarity": 0.9125747306639348,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_149",
@@ -1570,7 +3600,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.23643540225079396,
-    "cosine_similarity": 0.8758164994201263
+    "cosine_similarity": 0.8758164994201263,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 67
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_221",
@@ -1583,7 +3624,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.128846297838409,
-    "cosine_similarity": 0.8834463100469909
+    "cosine_similarity": 0.8834463100469909,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 47
+        },
+        "endPos": {
+          "line": 8,
+          "column": 54
+        },
+        "data": "invalid field 'prime', the environment does not contain 'Nat.prime'\n  p\nhas type\n  \u2115"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_64",
@@ -1596,7 +3651,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.19783691883509516,
-    "cosine_similarity": 0.8909474040403671
+    "cosine_similarity": 0.8909474040403671,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_33",
@@ -1609,7 +3665,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.09269876656698088,
-    "cosine_similarity": 0.8581745204411086
+    "cosine_similarity": 0.858450510657528,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_48",
@@ -1622,7 +3679,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.3064185630764539,
-    "cosine_similarity": 0.8664529375730039
+    "cosine_similarity": 0.8664529375730039,
+    "repl_errors": []
   },
   {
     "name": "f2f_numbertheory_sqmod4in01d",
@@ -1635,7 +3693,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.5580662229104153,
-    "cosine_similarity": 0.9185869620498979
+    "cosine_similarity": 0.9195646256187602,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_466",
@@ -1648,7 +3707,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.2094108425209914,
-    "cosine_similarity": 0.8504751495898413
+    "cosine_similarity": 0.8504751495898413,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_132",
@@ -1661,7 +3721,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 1.0,
-    "cosine_similarity": 0.896949656759197
+    "cosine_similarity": 0.896949656759197,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_188",
@@ -1674,7 +3735,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 1.0,
-    "cosine_similarity": 0.9210350350901912
+    "cosine_similarity": 0.9210350350901912,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_32",
@@ -1687,7 +3749,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.10495620780256237,
-    "cosine_similarity": 0.8752274739460673
+    "cosine_similarity": 0.8752274739460673,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 42
+        },
+        "endPos": {
+          "line": 8,
+          "column": 43
+        },
+        "data": "unexpected token ','; expected '\u21a6', '=>'"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_109",
@@ -1700,7 +3776,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.1494661480897195,
-    "cosine_similarity": 0.8724760521145265
+    "cosine_similarity": 0.8723964102960333,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 51
+        },
+        "endPos": {
+          "line": 8,
+          "column": 52
+        },
+        "data": "unexpected token ','; expected '\u21a6', '=>'"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_236",
@@ -1713,7 +3803,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.5387551338654779,
-    "cosine_similarity": 0.8954634120443947
+    "cosine_similarity": 0.8954634120443947,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_24",
@@ -1726,7 +3817,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.08445274226031542,
-    "cosine_similarity": 0.8681990771245078
+    "cosine_similarity": 0.8681990771245078,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 52
+        },
+        "endPos": {
+          "line": 8,
+          "column": 53
+        },
+        "data": "unexpected token ','; expected '\u21a6', '=>'"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_257",
@@ -1739,7 +3844,33 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.10489120893770223,
-    "cosine_similarity": 0.8656242266094968
+    "cosine_similarity": 0.8656242266094968,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 31
+        },
+        "endPos": {
+          "line": 8,
+          "column": 43
+        },
+        "data": "unknown identifier 'finset.range'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 61
+        },
+        "endPos": {
+          "line": 8,
+          "column": 73
+        },
+        "data": "unknown identifier 'finset.range'"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_200",
@@ -1752,7 +3883,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.53107253497887,
-    "cosine_similarity": 0.865653633089235
+    "cosine_similarity": 0.865653633089235,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_45",
@@ -1765,7 +3897,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 1.0,
-    "cosine_similarity": 0.9228362774474028
+    "cosine_similarity": 0.9228362774474028,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_739",
@@ -1778,7 +3911,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.392814650900513,
-    "cosine_similarity": 0.8837014520092458
+    "cosine_similarity": 0.8837014520092458,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_543",
@@ -1791,7 +3925,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.1472821272412462,
-    "cosine_similarity": 0.8970095772160654
+    "cosine_similarity": 0.8971073820430433,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 30
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_335",
@@ -1804,7 +3949,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.43941109616202023,
-    "cosine_similarity": 0.8847428330667267
+    "cosine_similarity": 0.8847428330667267,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_35",
@@ -1817,7 +3963,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.12812107890078672,
-    "cosine_similarity": 0.8796758059117895
+    "cosine_similarity": 0.8796758059117895,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 38
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_102",
@@ -1830,7 +3987,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.5387551338654779,
-    "cosine_similarity": 0.8801004230315926
+    "cosine_similarity": 0.8801004230315926,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_81",
@@ -1843,7 +4001,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 1.0,
-    "cosine_similarity": 0.8841086382349119
+    "cosine_similarity": 0.8841086382349119,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_155",
@@ -1856,7 +4015,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.18641996229708285,
-    "cosine_similarity": 0.8913671310803317
+    "cosine_similarity": 0.8913671310803317,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 16
+        },
+        "endPos": {
+          "line": 8,
+          "column": 63
+        },
+        "data": "invalid field notation, type is not of the form (C ...) where C is a constant\n  { n // 100 \u2264 n \u2227 n < 1000 \u2227 n % 19 = 7 }\nhas type\n  Type"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_42",
@@ -1869,7 +4042,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.17761620956803834,
-    "cosine_similarity": 0.8634281915735746
+    "cosine_similarity": 0.8634281915735746,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 39
+        },
+        "endPos": {
+          "line": 8,
+          "column": 40
+        },
+        "data": "unexpected token ','; expected '\u21a6', '=>'"
+      }
+    ]
   },
   {
     "name": "f2f_numbertheory_sumkmulnckeqnmul2pownm1",
@@ -1882,7 +4069,33 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.2919781303036754,
-    "cosine_similarity": 0.9227407644327841
+    "cosine_similarity": 0.9227407644327841,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 59
+        },
+        "endPos": {
+          "line": 8,
+          "column": 71
+        },
+        "data": "unknown identifier 'finset.range'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 86
+        },
+        "endPos": {
+          "line": 8,
+          "column": 96
+        },
+        "data": "unknown identifier 'nat.choose'"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_303",
@@ -1895,7 +4108,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.08245080243032145,
-    "cosine_similarity": 0.8788817156384146
+    "cosine_similarity": 0.8788817156384146,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 90
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_211",
@@ -1908,7 +4132,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.20389696163541748,
-    "cosine_similarity": 0.9127581090270851
+    "cosine_similarity": 0.9127581090270851,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 28
+        },
+        "endPos": {
+          "line": 8,
+          "column": 68
+        },
+        "data": "failed to synthesize\n  Fintype \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_640",
@@ -1921,7 +4159,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 1.0,
-    "cosine_similarity": 0.9138444738675369
+    "cosine_similarity": 0.9138444738675369,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_43",
@@ -1934,7 +4173,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.11325008372337807,
-    "cosine_similarity": 0.8983079634860058
+    "cosine_similarity": 0.8983079634860058,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_284",
@@ -1947,7 +4187,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.10039350106526296,
-    "cosine_similarity": 0.8418852582321844
+    "cosine_similarity": 0.8418852582321844,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_709",
@@ -1960,7 +4201,45 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.29216142942767637,
-    "cosine_similarity": 0.9094225629592276
+    "cosine_similarity": 0.9094225629592276,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 41
+        },
+        "endPos": {
+          "line": 8,
+          "column": 60
+        },
+        "data": "invalid field 'numDivisors', the environment does not contain 'Nat.numDivisors'\n  2 * n\nhas type\n  \u2115"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 73
+        },
+        "endPos": {
+          "line": 8,
+          "column": 92
+        },
+        "data": "invalid field 'numDivisors', the environment does not contain 'Nat.numDivisors'\n  3 * n\nhas type\n  \u2115"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 101
+        },
+        "endPos": {
+          "line": 8,
+          "column": 120
+        },
+        "data": "invalid field 'numDivisors', the environment does not contain 'Nat.numDivisors'\n  6 * n\nhas type\n  \u2115"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_461",
@@ -1973,7 +4252,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.20768638911687382,
-    "cosine_similarity": 0.9048543482657135
+    "cosine_similarity": 0.9048543482657135,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 44
+        },
+        "endPos": {
+          "line": 8,
+          "column": 45
+        },
+        "data": "unexpected token ','; expected '\u21a6', '=>'"
+      }
+    ]
   },
   {
     "name": "f2f_numbertheory_sqmod3in01d",
@@ -1986,7 +4279,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.4342713064636021,
-    "cosine_similarity": 0.8852819892650675
+    "cosine_similarity": 0.8852819892650675,
+    "repl_errors": []
   },
   {
     "name": "f2f_numbertheory_xsqpysqintdenomeq",
@@ -1999,7 +4293,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.26138819108278194,
-    "cosine_similarity": 0.9104143702578046
+    "cosine_similarity": 0.9104143702578046,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 29
+        },
+        "endPos": {
+          "line": 8,
+          "column": 42
+        },
+        "data": "failed to synthesize\n  Membership \u211a Type\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_22",
@@ -2012,7 +4320,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.024957174795352744,
-    "cosine_similarity": 0.8615935453137201
+    "cosine_similarity": 0.8615935453137201,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 33
+        },
+        "endPos": {
+          "line": 8,
+          "column": 34
+        },
+        "data": "unexpected token ','; expected '\u21a6', '=>'"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_136",
@@ -2025,7 +4347,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.554791407310483,
-    "cosine_similarity": 0.9341689315171133
+    "cosine_similarity": 0.9341689315171133,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_198",
@@ -2038,7 +4361,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.144769886226851,
-    "cosine_similarity": 0.8953692758281617
+    "cosine_similarity": 0.8953692758281617,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_37",
@@ -2051,7 +4375,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 1.0,
-    "cosine_similarity": 0.9261098697977523
+    "cosine_similarity": 0.9261098697977523,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_458",
@@ -2064,7 +4389,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.8578928092681435,
-    "cosine_similarity": 0.913950186141142
+    "cosine_similarity": 0.913950186141142,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_301",
@@ -2077,7 +4403,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.4138377804534518,
-    "cosine_similarity": 0.9177728783514638
+    "cosine_similarity": 0.9177728783514638,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_252",
@@ -2090,7 +4417,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.392814650900513,
-    "cosine_similarity": 0.8758112152600352
+    "cosine_similarity": 0.8758112152600352,
+    "repl_errors": []
   },
   {
     "name": "f2f_numbertheory_nckeqnm1ckpnm1ckm1",
@@ -2103,7 +4431,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.7460331250180317,
-    "cosine_similarity": 0.9225006736977552
+    "cosine_similarity": 0.9225006736977552,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_403",
@@ -2116,7 +4445,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.15415064977510756,
-    "cosine_similarity": 0.9029964437938005
+    "cosine_similarity": 0.9029964437938005,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 42
+        },
+        "endPos": {
+          "line": 8,
+          "column": 43
+        },
+        "data": "unexpected token ','; expected '\u21a6', '=>'"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_269",
@@ -2129,7 +4472,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.24996242994869414,
-    "cosine_similarity": 0.914122413372297
+    "cosine_similarity": 0.914122413372297,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_101",
@@ -2142,7 +4486,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.5452469119630863,
-    "cosine_similarity": 0.8795294522072153
+    "cosine_similarity": 0.8795294522072153,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_156",
@@ -2155,7 +4500,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.43434098825795264,
-    "cosine_similarity": 0.906169521737282
+    "cosine_similarity": 0.906169521737282,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_232",
@@ -2168,7 +4514,45 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.055617050519224207,
-    "cosine_similarity": 0.81955681490118
+    "cosine_similarity": 0.81955681490118,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 17
+        },
+        "endPos": {
+          "line": 8,
+          "column": 20
+        },
+        "data": "failed to synthesize\n  Inv \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 23
+        },
+        "endPos": {
+          "line": 8,
+          "column": 26
+        },
+        "data": "failed to synthesize\n  Inv \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 16
+        },
+        "endPos": {
+          "line": 8,
+          "column": 29
+        },
+        "data": "failed to synthesize\n  Inv \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_530",
@@ -2181,7 +4565,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.35669998303529715,
-    "cosine_similarity": 0.9176638942519464
+    "cosine_similarity": 0.9176638942519464,
+    "repl_errors": []
   },
   {
     "name": "f2f_numbertheory_aneqprodakp4_anmsqrtanp1eq2",
@@ -2194,7 +4579,33 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.668295219668344,
-    "cosine_similarity": 0.9113485177807064
+    "cosine_similarity": 0.9113485177807064,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 72
+        },
+        "endPos": {
+          "line": 8,
+          "column": 84
+        },
+        "data": "unknown identifier 'finset.range'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 121
+        },
+        "endPos": {
+          "line": 8,
+          "column": 129
+        },
+        "data": "unknown identifier 'nat.sqrt'"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_690",
@@ -2207,7 +4618,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.6626156022797183,
-    "cosine_similarity": 0.9012624741229025
+    "cosine_similarity": 0.9012624741229025,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_405",
@@ -2220,7 +4632,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.3233888901102408,
-    "cosine_similarity": 0.8892829700759746
+    "cosine_similarity": 0.8892829700759746,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_110",
@@ -2233,7 +4646,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.598449731685384,
-    "cosine_similarity": 0.9088416163078616
+    "cosine_similarity": 0.9088416163078616,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_126",
@@ -2246,7 +4660,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.20294875243084157,
-    "cosine_similarity": 0.9049795401404921
+    "cosine_similarity": 0.9049795401404921,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_370",
@@ -2259,7 +4674,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.839587623092576,
-    "cosine_similarity": 0.9218608753300205
+    "cosine_similarity": 0.9218608753300205,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_326",
@@ -2272,7 +4688,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.29385109454936514,
-    "cosine_similarity": 0.8779377769304706
+    "cosine_similarity": 0.8777715710506666,
+    "repl_errors": []
   },
   {
     "name": "f2f_numbertheory_prmdvsneqnsqmodpeq0",
@@ -2285,7 +4702,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.17159657384560215,
-    "cosine_similarity": 0.920481681308882
+    "cosine_similarity": 0.920481681308882,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 40
+        },
+        "endPos": {
+          "line": 8,
+          "column": 41
+        },
+        "data": "application type mismatch\n  Nat.Prime p\nargument\n  p\nhas type\n  \u2124 : Type\nbut is expected to have type\n  \u2115 : Type"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_30",
@@ -2298,7 +4729,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.21184844649591497,
-    "cosine_similarity": 0.912107932290238
+    "cosine_similarity": 0.912107932290238,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_961",
@@ -2311,7 +4743,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 1.0,
-    "cosine_similarity": 0.8938911957506532
+    "cosine_similarity": 0.8938911957506532,
+    "repl_errors": []
   },
   {
     "name": "f2f_numbertheory_2dvd4expn",
@@ -2324,7 +4757,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.39510435123461274,
-    "cosine_similarity": 0.9117724073888456
+    "cosine_similarity": 0.9117724073888456,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_92",
@@ -2337,7 +4771,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.1477219991186121,
-    "cosine_similarity": 0.8622344297487013
+    "cosine_similarity": 0.8622344297487013,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 42
+        },
+        "endPos": {
+          "line": 8,
+          "column": 47
+        },
+        "data": "type mismatch\n  5 * n\nhas type\n  \u2124 : outParam Type\nbut is expected to have type\n  \u2115 : Type"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_668",
@@ -2350,7 +4798,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.07195213544257117,
-    "cosine_similarity": 0.8313021000104002
+    "cosine_similarity": 0.8313021000104002,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 27
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_84",
@@ -2363,7 +4822,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.15326859947928292,
-    "cosine_similarity": 0.8768467265902373
+    "cosine_similarity": 0.8768467265902373,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 8,
+          "column": 45
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "f2f_mathd_numbertheory_412",
@@ -2376,7 +4846,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.3072314509084722,
-    "cosine_similarity": 0.9177483640366123
+    "cosine_similarity": 0.9177483640366123,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_629",
@@ -2389,7 +4860,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.12729992303943352,
-    "cosine_similarity": 0.8884229156255727
+    "cosine_similarity": 0.8884229156255727,
+    "repl_errors": []
   },
   {
     "name": "f2f_mathd_numbertheory_202",
@@ -2402,7 +4874,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.3906864844152217,
-    "cosine_similarity": 0.9003381077483269
+    "cosine_similarity": 0.9003381077483269,
+    "repl_errors": []
   },
   {
     "name": "putnam_1992_a3",
@@ -2415,7 +4888,33 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.10701962517226968,
-    "cosine_similarity": 0.8939746871172978
+    "cosine_similarity": 0.8939746871172978,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 1,
+          "column": 37
+        },
+        "endPos": {
+          "line": 1,
+          "column": 52
+        },
+        "data": "function expected at\n  Set\nterm has type\n  ?m.10"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 48
+        },
+        "endPos": {
+          "line": 3,
+          "column": 50
+        },
+        "data": "unexpected token ':'; expected '}'"
+      }
+    ]
   },
   {
     "name": "putnam_2000_b2",
@@ -2428,7 +4927,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.054697878141153705,
-    "cosine_similarity": 0.9068221050794696
+    "cosine_similarity": 0.9068221050794696,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 52
+        },
+        "endPos": {
+          "line": 3,
+          "column": 84
+        },
+        "data": "failed to synthesize\n  Membership \u2115 Type\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      }
+    ]
   },
   {
     "name": "putnam_2014_a1",
@@ -2441,7 +4954,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.07700095074755631,
-    "cosine_similarity": 0.8908849367239037
+    "cosine_similarity": 0.8909133529221542,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 55
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "putnam_1976_a3",
@@ -2454,7 +4978,33 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.09534024113830052,
-    "cosine_similarity": 0.9150811884796659
+    "cosine_similarity": 0.9150811884796659,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 1,
+          "column": 33
+        },
+        "endPos": {
+          "line": 1,
+          "column": 52
+        },
+        "data": "function expected at\n  Set\nterm has type\n  ?m.3"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 68
+        },
+        "endPos": {
+          "line": 3,
+          "column": 70
+        },
+        "data": "unexpected token '|'; expected term"
+      }
+    ]
   },
   {
     "name": "putnam_2002_b6",
@@ -2467,7 +5017,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.0132725299686945,
-    "cosine_similarity": 0.8788111702310072
+    "cosine_similarity": 0.8788111702310072,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 124
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "putnam_1977_a5",
@@ -2480,7 +5041,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.658512268936874,
-    "cosine_similarity": 0.9378480352826793
+    "cosine_similarity": 0.9378480352826793,
+    "repl_errors": []
   },
   {
     "name": "putnam_2008_b1",
@@ -2493,7 +5055,69 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.1336970344514304,
-    "cosine_similarity": 0.9073580788444475
+    "cosine_similarity": 0.9073580788444475,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 57
+        },
+        "endPos": {
+          "line": 3,
+          "column": 58
+        },
+        "data": "unknown identifier '\u211a'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 57
+        },
+        "endPos": {
+          "line": 3,
+          "column": 58
+        },
+        "data": "unknown identifier '\u211a'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 4,
+          "column": 75
+        },
+        "endPos": {
+          "line": 4,
+          "column": 77
+        },
+        "data": "unexpected token '|'; expected '//' or '}'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 4,
+          "column": 42
+        },
+        "endPos": {
+          "line": 4,
+          "column": 57
+        },
+        "data": "function expected at\n  Set\nterm has type\n  ?m.816"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 5,
+          "column": 128
+        },
+        "endPos": {
+          "line": 5,
+          "column": 130
+        },
+        "data": "unexpected token '|'; expected '//' or '}'"
+      }
+    ]
   },
   {
     "name": "putnam_1999_a4",
@@ -2506,7 +5130,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.1110097280253244,
-    "cosine_similarity": 0.8951861180596954
+    "cosine_similarity": 0.8951861180596954,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 16
+        },
+        "endPos": null,
+        "data": "expected token"
+      }
+    ]
   },
   {
     "name": "putnam_2013_a3",
@@ -2519,7 +5154,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.4270469512913905,
-    "cosine_similarity": 0.9467435567277691
+    "cosine_similarity": 0.9467435567277691,
+    "repl_errors": []
   },
   {
     "name": "putnam_1973_b2",
@@ -2532,7 +5168,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.06184671509288757,
-    "cosine_similarity": 0.898732936975311
+    "cosine_similarity": 0.898732936975311,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 63
+        },
+        "endPos": null,
+        "data": "expected token"
+      }
+    ]
   },
   {
     "name": "putnam_1980_b6",
@@ -2545,7 +5192,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.02797286020486148,
-    "cosine_similarity": 0.9237884743023791
+    "cosine_similarity": 0.9237884743023791,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 225
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "putnam_1973_a3",
@@ -2558,7 +5216,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.18780788241658158,
-    "cosine_similarity": 0.9057829057556609
+    "cosine_similarity": 0.9057829057556609,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 53
+        },
+        "endPos": {
+          "line": 3,
+          "column": 54
+        },
+        "data": "unexpected token ','; expected '\u21a6', '=>'"
+      }
+    ]
   },
   {
     "name": "putnam_2020_a5",
@@ -2571,7 +5243,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.029377612780197824,
-    "cosine_similarity": 0.9077340713713565
+    "cosine_similarity": 0.9077340713713565,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 55
+        },
+        "endPos": null,
+        "data": "expected token"
+      }
+    ]
   },
   {
     "name": "putnam_1970_a3",
@@ -2584,7 +5267,93 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.028428179081531973,
-    "cosine_similarity": 0.891805485201709
+    "cosine_similarity": 0.891805485201709,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 134
+        },
+        "endPos": {
+          "line": 3,
+          "column": 135
+        },
+        "data": "unexpected token ')'; expected ':=', 'where' or '|'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 76
+        },
+        "endPos": {
+          "line": 3,
+          "column": 77
+        },
+        "data": "failed to synthesize\n  OfNat \u2115 0\nnumerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is\n  \u2115\ndue to the absence of the instance above\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 129
+        },
+        "endPos": {
+          "line": 3,
+          "column": 134
+        },
+        "data": "failed to synthesize\n  LE \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 54
+        },
+        "endPos": {
+          "line": 3,
+          "column": 57
+        },
+        "data": "failed to synthesize\n  HPow \u2115 Nat \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 97
+        },
+        "endPos": {
+          "line": 3,
+          "column": 101
+        },
+        "data": "failed to synthesize\n  HPow Nat \u2115 (?m.929 n m k d l)\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 110
+        },
+        "endPos": {
+          "line": 3,
+          "column": 114
+        },
+        "data": "failed to synthesize\n  HPow Nat \u2115 (?m.939 n m k d l)\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 105
+        },
+        "endPos": {
+          "line": 3,
+          "column": 119
+        },
+        "data": "failed to synthesize\n  HMul \u2115 Nat (?m.934 n m k d l)\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      }
+    ]
   },
   {
     "name": "putnam_2018_a4",
@@ -2597,7 +5366,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.32140230876571274,
-    "cosine_similarity": 0.913138729914954
+    "cosine_similarity": 0.913138729914954,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 217
+        },
+        "endPos": {
+          "line": 3,
+          "column": 241
+        },
+        "data": "failed to synthesize\n  CommMonoid G\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      }
+    ]
   },
   {
     "name": "putnam_2013_a2",
@@ -2610,7 +5393,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 7.18512332115973e-10,
-    "cosine_similarity": 0.8887010073795987
+    "cosine_similarity": 0.8887010073795987,
+    "repl_errors": []
   },
   {
     "name": "putnam_2023_b2",
@@ -2623,7 +5407,57 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.038115442627705026,
-    "cosine_similarity": 0.8239931626446189
+    "cosine_similarity": 0.8239931626446189,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 28
+        },
+        "endPos": {
+          "line": 3,
+          "column": 33
+        },
+        "data": "failed to synthesize\n  LT \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 32
+        },
+        "endPos": {
+          "line": 3,
+          "column": 33
+        },
+        "data": "failed to synthesize\n  OfNat \u2115 0\nnumerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is\n  \u2115\ndue to the absence of the instance above\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 46
+        },
+        "endPos": {
+          "line": 3,
+          "column": 49
+        },
+        "data": "function expected at\n  k\nterm has type\n  ?m.48"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 61
+        },
+        "endPos": {
+          "line": 3,
+          "column": 64
+        },
+        "data": "function expected at\n  k\nterm has type\n  ?m.99"
+      }
+    ]
   },
   {
     "name": "putnam_2008_b6",
@@ -2636,7 +5470,45 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.11893770624332835,
-    "cosine_similarity": 0.9352923282448098
+    "cosine_similarity": 0.9352923282448098,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 59
+        },
+        "endPos": {
+          "line": 3,
+          "column": 69
+        },
+        "data": "unknown identifier 'equiv.perm'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 92
+        },
+        "endPos": {
+          "line": 3,
+          "column": 101
+        },
+        "data": "failed to synthesize\n  AddGroup \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 85
+        },
+        "endPos": {
+          "line": 3,
+          "column": 90
+        },
+        "data": "function expected at\n  fin\nterm has type\n  ?m.81"
+      }
+    ]
   },
   {
     "name": "putnam_2022_a3",
@@ -2649,7 +5521,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.39491851865238337,
-    "cosine_similarity": 0.9316534708610813
+    "cosine_similarity": 0.9316534708610813,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 76
+        },
+        "endPos": {
+          "line": 3,
+          "column": 77
+        },
+        "data": "unexpected token ','; expected '\u21a6', '=>'"
+      }
+    ]
   },
   {
     "name": "putnam_1974_a1",
@@ -2662,7 +5548,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.017160567942712597,
-    "cosine_similarity": 0.8897734233029307
+    "cosine_similarity": 0.8897734233029307,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 42
+        },
+        "endPos": {
+          "line": 3,
+          "column": 44
+        },
+        "data": "unexpected token '\u2208'; expected ','"
+      }
+    ]
   },
   {
     "name": "putnam_2012_b6",
@@ -2675,7 +5575,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.025707154196510356,
-    "cosine_similarity": 0.93139125558106
+    "cosine_similarity": 0.93139125558106,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 111
+        },
+        "endPos": {
+          "line": 3,
+          "column": 112
+        },
+        "data": "unexpected token ','; expected '\u21a6', '=>'"
+      }
+    ]
   },
   {
     "name": "putnam_1988_b1",
@@ -2688,7 +5602,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.3570224248177065,
-    "cosine_similarity": 0.8941561346941771
+    "cosine_similarity": 0.8941561346941771,
+    "repl_errors": []
   },
   {
     "name": "putnam_2002_a6",
@@ -2701,7 +5616,30 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.030391944527198907,
-    "cosine_similarity": 0.8886716327114892
+    "cosine_similarity": 0.8886716327114892,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 1,
+          "column": 33
+        },
+        "endPos": {
+          "line": 1,
+          "column": 38
+        },
+        "data": "function expected at\n  Set\nterm has type\n  ?m.3"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 65
+        },
+        "endPos": null,
+        "data": "expected token"
+      }
+    ]
   },
   {
     "name": "putnam_2003_b4",
@@ -2714,7 +5652,33 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.1439132404570823,
-    "cosine_similarity": 0.9273376625655696
+    "cosine_similarity": 0.9273376625655696,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 285
+        },
+        "endPos": {
+          "line": 3,
+          "column": 296
+        },
+        "data": "failed to synthesize\n  Membership \u2102 Type\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 325
+        },
+        "endPos": {
+          "line": 3,
+          "column": 336
+        },
+        "data": "failed to synthesize\n  Membership \u2102 Type\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      }
+    ]
   },
   {
     "name": "putnam_1975_a1",
@@ -2727,7 +5691,81 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.0940590042843577,
-    "cosine_similarity": 0.8751198502507369
+    "cosine_similarity": 0.8751198502507369,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 41
+        },
+        "endPos": {
+          "line": 3,
+          "column": 48
+        },
+        "data": "failed to synthesize\n  HAdd \u2124 \u2124 ?m.150\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 97
+        },
+        "endPos": {
+          "line": 3,
+          "column": 106
+        },
+        "data": "failed to synthesize\n  HAdd \u2124 \u2124 ?m.343\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 41
+        },
+        "endPos": {
+          "line": 3,
+          "column": 44
+        },
+        "data": "failed to synthesize\n  HPow \u2124 Nat \u2124\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 85
+        },
+        "endPos": {
+          "line": 3,
+          "column": 90
+        },
+        "data": "failed to synthesize\n  HMul Nat \u2124 ?m.282\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 97
+        },
+        "endPos": {
+          "line": 3,
+          "column": 100
+        },
+        "data": "failed to synthesize\n  HPow \u2124 Nat \u2124\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 103
+        },
+        "endPos": {
+          "line": 3,
+          "column": 106
+        },
+        "data": "failed to synthesize\n  HPow \u2124 Nat \u2124\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      }
+    ]
   },
   {
     "name": "putnam_1981_b3",
@@ -2740,7 +5778,69 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.21419046521878135,
-    "cosine_similarity": 0.9094414210073246
+    "cosine_similarity": 0.9094414210073246,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 56
+        },
+        "endPos": {
+          "line": 3,
+          "column": 63
+        },
+        "data": "invalid field 'prime', the environment does not contain 'Nat.prime'\n  p\nhas type\n  \u2115"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 139
+        },
+        "endPos": {
+          "line": 3,
+          "column": 146
+        },
+        "data": "invalid field 'prime', the environment does not contain 'Nat.prime'\n  p\nhas type\n  \u2115"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 84
+        },
+        "endPos": {
+          "line": 3,
+          "column": 91
+        },
+        "data": "failed to synthesize\n  HAdd \u2124 \u2124 \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 153
+        },
+        "endPos": {
+          "line": 3,
+          "column": 160
+        },
+        "data": "failed to synthesize\n  HAdd \u2124 \u2124 \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 167
+        },
+        "endPos": {
+          "line": 3,
+          "column": 174
+        },
+        "data": "failed to synthesize\n  HAdd \u2124 \u2124 \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      }
+    ]
   },
   {
     "name": "putnam_1980_a2",
@@ -2753,7 +5853,321 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.25594523700915284,
-    "cosine_similarity": 0.9067042843823401
+    "cosine_similarity": 0.9067042843823401,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 30
+        },
+        "endPos": {
+          "line": 3,
+          "column": 35
+        },
+        "data": "failed to synthesize\n  LT \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 43
+        },
+        "endPos": {
+          "line": 3,
+          "column": 48
+        },
+        "data": "failed to synthesize\n  LT \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 85
+        },
+        "endPos": {
+          "line": 3,
+          "column": 90
+        },
+        "data": "failed to synthesize\n  LT \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 93
+        },
+        "endPos": {
+          "line": 3,
+          "column": 98
+        },
+        "data": "failed to synthesize\n  LT \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 101
+        },
+        "endPos": {
+          "line": 3,
+          "column": 106
+        },
+        "data": "failed to synthesize\n  LT \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 109
+        },
+        "endPos": {
+          "line": 3,
+          "column": 114
+        },
+        "data": "failed to synthesize\n  LT \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 253
+        },
+        "endPos": {
+          "line": 3,
+          "column": 272
+        },
+        "data": "unknown identifier 'finset.univ.product'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 335
+        },
+        "endPos": {
+          "line": 3,
+          "column": 354
+        },
+        "data": "unknown identifier 'finset.univ.product'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 30
+        },
+        "endPos": {
+          "line": 3,
+          "column": 31
+        },
+        "data": "failed to synthesize\n  OfNat \u2115 0\nnumerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is\n  \u2115\ndue to the absence of the instance above\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 43
+        },
+        "endPos": {
+          "line": 3,
+          "column": 44
+        },
+        "data": "failed to synthesize\n  OfNat \u2115 0\nnumerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is\n  \u2115\ndue to the absence of the instance above\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 89
+        },
+        "endPos": {
+          "line": 3,
+          "column": 90
+        },
+        "data": "failed to synthesize\n  OfNat \u2115 0\nnumerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is\n  \u2115\ndue to the absence of the instance above\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 97
+        },
+        "endPos": {
+          "line": 3,
+          "column": 98
+        },
+        "data": "failed to synthesize\n  OfNat \u2115 0\nnumerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is\n  \u2115\ndue to the absence of the instance above\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 105
+        },
+        "endPos": {
+          "line": 3,
+          "column": 106
+        },
+        "data": "failed to synthesize\n  OfNat \u2115 0\nnumerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is\n  \u2115\ndue to the absence of the instance above\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 113
+        },
+        "endPos": {
+          "line": 3,
+          "column": 114
+        },
+        "data": "failed to synthesize\n  OfNat \u2115 0\nnumerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is\n  \u2115\ndue to the absence of the instance above\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 135
+        },
+        "endPos": {
+          "line": 3,
+          "column": 138
+        },
+        "data": "failed to synthesize\n  HPow Nat \u2115 (?m.924 f a b c d)\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 141
+        },
+        "endPos": {
+          "line": 3,
+          "column": 144
+        },
+        "data": "failed to synthesize\n  HPow Nat \u2115 (?m.925 f a b c d)\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 165
+        },
+        "endPos": {
+          "line": 3,
+          "column": 168
+        },
+        "data": "failed to synthesize\n  HPow Nat \u2115 (?m.935 f a b c d)\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 171
+        },
+        "endPos": {
+          "line": 3,
+          "column": 174
+        },
+        "data": "failed to synthesize\n  HPow Nat \u2115 (?m.936 f a b c d)\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 195
+        },
+        "endPos": {
+          "line": 3,
+          "column": 198
+        },
+        "data": "failed to synthesize\n  HPow Nat \u2115 (?m.946 f a b c d)\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 201
+        },
+        "endPos": {
+          "line": 3,
+          "column": 204
+        },
+        "data": "failed to synthesize\n  HPow Nat \u2115 (?m.947 f a b c d)\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 225
+        },
+        "endPos": {
+          "line": 3,
+          "column": 228
+        },
+        "data": "failed to synthesize\n  HPow Nat \u2115 (?m.957 f a b c d)\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 231
+        },
+        "endPos": {
+          "line": 3,
+          "column": 234
+        },
+        "data": "failed to synthesize\n  HPow Nat \u2115 (?m.958 f a b c d)\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 117
+        },
+        "endPos": {
+          "line": 3,
+          "column": 132
+        },
+        "data": "function expected at\n  lcm\nterm has type\n  ?m.172"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 147
+        },
+        "endPos": {
+          "line": 3,
+          "column": 162
+        },
+        "data": "function expected at\n  lcm\nterm has type\n  ?m.172"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 177
+        },
+        "endPos": {
+          "line": 3,
+          "column": 192
+        },
+        "data": "function expected at\n  lcm\nterm has type\n  ?m.172"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 207
+        },
+        "endPos": {
+          "line": 3,
+          "column": 222
+        },
+        "data": "function expected at\n  lcm\nterm has type\n  ?m.172"
+      }
+    ]
   },
   {
     "name": "putnam_1994_b4",
@@ -2766,7 +6180,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.12419895500579724,
-    "cosine_similarity": 0.9017577645368097
+    "cosine_similarity": 0.9017577645368097,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 72
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "putnam_2011_b2",
@@ -2779,7 +6204,33 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.11784131986159603,
-    "cosine_similarity": 0.8958976728882129
+    "cosine_similarity": 0.8958976728882129,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 1,
+          "column": 33
+        },
+        "endPos": {
+          "line": 1,
+          "column": 38
+        },
+        "data": "function expected at\n  Set\nterm has type\n  ?m.3"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 53
+        },
+        "endPos": {
+          "line": 3,
+          "column": 55
+        },
+        "data": "unexpected token '|'; expected '}'"
+      }
+    ]
   },
   {
     "name": "putnam_1988_b6",
@@ -2792,7 +6243,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.09170029334715941,
-    "cosine_similarity": 0.8926081147283897
+    "cosine_similarity": 0.8926081147283897,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 67
+        },
+        "endPos": {
+          "line": 3,
+          "column": 68
+        },
+        "data": "unexpected token ','; expected '\u21a6', '=>'"
+      }
+    ]
   },
   {
     "name": "putnam_2018_a2",
@@ -2805,7 +6270,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.05159915299552945,
-    "cosine_similarity": 0.9250631554589096
+    "cosine_similarity": 0.9250631554589096,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 85
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "putnam_1998_b6",
@@ -2818,7 +6294,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.38471697473345795,
-    "cosine_similarity": 0.9320250185144591
+    "cosine_similarity": 0.9320250185144591,
+    "repl_errors": []
   },
   {
     "name": "putnam_2015_b6",
@@ -2831,7 +6308,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.05685686079298245,
-    "cosine_similarity": 0.890820659852409
+    "cosine_similarity": 0.890820659852409,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 36
+        },
+        "endPos": {
+          "line": 3,
+          "column": 37
+        },
+        "data": "unexpected token ','; expected '\u21a6', '=>'"
+      }
+    ]
   },
   {
     "name": "putnam_2016_a1",
@@ -2844,7 +6335,57 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.05182499163760786,
-    "cosine_similarity": 0.9117733257112922
+    "cosine_similarity": 0.9117733257112922,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 25
+        },
+        "endPos": {
+          "line": 3,
+          "column": 30
+        },
+        "data": "failed to synthesize\n  LT \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 29
+        },
+        "endPos": {
+          "line": 3,
+          "column": 30
+        },
+        "data": "failed to synthesize\n  OfNat \u2115 0\nnumerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is\n  \u2115\ndue to the absence of the instance above\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 63
+        },
+        "endPos": {
+          "line": 3,
+          "column": 84
+        },
+        "data": "unknown identifier 'polynomial.derivative'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 85
+        },
+        "endPos": {
+          "line": 3,
+          "column": 90
+        },
+        "data": "function expected at\n  [j]\nterm has type\n  List \u2115"
+      }
+    ]
   },
   {
     "name": "putnam_2005_a1",
@@ -2857,7 +6398,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.09431944353203157,
-    "cosine_similarity": 0.9385092506626456
+    "cosine_similarity": 0.9385092506626456,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 144
+        },
+        "endPos": {
+          "line": 3,
+          "column": 156
+        },
+        "data": "unknown identifier 'finset.range'"
+      }
+    ]
   },
   {
     "name": "putnam_1995_a3",
@@ -2870,7 +6425,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.14083531029039678,
-    "cosine_similarity": 0.9081228415010909
+    "cosine_similarity": 0.9081228415010909,
+    "repl_errors": []
   },
   {
     "name": "putnam_2017_b6",
@@ -2883,7 +6439,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.023934477170678935,
-    "cosine_similarity": 0.8900026544718747
+    "cosine_similarity": 0.8900026544718747,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 65
+        },
+        "endPos": null,
+        "data": "expected token"
+      }
+    ]
   },
   {
     "name": "putnam_1998_b5",
@@ -2896,7 +6463,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.03343197925055772,
-    "cosine_similarity": 0.8906442372077643
+    "cosine_similarity": 0.8906442372077643,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 43
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "putnam_1973_b3",
@@ -2909,7 +6487,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.4993255828113887,
-    "cosine_similarity": 0.9404657695856039
+    "cosine_similarity": 0.9404657695856039,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 96
+        },
+        "endPos": {
+          "line": 3,
+          "column": 107
+        },
+        "data": "The `ExistsUnique` notation should not be used with more than one binder.\n\nThe reason for this is that `\u2203! (x : \u03b1), \u2203! (y : \u03b2), p x y` has a completely different meaning from `\u2203! q : \u03b1 \u00d7 \u03b2, p q.1 q.2`. To prevent confusion, this notation requires that you be explicit and use one with the correct interpretation."
+      }
+    ]
   },
   {
     "name": "putnam_2000_a2",
@@ -2922,7 +6514,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.07733433721780288,
-    "cosine_similarity": 0.9013402363911064
+    "cosine_similarity": 0.9013402363911064,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 28
+        },
+        "endPos": {
+          "line": 3,
+          "column": 41
+        },
+        "data": "unknown identifier 'filter.at_top'"
+      }
+    ]
   },
   {
     "name": "putnam_2017_b3",
@@ -2935,7 +6541,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.17285010537127138,
-    "cosine_similarity": 0.9275302705832895
+    "cosine_similarity": 0.9275302705832895,
+    "repl_errors": []
   },
   {
     "name": "putnam_1981_a1",
@@ -2948,7 +6555,21 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.05023458639234338,
-    "cosine_similarity": 0.9188393810375695
+    "cosine_similarity": 0.9188393810375695,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 36
+        },
+        "endPos": {
+          "line": 3,
+          "column": 37
+        },
+        "data": "unexpected token ','; expected '\u21a6', '=>'"
+      }
+    ]
   },
   {
     "name": "putnam_2010_a4",
@@ -2961,7 +6582,8 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.2648634566399074,
-    "cosine_similarity": 0.937511796427162
+    "cosine_similarity": 0.937511796427162,
+    "repl_errors": []
   },
   {
     "name": "putnam_1983_a3",
@@ -2974,7 +6596,33 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.3369201604104883,
-    "cosine_similarity": 0.9236367908245362
+    "cosine_similarity": 0.9236367908245362,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 28
+        },
+        "endPos": {
+          "line": 3,
+          "column": 37
+        },
+        "data": "unknown identifier 'nat.prime'"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 98
+        },
+        "endPos": {
+          "line": 3,
+          "column": 110
+        },
+        "data": "unknown identifier 'finset.range'"
+      }
+    ]
   },
   {
     "name": "putnam_2020_a1",
@@ -2987,7 +6635,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.0277651724972491,
-    "cosine_similarity": 0.8856313379149365
+    "cosine_similarity": 0.8856313379149365,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 30
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "putnam_2021_a6",
@@ -3000,7 +6659,105 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.15361755393174342,
-    "cosine_similarity": 0.9074333553903658
+    "cosine_similarity": 0.9074333553903658,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 173
+        },
+        "endPos": {
+          "line": 3,
+          "column": 178
+        },
+        "data": "failed to synthesize\n  LT \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 181
+        },
+        "endPos": {
+          "line": 3,
+          "column": 186
+        },
+        "data": "failed to synthesize\n  LT \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 200
+        },
+        "endPos": {
+          "line": 3,
+          "column": 205
+        },
+        "data": "failed to synthesize\n  HMul \u2115 \u2115 ?m.489\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 177
+        },
+        "endPos": {
+          "line": 3,
+          "column": 178
+        },
+        "data": "failed to synthesize\n  OfNat \u2115 1\nnumerals are polymorphic in Lean, but the numeral `1` cannot be used in a context where the expected type is\n  \u2115\ndue to the absence of the instance above\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 185
+        },
+        "endPos": {
+          "line": 3,
+          "column": 186
+        },
+        "data": "failed to synthesize\n  OfNat \u2115 1\nnumerals are polymorphic in Lean, but the numeral `1` cannot be used in a context where the expected type is\n  \u2115\ndue to the absence of the instance above\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 19
+        },
+        "endPos": {
+          "line": 3,
+          "column": 31
+        },
+        "data": "function expected at\n  Polynomial\nterm has type\n  ?m.7"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 102
+        },
+        "endPos": {
+          "line": 3,
+          "column": 114
+        },
+        "data": "function expected at\n  Polynomial\nterm has type\n  ?m.7"
+      },
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 102
+        },
+        "endPos": {
+          "line": 3,
+          "column": 114
+        },
+        "data": "function expected at\n  Polynomial\nterm has type\n  ?m.7"
+      }
+    ]
   },
   {
     "name": "putnam_1982_b4",
@@ -3013,7 +6770,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.06433389567508312,
-    "cosine_similarity": 0.8869064078349544
+    "cosine_similarity": 0.8869064078349544,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 93
+        },
+        "endPos": null,
+        "data": "expected token"
+      }
+    ]
   },
   {
     "name": "putnam_1996_a5",
@@ -3026,7 +6794,18 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.3536790538050789,
-    "cosine_similarity": 0.9283288364276454
+    "cosine_similarity": 0.9283288364276454,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 80
+        },
+        "endPos": null,
+        "data": "expected ';' or line break"
+      }
+    ]
   },
   {
     "name": "putnam_1972_a5",
@@ -3039,6 +6818,20 @@
     "model": "gpt-4o",
     "provider": "openai",
     "bleu": 0.40103544188108264,
-    "cosine_similarity": 0.9312945930518762
+    "cosine_similarity": 0.9312945930518762,
+    "repl_errors": [
+      {
+        "severity": "error",
+        "pos": {
+          "line": 3,
+          "column": 42
+        },
+        "endPos": {
+          "line": 3,
+          "column": 45
+        },
+        "data": "failed to synthesize\n  HPow \u2124 \u2124 ?m.103\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+      }
+    ]
   }
 ]
