@@ -5,7 +5,7 @@ from tqdm import tqdm
 from datasets import load_dataset, concatenate_datasets
 
 import config
-from utils import load_few_shot_examples, translate_statement
+from utils import load_few_shot_examples, translate_statement, get_hypothesis_decomp
 
 os.environ['OPENAI_API_KEY'] = config.OPENAI_API_KEY
 
@@ -21,9 +21,17 @@ for item in tqdm(all_data):
     informal_statement = item['informal_statement']
     
     try:
+        if config.HYPOTHESIS_DECOMP:
+            decomp = get_hypothesis_decomp(informal_statement, 
+                                           model=config.DEFAULT_MODEL, 
+                                           max_tokens=1000,)
+        else:
+            decomp = None
+
         formal_statement = translate_statement(
             informal_statement,
             few_shot_examples,
+            hypothesis_decomp=decomp,
             model=config.DEFAULT_MODEL,
             temperature=0.0,
             max_tokens=1000,
@@ -31,12 +39,12 @@ for item in tqdm(all_data):
 
         # other passes: hypothesis decomp, REPL feedback, etc
         
-
         results.append({
             'name': item['name'],
             'informal_statement': informal_statement,
             'generated_formal_statement': formal_statement,
             'formal_statement': item['formal_statement'],
+            'hypothesis_decomp': decomp, # OPTIONAL
             'tags': item['tags'],
             'header': item['header'],
             'split': item['split'],

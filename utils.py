@@ -28,22 +28,32 @@ def load_few_shot_examples(filepath):
     return examples
 
 # test adding sorry to fewshot examples: KEEP
-def generate_prompt(informal_statement, few_shot_examples, instruction=None):
+def generate_prompt(informal_statement, few_shot_examples, hypothesis_decomp):
     examples_text = ""
     for example in few_shot_examples:
         examples_text += f"Informal statement:\n{example['nl_statement']}\n\nFormal statement in Lean 4:\n{example['formal_statement']} sorry\n\n"
     
     instruction = f"You are an expert in formalizing mathematical statements in Lean 4. Given the following informal mathematical statement, write the corresponding formal statement in Lean 4 syntax.\nOutput format: The translated LEAN 4 theorem should be provided as a single cohesive code block, displaying the correct syntax and formatting expected for a LEAN 4 theorem statement. Do not enclose the code block in backticks. write sorry as the proof."
     
-    prompt = f"{instruction}\n\n{examples_text}\n\nInformal statement:\n{informal_statement}\n\nFormal statement in Lean 4:"
+    prompt = f"{instruction}\n\n"
+
+    if few_shot_examples:
+        prompt += f"{examples_text}\n\n"
+        
+    prompt += f"Informal statement:\n{informal_statement}\n\n"
+    
+    if hypothesis_decomp:
+        prompt += f"Identified premisces and goal of the statement:\n{str(hypothesis_decomp)}\n\n"
+
+    prompt += "Formal statement in Lean 4:"
     return prompt
 
 # add modularity: many ways to generate prompt and messages
 # few shot : static or NN?
 # messages: all in one prompt or as 'chat history' ?
 
-def translate_statement(informal_statement, few_shot_examples, model=DEFAULT_MODEL, **kwargs):
-    prompt = generate_prompt(informal_statement, few_shot_examples)
+def translate_statement(informal_statement, few_shot_examples, hypothesis_decomp=None, model=DEFAULT_MODEL, **kwargs):
+    prompt = generate_prompt(informal_statement, few_shot_examples, hypothesis_decomp)
     messages = [{"role": "user", "content": prompt}]
     
     response = completion(
@@ -56,8 +66,51 @@ def translate_statement(informal_statement, few_shot_examples, model=DEFAULT_MOD
     
     return formal_statement
 
-def get_hypothesis_decomp(): #TODO
-    ...
+def get_hypothesis_decomp(informal_statement, model=DEFAULT_MODEL, **kwargs):
+    instruction = f'''Extract the premises and goal from an informal theorem statement to assist in formalizing it in LEAN 4.
+
+# Steps
+
+1. **Identify Premises**:
+   - Read the informal statement carefully.
+   - Identify the assumptions or conditions that are provided in the theorem.
+   - Extract these premises clearly and mark them as conditions that must hold true.
+
+2. **Identify the Goal**:
+   - Identify what is being proven or concluded from the assumptions in the statement.
+   - Clearly separate the goal from the premises.
+
+# Output Format
+
+- A concise breakdown using the following structure, do not enclose the code block in backticks.:
+{{
+  "premises": [
+    "[Premise 1]",
+    "[Premise 2]",
+    "... (List other premises)"
+  ],
+  "goal": "[The goal that follows from the premises]"
+}}
+
+# Notes 
+
+- Carefully distinguish terms that indicate premises ("if," "given," "assume") from those that indicate goals ("then," "thus," "is").
+- Ensure that all premises are complete and independently meaningful.
+- The goal should directly represent what the theorem is asserting, without including extraneous details.'''
+    
+    prompt = f"{instruction}\n\nInformal statement:\n{informal_statement}\n\nOutput:"
+    messages = [{"role": "user", "content": prompt}]
+
+    response = completion(
+        messages=messages,
+        model=model,
+        **kwargs
+    )
+
+    decomp = response.choices[0].message.content
+
+    return decomp
+
 
 def clean_theorem_string(theorem_string: str, new_theorem_name: str = "dummy") -> str | None:
     try:

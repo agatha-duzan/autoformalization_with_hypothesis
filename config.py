@@ -15,10 +15,10 @@ DEFAULT_MODEL = 'gpt-4o'
 DEFAULT_PROVIDER = 'openai'
 
 # Process
-FEWSHOT = True
+FEWSHOT = False
 HYPOTHESIS_DECOMP = True
 
 # Output config
 RESULTS_DIR = '/home/agatha/Desktop/MA3/sem proj/autoformalization_with_hypothesis/results/generations'
-OUTPUT_NAME = 'direct_translation_with_general_fewshot'
+OUTPUT_NAME = 'base_hypothesis_decomp'
 EVAL_RESULTS_DIR = '/home/agatha/Desktop/MA3/sem proj/autoformalization_with_hypothesis/results/evaluations'
