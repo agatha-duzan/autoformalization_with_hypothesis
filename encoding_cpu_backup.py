@@ -4,15 +4,12 @@ import pandas as pd
 import multiprocessing
 
 from tqdm import tqdm
-from typing import List
+from typing import Union, List
 from transformers import AutoTokenizer, AutoModelForTextEncoding
-
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-print(f"Using device: {device}")
 
 @torch.no_grad()
 def encode(s: List[str]) -> torch.Tensor:
-    tokenized_s = tokenizer(s, return_tensors="pt", padding=True, truncation=True).to(device)
+    tokenized_s = tokenizer(s, return_tensors="pt", padding=True, truncation=True)
     input_ids = tokenized_s.input_ids
     attention_mask = tokenized_s.attention_mask
 
@@ -24,7 +21,7 @@ def encode(s: List[str]) -> torch.Tensor:
 
 def encode_premises(premises: List[str], filename: str, batch_size: int = 8):
     premise_encs = []
-    print(f"Encoding premises on {device} in batches of {batch_size}...")
+    print(f"Encoding premises in batches of {batch_size}...")
     
     for i in tqdm(range(0, len(premises), batch_size)):
         batch = premises[i:i + batch_size]
@@ -42,7 +39,7 @@ def encode_premises(premises: List[str], filename: str, batch_size: int = 8):
 def main():
     file_path = 'data/dependencies_mathlib_v4.14.0-rc1.jsonl'
     output_file = 'premises.pkl'
-    batch_size = 32 # adjust to not crash
+    batch_size = 32
 
     print(f"Loading data from {file_path}...")
     df = pd.read_json(file_path, lines=True)
@@ -52,7 +49,11 @@ def main():
     tokenizer = AutoTokenizer.from_pretrained("kaiyuy/leandojo-lean4-retriever-byt5-small")
     model = AutoModelForTextEncoding.from_pretrained("kaiyuy/leandojo-lean4-retriever-byt5-small")
     model.eval()
-    model.to(device)
+
+    # use all available CPU cores
+    num_cpu_cores = multiprocessing.cpu_count()
+    torch.set_num_threads(num_cpu_cores)
+    print(f"Using {num_cpu_cores} CPU cores for processing.")
 
     encode_premises(all_premises, output_file, batch_size=batch_size)
 
