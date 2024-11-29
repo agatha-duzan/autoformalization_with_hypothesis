@@ -16,7 +16,7 @@ DEFAULT_PROVIDER = 'openai'
 
 # Process
 FEWSHOT = False
-HYPOTHESIS_DECOMP = True
+HYPOTHESIS_DECOMP = 'informal'
 
 # Output config
 RESULTS_DIR = '/home/agatha/Desktop/MA3/sem proj/autoformalization_with_hypothesis/results/generations'

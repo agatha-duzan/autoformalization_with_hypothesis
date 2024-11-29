@@ -66,7 +66,7 @@ def translate_statement(informal_statement, few_shot_examples, hypothesis_decomp
     
     return formal_statement
 
-def get_hypothesis_decomp(informal_statement, model=DEFAULT_MODEL, **kwargs):
+def informal_hypothesis_decomp(informal_statement, model=DEFAULT_MODEL, **kwargs):
     instruction = f'''Extract the premises and goal from an informal theorem statement to assist in formalizing it in LEAN 4.
 
 # Steps
@@ -111,6 +111,9 @@ def get_hypothesis_decomp(informal_statement, model=DEFAULT_MODEL, **kwargs):
 
     return decomp
 
+def formal_hypothesis_decomp(informal_statement, model=DEFAULT_MODEL, **kwargs):
+    ...
+    return
 
 def clean_theorem_string(theorem_string: str, new_theorem_name: str = "dummy") -> str | None:
     try:
