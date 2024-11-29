@@ -15,6 +15,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from repl.server import LeanServer, RobustLeanServer
 
 from config import *
+from encoding import retrieve
 
 def load_few_shot_examples(filepath):
     examples = []
@@ -27,7 +28,6 @@ def load_few_shot_examples(filepath):
             })
     return examples
 
-# test adding sorry to fewshot examples: KEEP
 def generate_prompt(informal_statement, few_shot_examples, hypothesis_decomp):
     examples_text = ""
     for example in few_shot_examples:
@@ -52,7 +52,7 @@ def generate_prompt(informal_statement, few_shot_examples, hypothesis_decomp):
 # few shot : static or NN?
 # messages: all in one prompt or as 'chat history' ?
 
-def translate_statement(informal_statement, few_shot_examples, hypothesis_decomp=None, model=DEFAULT_MODEL, **kwargs):
+def translate_statement(informal_statement, few_shot_examples= [], hypothesis_decomp=None, model=DEFAULT_MODEL, **kwargs):
     prompt = generate_prompt(informal_statement, few_shot_examples, hypothesis_decomp)
     messages = [{"role": "user", "content": prompt}]
     

@@ -39,6 +39,20 @@ def encode_premises(premises: List[str], filename: str, batch_size: int = 8):
         pickle.dump(data, f)
     print(f"Premises and encodings saved to {filename}")
 
+@torch.no_grad()
+def retrieve(query: str, premises_file: str, k: int) -> List[str]:
+    """Retrieve the top-k premises given a query."""
+    with open(premises_file, 'rb') as f:
+        data = pickle.load(f)
+
+    premises = data['premises']
+    encodings = torch.tensor(data['encodings'])
+    query_enc = encode(query)
+
+    scores = (query_enc @ encodings.T)
+    topk = scores.topk(k).indices.tolist()
+    return [premises[i] for i in topk]
+
 def main():
     file_path = 'data/dependencies_mathlib_v4.14.0-rc1.jsonl'
     output_file = 'premises.pkl'

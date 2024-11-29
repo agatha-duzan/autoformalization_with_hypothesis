@@ -26,7 +26,13 @@ for item in tqdm(all_data):
                                            model=config.DEFAULT_MODEL, 
                                            max_tokens=1000,)
         elif config.HYPOTHESIS_DECOMP == 'formal':
-            decomp = ...
+            formal_try = formal_statement = translate_statement(
+            informal_statement,
+            few_shot_examples,
+            model=config.DEFAULT_MODEL,
+            temperature=0.0,
+            max_tokens=1000,
+            )
         else:
             decomp = None
 
@@ -37,7 +43,7 @@ for item in tqdm(all_data):
             model=config.DEFAULT_MODEL,
             temperature=0.0,
             max_tokens=1000,
-        )
+            )
 
         # other passes: hypothesis decomp, REPL feedback, etc
         
