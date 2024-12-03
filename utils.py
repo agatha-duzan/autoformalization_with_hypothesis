@@ -112,7 +112,10 @@ def informal_hypothesis_decomp(informal_statement, model=DEFAULT_MODEL, **kwargs
     return decomp
 
 def formal_hypothesis_decomp(informal_statement, model=DEFAULT_MODEL, **kwargs):
-    ...
+    # generate first try
+    # extract hypothesis from it
+    # for each hypothesis, retrieve top k premises from corpora
+    # second pass: retieval augmented generation
     return
 
 def clean_theorem_string(theorem_string: str, new_theorem_name: str = "dummy") -> str | None:
