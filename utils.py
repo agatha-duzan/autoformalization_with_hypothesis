@@ -48,10 +48,6 @@ def generate_prompt(informal_statement, few_shot_examples, hypothesis_decomp):
     prompt += "Formal statement in Lean 4:"
     return prompt
 
-# add modularity: many ways to generate prompt and messages
-# few shot : static or NN?
-# messages: all in one prompt or as 'chat history' ?
-
 def translate_statement(informal_statement, few_shot_examples= [], hypothesis_decomp=None, model=DEFAULT_MODEL, **kwargs):
     prompt = generate_prompt(informal_statement, few_shot_examples, hypothesis_decomp)
     messages = [{"role": "user", "content": prompt}]

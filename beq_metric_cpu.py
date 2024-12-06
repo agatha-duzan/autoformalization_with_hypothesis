@@ -1,13 +1,16 @@
 import json
+import os
 import multiprocessing as mp
 import re
-from multiprocessing.pool import Pool
-
 import jsonlines
-from pyleanrepl import RobustLeanServer, clean_cache
+from multiprocessing.pool import Pool
 from rich.console import Console
 from rich.syntax import Syntax
 from tqdm import tqdm
+
+import config
+from eval import load_checkpoint, save_checkpoint
+from pyleanrepl import RobustLeanServer, clean_cache
 
 console = Console()
 
@@ -369,7 +372,7 @@ def _extract_proof(
     return None
 
 
-if __name__ == "__main__":
+def toy_example():
     # clean_cache()
     beq_metric = BEqMetricCPU()
 
@@ -391,36 +394,36 @@ open scoped BigOperators"""
             "theorem sQ : Set.Infinite {p : ℕ | Nat.Prime p ∧ p % 6 = 5} :=",
             src_header,
         ),
-        # (
-        #     "theorem sP {R : Type u_1} [Ring R] (h : ∀ (x : R), x ^ 3 = x) (x : R) (y : R) : x * y = y * x :=",
-        #     "theorem sQ {R : Type*} [Ring R] (h : ∀ x : R, x ^ 3 = x) : Nonempty (CommRing R) :=",
-        #     src_header,
-        # ),
-        # (
-        #     "theorem sPpp {G : Type*} [Group G] [Fintype G] {p q : ℕ} (hp : Prime p) (hq : Prime q) (hG : card G = p*q) :  IsSimpleGroup G → False :=",
-        #     "theorem sQqq (p q : ℕ) (hp : Nat.Prime p) (hq : Nat.Prime q) (G : Type _) [Group G] [Fintype G] (hG : Fintype.card G = p * q) : ¬ IsSimpleGroup G :=",
-        #     src_header,
-        # ),
-        # (
-        #     "theorem sPppp {f : ℝ → ℝ} (hf : ∀ x y, |f x - f y| ≤ |x - y| ^ 2) : ∃ c, f = λ x => c :=",
-        #     "theorem sQqqq (f : ℝ → ℝ) (h : ∀ (t x : ℝ), |f t - f x| ≤ |t - x| ^ 2) (x : ℝ) (y : ℝ) : f x = f y :=",
-        #     src_header,
-        # ),
-        # (
-        #     "theorem dummy (n : ℕ) (hn : n % 2 = 1) : 8 ∣ n^2 - 1 :=",
-        #     "theorem dummy {n : ℕ} (hn : Odd n) : 8 ∣ (n^2 - 1) :=",
-        #     src_header,
-        # ),
-        # (
-        #     "theorem dumssmy {G : Type*} [Group G] (x : G) : x ^ 2 = 1 ↔ orderOf x = 1 ∨ orderOf x = 2 :=",
-        #     "theorem dumssfmy {G : Type*} [Group G] : ∀ (x : G), orderOf x = 1 ∨ orderOf x = 2 ↔ x ^ 2 = 1 :=",
-        #     src_header,
-        # ),
-        # (
-        #     "theorem dummy83 : Irreducible (Polynomial.C (12 : ℚ) + Polynomial.C (6 : ℚ) * Polynomial.X + Polynomial.X ^ 3) :=",
-        #     "theorem dummy84 : Irreducible (12 + 6 * X + X ^ 3 : Polynomial ℚ) :=",
-        #     src_header,
-        # ),
+        (
+            "theorem sP {R : Type u_1} [Ring R] (h : ∀ (x : R), x ^ 3 = x) (x : R) (y : R) : x * y = y * x :=",
+            "theorem sQ {R : Type*} [Ring R] (h : ∀ x : R, x ^ 3 = x) : Nonempty (CommRing R) :=",
+            src_header,
+        ),
+        (
+            "theorem sPpp {G : Type*} [Group G] [Fintype G] {p q : ℕ} (hp : Prime p) (hq : Prime q) (hG : card G = p*q) :  IsSimpleGroup G → False :=",
+            "theorem sQqq (p q : ℕ) (hp : Nat.Prime p) (hq : Nat.Prime q) (G : Type _) [Group G] [Fintype G] (hG : Fintype.card G = p * q) : ¬ IsSimpleGroup G :=",
+            src_header,
+        ),
+        (
+            "theorem sPppp {f : ℝ → ℝ} (hf : ∀ x y, |f x - f y| ≤ |x - y| ^ 2) : ∃ c, f = λ x => c :=",
+            "theorem sQqqq (f : ℝ → ℝ) (h : ∀ (t x : ℝ), |f t - f x| ≤ |t - x| ^ 2) (x : ℝ) (y : ℝ) : f x = f y :=",
+            src_header,
+        ),
+        (
+            "theorem dummy (n : ℕ) (hn : n % 2 = 1) : 8 ∣ n^2 - 1 :=",
+            "theorem dummy {n : ℕ} (hn : Odd n) : 8 ∣ (n^2 - 1) :=",
+            src_header,
+        ),
+        (
+            "theorem dumssmy {G : Type*} [Group G] (x : G) : x ^ 2 = 1 ↔ orderOf x = 1 ∨ orderOf x = 2 :=",
+            "theorem dumssfmy {G : Type*} [Group G] : ∀ (x : G), orderOf x = 1 ∨ orderOf x = 2 ↔ x ^ 2 = 1 :=",
+            src_header,
+        ),
+        (
+            "theorem dummy83 : Irreducible (Polynomial.C (12 : ℚ) + Polynomial.C (6 : ℚ) * Polynomial.X + Polynomial.X ^ 3) :=",
+            "theorem dummy84 : Irreducible (12 + 6 * X + X ^ 3 : Polynomial ℚ) :=",
+            src_header,
+        ),
         # (
         #     "theorem dummy90 {p : ℕ} (hp : Nat.Prime p) (n : ℕ) (hn : 0 < n) : Irreducible (Polynomial.C (1 : ℚ) * Polynomial.X ^ n - Polynomial.C (p : ℚ)) :=",
         #     "theorem dummy91 (p : ℕ) (hp : Prime p) (n : ℕ) (hn : n > 0) : Irreducible (X ^ n - (p : Polynomial ℚ) : Polynomial ℚ) :=",
@@ -438,7 +441,7 @@ open scoped BigOperators"""
         # ),
     ]
 
-    res = beq_metric(formalization_pairs, verbose=True, nb_process=2)
+    res = beq_metric(formalization_pairs, verbose=True, nb_process=8)
 
     console.print("BEq metric results:")
     for (formalization_1, formalization_2, _), result in zip(formalization_pairs, res):
@@ -448,3 +451,57 @@ open scoped BigOperators"""
         console.print(Syntax(formalization_1, "lean4"))
         console.print(Syntax(formalization_2, "lean4"))
         console.print(f"Result: {'[green]Equivalent[/green]' if result else '[yellow]Not conclusive[/yellow]'}")
+
+if __name__ == "__main__":
+    NB_PROCESS = 6 # setup for my laptop's cpu (12 cores), increase if needed
+
+    input_file = os.path.join(config.RESULTS_DIR, f"{config.OUTPUT_NAME}_{config.DEFAULT_MODEL}.json")
+    output_file = os.path.join(config.EVAL_RESULTS_DIR, f"{config.OUTPUT_NAME}_{config.DEFAULT_MODEL}_evaluated.json")
+    checkpoint_file = os.path.join(config.EVAL_RESULTS_DIR, f"{config.OUTPUT_NAME}_{config.DEFAULT_MODEL}_checkpoint.json")
+    os.makedirs(config.EVAL_RESULTS_DIR, exist_ok=True)
+
+    with open(input_file, 'r') as f:
+        data = json.load(f)
+
+    # if no header is specified, we import Mathlib
+    for item in data:
+        if not item['header'].strip():
+            item['header'] = 'import Mathlib'
+
+    # load checkpoint if it exists and get already processed entries
+    results = load_checkpoint(checkpoint_file)
+    processed_entries = {entry["name"] for entry in results}
+
+    print("Loading BEq metric...")
+    beq_metric = BEqMetricCPU()
+    print("BEq metric loaded!")
+
+    for i in range(0, len(data), NB_PROCESS):
+        batch = data[i:i + NB_PROCESS]
+        batch = [entry for entry in batch if entry["name"] not in processed_entries]
+        if not batch:
+            continue
+        
+        formalization_pairs = [
+            (entry["formal_statement"], entry["generated_formal_statement"], entry["header"])
+            for entry in batch
+        ]
+
+        res = beq_metric(formalization_pairs, verbose=True, nb_process=NB_PROCESS)
+        res = [int(eval_result) for eval_result in res]
+
+        for entry, result in zip(batch, res):
+            if entry["name"] not in processed_entries:
+                results.append({
+                    "name": entry["name"],
+                    "formalization_1": entry["formalization_1"],
+                    "formalization_2": entry["formalization_2"],
+                    "src_header": entry["src_header"],
+                    "equivalence_proven": result
+                })
+
+        save_checkpoint(results, checkpoint_file)
+
+    with open(output_file, 'w') as f:
+        json.dump(results, f, indent=4)
+
