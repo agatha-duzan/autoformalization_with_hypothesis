@@ -51,6 +51,15 @@ def evaluate_results(input_file, output_file, checkpoint_file, save_every=10):
         entry["bleu"] = bleu_score
         entry["cosine_similarity"] = cosine_sim
         entry["repl_errors"] = repl_errors
+
+        if isinstance(repl_errors, str):
+            repl = 0  # an exception occurred
+        else:
+            repl = 0 if any(error["severity"] == "error" for error in repl_errors) else 1
+
+        # type check is a necessary condition for equivalence
+        if entry['repl'] == 0:
+            entry['beq'] = 0
         
         results.append(entry)
         processed_entries.add(entry_name)

@@ -453,7 +453,7 @@ open scoped BigOperators"""
         console.print(f"Result: {'[green]Equivalent[/green]' if result else '[yellow]Not conclusive[/yellow]'}")
 
 if __name__ == "__main__":
-    NB_PROCESS = 6 # setup for my laptop's cpu (12 cores), increase if needed
+    NB_PROCESS = 6 # setup for my laptop's cpu (12 cores), increase if you can
 
     input_file = os.path.join(config.EVAL_RESULTS_DIR, f"{config.OUTPUT_NAME}_{config.DEFAULT_MODEL}_eval1.json")
     output_file = os.path.join(config.EVAL_RESULTS_DIR, f"{config.OUTPUT_NAME}_{config.DEFAULT_MODEL}_eval2.json")
@@ -462,6 +462,7 @@ if __name__ == "__main__":
 
     with open(input_file, 'r') as f:
         data = json.load(f)
+
 
     # if no header is specified, we import Mathlib
     for item in data:
@@ -472,15 +473,15 @@ if __name__ == "__main__":
     results = load_checkpoint(checkpoint_file)
     processed_entries = {entry["name"] for entry in results}
 
+    data_done = [item for item in data if item['repl'] == 0]
+    data_eval = [item for item in data if item['repl'] == 1 and item['name'] not in processed_entries]
+
     print("Loading BEq metric...")
     beq_metric = BEqMetricCPU()
     print("BEq metric loaded!")
 
-    for i in tqdm(range(0, len(data), NB_PROCESS)):
-        batch = data[i:i + NB_PROCESS]
-        batch = [entry for entry in batch if entry["name"] not in processed_entries]
-        if not batch:
-            continue
+    for i in tqdm(range(0, len(data_eval), NB_PROCESS)):
+        batch = data_eval[i:i + NB_PROCESS]
 
         formalization_pairs = [
             (entry["formal_statement"], entry["generated_formal_statement"], entry["header"])
@@ -499,6 +500,7 @@ if __name__ == "__main__":
         save_checkpoint(results, checkpoint_file)
 
     # Save final results to output file
+    all_data = data_done + results
     with open(output_file, 'w') as f:
-        json.dump(results, f, indent=4)
+        json.dump(all_data, f, indent=4)
 

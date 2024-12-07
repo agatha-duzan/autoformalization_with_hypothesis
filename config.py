@@ -20,6 +20,6 @@ HYPOTHESIS_DECOMP = 'informal'
 
 # Output config
 RESULTS_DIR = '/home/agatha/Desktop/MA3/sem proj/autoformalization_with_hypothesis/results/generations'
-OUTPUT_NAME = 'base_hypothesis_decomp'
+OUTPUT_NAME = 'baseline_direct_translation'
 EVAL_RESULTS_DIR = '/home/agatha/Desktop/MA3/sem proj/autoformalization_with_hypothesis/results/evaluations'
 CHECKPOINT_DIR = '/home/agatha/Desktop/MA3/sem proj/autoformalization_with_hypothesis/results/checkpoints'

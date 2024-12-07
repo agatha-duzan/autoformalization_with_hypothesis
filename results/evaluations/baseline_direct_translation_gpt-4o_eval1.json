@@ -11,7 +11,8 @@
     "provider": "openai",
     "bleu": 0.1552046986577469,
     "cosine_similarity": 0.9020570688686504,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_3",
@@ -38,7 +39,9 @@
         },
         "data": "unknown identifier 'finset.range'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_1124",
@@ -52,7 +55,8 @@
     "provider": "openai",
     "bleu": 0.3556521383601747,
     "cosine_similarity": 0.8975005223227932,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_237",
@@ -79,7 +83,9 @@
         },
         "data": "unknown identifier 'finset.range'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_299",
@@ -93,7 +99,8 @@
     "provider": "openai",
     "bleu": 0.7389984311706962,
     "cosine_similarity": 0.8863769136640641,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_427",
@@ -120,7 +127,9 @@
         },
         "data": "unexpected token ','; expected '\u21a6', '=>'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_numbertheory_x5neqy2p4",
@@ -134,7 +143,8 @@
     "provider": "openai",
     "bleu": 0.4732901678120695,
     "cosine_similarity": 0.9209701795062956,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_430",
@@ -148,7 +158,8 @@
     "provider": "openai",
     "bleu": 0.1060433720037436,
     "cosine_similarity": 0.8954961226111287,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_277",
@@ -162,7 +173,8 @@
     "provider": "openai",
     "bleu": 0.4401659511741363,
     "cosine_similarity": 0.9111278570336105,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_559",
@@ -176,7 +188,8 @@
     "provider": "openai",
     "bleu": 0.06322328208407124,
     "cosine_similarity": 0.8379188214618506,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_353",
@@ -200,7 +213,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_numbertheory_notequiv2i2jasqbsqdiv8",
@@ -214,7 +229,8 @@
     "provider": "openai",
     "bleu": 0.03770864890008891,
     "cosine_similarity": 0.9024555387070499,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_12",
@@ -241,7 +257,9 @@
         },
         "data": "unexpected token ','; expected '\u21a6', '=>'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_345",
@@ -255,7 +273,8 @@
     "provider": "openai",
     "bleu": 1.0,
     "cosine_similarity": 0.9202865681120895,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_447",
@@ -282,7 +301,9 @@
         },
         "data": "unexpected token ','; expected '\u21a6', '=>'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_328",
@@ -296,7 +317,8 @@
     "provider": "openai",
     "bleu": 0.5452469119630863,
     "cosine_similarity": 0.8903936932598009,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_451",
@@ -320,7 +342,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_227",
@@ -359,7 +383,9 @@
         },
         "data": "unknown identifier 'finset.range'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_765",
@@ -373,7 +399,8 @@
     "provider": "openai",
     "bleu": 0.06759926455384295,
     "cosine_similarity": 0.8556176325407209,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_175",
@@ -387,7 +414,8 @@
     "provider": "openai",
     "bleu": 0.5452469119630863,
     "cosine_similarity": 0.9040786858561927,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_numbertheory_fxeq4powxp6powxp9powx_f2powmdvdf2pown",
@@ -411,7 +439,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_728",
@@ -425,7 +455,8 @@
     "provider": "openai",
     "bleu": 0.3906864844152217,
     "cosine_similarity": 0.8837719454983115,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_552",
@@ -449,7 +480,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_293",
@@ -463,7 +496,8 @@
     "provider": "openai",
     "bleu": 0.11066171274883234,
     "cosine_similarity": 0.8622462934537521,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_769",
@@ -477,7 +511,8 @@
     "provider": "openai",
     "bleu": 0.3906864844152217,
     "cosine_similarity": 0.9007314134696675,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_5",
@@ -491,7 +526,8 @@
     "provider": "openai",
     "bleu": 0.03884198534513185,
     "cosine_similarity": 0.8588602757023194,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_207",
@@ -505,7 +541,8 @@
     "provider": "openai",
     "bleu": 0.19228435969514684,
     "cosine_similarity": 0.8451056842336525,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_342",
@@ -519,7 +556,8 @@
     "provider": "openai",
     "bleu": 1.0,
     "cosine_similarity": 0.8899190268881942,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_483",
@@ -543,7 +581,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_495",
@@ -557,7 +597,8 @@
     "provider": "openai",
     "bleu": 0.22169662586313604,
     "cosine_similarity": 0.8843242436808572,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_247",
@@ -571,7 +612,8 @@
     "provider": "openai",
     "bleu": 0.341191474032336,
     "cosine_similarity": 0.8728494185943645,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_numbertheory_2pownm1prime_nprime",
@@ -610,7 +652,9 @@
         },
         "data": "unknown constant 'Nat.prime'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_314",
@@ -634,7 +678,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_343",
@@ -658,7 +704,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_457",
@@ -682,7 +730,9 @@
         "endPos": null,
         "data": "expected interpolated string"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_135",
@@ -706,7 +756,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_34",
@@ -720,7 +772,8 @@
     "provider": "openai",
     "bleu": 0.24145384320377525,
     "cosine_similarity": 0.89537443326722,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_764",
@@ -747,7 +800,9 @@
         },
         "data": "unexpected token ','; expected '\u21a6', '=>'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_618",
@@ -774,7 +829,9 @@
         },
         "data": "unexpected token ','; expected '\u21a6', '=>'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_435",
@@ -861,7 +918,9 @@
         },
         "data": "unknown constant 'Nat.coprime'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_99",
@@ -888,7 +947,9 @@
         },
         "data": "type mismatch\n  2 * n\nhas type\n  \u2124 : outParam Type\nbut is expected to have type\n  \u2115 : Type"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_233",
@@ -902,7 +963,8 @@
     "provider": "openai",
     "bleu": 0.157188773630212,
     "cosine_similarity": 0.8869613818996678,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_321",
@@ -916,7 +978,8 @@
     "provider": "openai",
     "bleu": 0.1609791748450962,
     "cosine_similarity": 0.8733842361786143,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_229",
@@ -930,7 +993,8 @@
     "provider": "openai",
     "bleu": 0.5387551338654779,
     "cosine_similarity": 0.8837439300684934,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_100",
@@ -944,7 +1008,8 @@
     "provider": "openai",
     "bleu": 0.6344528593469496,
     "cosine_similarity": 0.917491511955346,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_551",
@@ -958,7 +1023,8 @@
     "provider": "openai",
     "bleu": 1.0,
     "cosine_similarity": 0.8827187232081093,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_341",
@@ -982,7 +1048,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_711",
@@ -996,7 +1064,8 @@
     "provider": "openai",
     "bleu": 0.5037480890553236,
     "cosine_similarity": 0.9074338770852245,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_212",
@@ -1020,7 +1089,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_320",
@@ -1034,7 +1105,8 @@
     "provider": "openai",
     "bleu": 0.053459335957372234,
     "cosine_similarity": 0.8602836013152877,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_254",
@@ -1058,7 +1130,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_numbertheory_3pow2pownm1mod2pownp3eq2pownp2",
@@ -1072,7 +1146,8 @@
     "provider": "openai",
     "bleu": 0.24900881977418668,
     "cosine_similarity": 0.9200533230124608,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_85",
@@ -1086,7 +1161,8 @@
     "provider": "openai",
     "bleu": 0.1240755029749901,
     "cosine_similarity": 0.8271142416259375,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_239",
@@ -1100,7 +1176,8 @@
     "provider": "openai",
     "bleu": 0.1819073390123456,
     "cosine_similarity": 0.8401613721382498,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_517",
@@ -1114,7 +1191,8 @@
     "provider": "openai",
     "bleu": 0.5333505353503044,
     "cosine_similarity": 0.8790461205407532,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_521",
@@ -1128,7 +1206,8 @@
     "provider": "openai",
     "bleu": 0.1286057341226582,
     "cosine_similarity": 0.8731076242775315,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_66",
@@ -1142,7 +1221,8 @@
     "provider": "openai",
     "bleu": 1.0,
     "cosine_similarity": 0.8862824357865688,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_235",
@@ -1156,7 +1236,8 @@
     "provider": "openai",
     "bleu": 1.0,
     "cosine_similarity": 0.882238815665338,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_234",
@@ -1170,7 +1251,8 @@
     "provider": "openai",
     "bleu": 0.207208593193734,
     "cosine_similarity": 0.8870592754659428,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_numbertheory_aoddbdiv4asqpbsqmod8eq1",
@@ -1184,7 +1266,8 @@
     "provider": "openai",
     "bleu": 0.30230462927066304,
     "cosine_similarity": 0.901502042585,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_222",
@@ -1198,7 +1281,8 @@
     "provider": "openai",
     "bleu": 0.2805767748474474,
     "cosine_similarity": 0.912870084709166,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_127",
@@ -1212,7 +1296,8 @@
     "provider": "openai",
     "bleu": 0.5052815513370239,
     "cosine_similarity": 0.9014237174125446,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_541",
@@ -1226,7 +1311,8 @@
     "provider": "openai",
     "bleu": 0.10847601086097745,
     "cosine_similarity": 0.869467383461359,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_150",
@@ -1240,7 +1326,8 @@
     "provider": "openai",
     "bleu": 0.08639926822802937,
     "cosine_similarity": 0.8562189898325638,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_296",
@@ -1254,7 +1341,8 @@
     "provider": "openai",
     "bleu": 0.03812898541998912,
     "cosine_similarity": 0.8678667438437135,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_numbertheory_exk2powkeqapb2mulbpa2_aeq1",
@@ -1268,7 +1356,8 @@
     "provider": "openai",
     "bleu": 0.2848558810571382,
     "cosine_similarity": 0.8873367603669615,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_185",
@@ -1282,7 +1371,8 @@
     "provider": "openai",
     "bleu": 0.5961621647299126,
     "cosine_similarity": 0.9123942137648458,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_582",
@@ -1296,7 +1386,8 @@
     "provider": "openai",
     "bleu": 0.4954767452468839,
     "cosine_similarity": 0.9117082251443553,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "putnam_2002_b5",
@@ -1371,7 +1462,9 @@
         },
         "data": "function expected at\n  finset\nterm has type\n  ?m.107"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2009_b3",
@@ -1410,7 +1503,9 @@
         },
         "data": "unexpected token ','; expected '\u21a6', '=>'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2019_a5",
@@ -1434,7 +1529,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2008_b4",
@@ -1448,7 +1545,8 @@
     "provider": "openai",
     "bleu": 0.16527558918116125,
     "cosine_similarity": 0.9212616135505645,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "putnam_1982_b3",
@@ -1472,7 +1570,9 @@
         "endPos": null,
         "data": "expected token"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1998_b4",
@@ -1508,7 +1608,9 @@
         "endPos": null,
         "data": "expected token"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1997_a5",
@@ -1547,7 +1649,9 @@
         },
         "data": "function expected at\n  Odd\nterm has type\n  ?m.12"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1986_b3",
@@ -1646,7 +1750,9 @@
         },
         "data": "failed to prove index is valid, possible solutions:\n  - Use `have`-expressions to prove the index is valid\n  - Use `a[i]!` notation instead, runtime check is performed, and 'Panic' error message is produced if index is not valid\n  - Use `a[i]?` notation instead, result is an `Option` type\n  - Use `a[i]'h` notation instead, where `h` is a proof that index is valid\nX : ?m.12\nf : \u2124[X]\ng : \u2124[X]\nh : \u2124[X]\nr : \u2124[X]\ns : \u2124[X]\np n : \u2115\nhp : Nat.Prime p\nh1 : r * f + s * g \u2261 1 [MOD p]\nh2 : f * g \u2261 ?m.1049 [MOD p]\nF : \u2124[X]\n\u22a2 ?m.3847 F \u2124 X"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2018_a3",
@@ -1670,7 +1776,9 @@
         "endPos": null,
         "data": "expected token"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2014_b6",
@@ -1697,7 +1805,9 @@
         },
         "data": "unexpected token '\u2208'; expected ','"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2009_b6",
@@ -1711,7 +1821,8 @@
     "provider": "openai",
     "bleu": 0.38908439324658706,
     "cosine_similarity": 0.9420038088875169,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "putnam_1971_b6",
@@ -1750,7 +1861,9 @@
         },
         "data": "function expected at\n  greatest_odd_divisor\nterm has type\n  ?m.68"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1971_a6",
@@ -1777,7 +1890,9 @@
         },
         "data": "failed to synthesize\n  HPow \u2124 \u211d ?m.847\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2019_b5",
@@ -1804,7 +1919,9 @@
         },
         "data": "unexpected token ','; expected '\u21a6', '=>'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2002_a5",
@@ -1855,7 +1972,9 @@
         },
         "data": "function expected at\n  a\nterm has type\n  ?m.54"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1991_b5",
@@ -1879,7 +1998,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1969_b1",
@@ -1906,7 +2027,9 @@
         },
         "data": "typeclass instance problem is stuck, it is often due to metavariables\n  Dvd ((\u2115 \u2192 ?m.114) \u2192 ?m.114)"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2015_a3",
@@ -1930,7 +2053,9 @@
         "endPos": null,
         "data": "expected token"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1991_b4",
@@ -1993,7 +2118,9 @@
         },
         "data": "unknown identifier 'nat.choose'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2021_a5",
@@ -2032,7 +2159,9 @@
         },
         "data": "unexpected token '|'; expected '//' or '}'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2017_a1",
@@ -2095,7 +2224,9 @@
         },
         "data": "type expected, got\n  (set \u2115 : ?m.155 PUnit)"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1983_a1",
@@ -2122,7 +2253,9 @@
         },
         "data": "unexpected token '|'; expected '//' or '}'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1976_b6",
@@ -2149,7 +2282,9 @@
         },
         "data": "function expected at\n  \u03c3\nterm has type\n  ?m.6"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1975_b1",
@@ -2173,7 +2308,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2014_a3",
@@ -2200,7 +2337,9 @@
         },
         "data": "unexpected token ','; expected '\u21a6', '=>'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2009_b1",
@@ -2287,7 +2426,9 @@
         },
         "data": "unknown identifier 'nat.factorial'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2014_b3",
@@ -2314,7 +2455,9 @@
         },
         "data": "unexpected token ','; expected '\u21a6', '=>'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1989_a1",
@@ -2341,7 +2484,9 @@
         },
         "data": "unexpected token ','; expected '\u21a6', '=>'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2018_b3",
@@ -2488,7 +2633,9 @@
         },
         "data": "failed to synthesize\n  HPow Nat \u2115 ?m.540\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1984_a6",
@@ -2611,7 +2758,9 @@
         },
         "data": "failed to synthesize\n  HAdd Nat \u2115 Nat\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1997_b5",
@@ -2625,7 +2774,8 @@
     "provider": "openai",
     "bleu": 0.32665187754616803,
     "cosine_similarity": 0.9165046523348747,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "putnam_1995_b6",
@@ -2676,7 +2826,9 @@
         },
         "data": "function expected at\n  floor\nterm has type\n  ?m.168"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1999_b6",
@@ -2703,7 +2855,9 @@
         },
         "data": "unexpected token '\u2208'; expected ','"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1993_b5",
@@ -2717,7 +2871,8 @@
     "provider": "openai",
     "bleu": 0.014492186436101947,
     "cosine_similarity": 0.8973020342417372,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "putnam_2001_a5",
@@ -2744,7 +2899,9 @@
         },
         "data": "The `ExistsUnique` notation should not be used with more than one binder.\n\nThe reason for this is that `\u2203! (x : \u03b1), \u2203! (y : \u03b2), p x y` has a completely different meaning from `\u2203! q : \u03b1 \u00d7 \u03b2, p q.1 q.2`. To prevent confusion, this notation requires that you be explicit and use one with the correct interpretation."
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1985_a4",
@@ -2783,7 +2940,9 @@
         },
         "data": "unexpected token ','; expected '\u21a6', '=>'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2007_a4",
@@ -2894,7 +3053,9 @@
         },
         "data": "unknown identifier 'polynomial.C'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2023_b5",
@@ -2993,7 +3154,9 @@
         },
         "data": "invalid constructor \u27e8...\u27e9, expected type must be an inductive type \n  ?m.207 m \u03c0 k"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2021_b4",
@@ -3044,7 +3207,9 @@
         },
         "data": "function expected at\n  fibonacci\nterm has type\n  ?m.90"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1994_b6",
@@ -3083,7 +3248,9 @@
         },
         "data": "failed to synthesize\n  HPow \u2124 \u2124 ?m.888\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2003_b3",
@@ -3122,7 +3289,9 @@
         },
         "data": "unknown identifier 'nat.lcm'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1997_b3",
@@ -3158,7 +3327,9 @@
         "endPos": null,
         "data": "expected token"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2018_a1",
@@ -3329,7 +3500,9 @@
         },
         "data": "failed to synthesize\n  OfNat \u2115 0\nnumerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is\n  \u2115\ndue to the absence of the instance above\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2015_a2",
@@ -3356,7 +3529,9 @@
         },
         "data": "unexpected token ','; expected '\u21a6', '=>'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1974_b3",
@@ -3370,7 +3545,8 @@
     "provider": "openai",
     "bleu": 0.22743363869750483,
     "cosine_similarity": 0.9287964483421318,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "putnam_2015_a5",
@@ -3397,7 +3573,9 @@
         },
         "data": "unexpected token ','; expected '\u21a6', '=>'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2009_a4",
@@ -3424,7 +3602,9 @@
         },
         "data": "function expected at\n  Set\nterm has type\n  ?m.7"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2011_b6",
@@ -3487,7 +3667,9 @@
         },
         "data": "invalid field notation, type is not of the form (C ...) where C is a constant\n  finset\nhas type\n  ?m.100"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1974_a3",
@@ -3535,7 +3717,9 @@
         "endPos": null,
         "data": "expected token"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_780",
@@ -3549,7 +3733,8 @@
     "provider": "openai",
     "bleu": 0.21719989910166268,
     "cosine_similarity": 0.8565932963243911,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_13",
@@ -3573,7 +3758,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_169",
@@ -3587,7 +3774,8 @@
     "provider": "openai",
     "bleu": 0.587728372510532,
     "cosine_similarity": 0.9125747306639348,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_149",
@@ -3611,7 +3799,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_221",
@@ -3638,7 +3828,9 @@
         },
         "data": "invalid field 'prime', the environment does not contain 'Nat.prime'\n  p\nhas type\n  \u2115"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_64",
@@ -3652,7 +3844,8 @@
     "provider": "openai",
     "bleu": 0.19783691883509516,
     "cosine_similarity": 0.8909474040403671,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_33",
@@ -3666,7 +3859,8 @@
     "provider": "openai",
     "bleu": 0.09269876656698088,
     "cosine_similarity": 0.858450510657528,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_48",
@@ -3680,7 +3874,8 @@
     "provider": "openai",
     "bleu": 0.3064185630764539,
     "cosine_similarity": 0.8664529375730039,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_numbertheory_sqmod4in01d",
@@ -3694,7 +3889,8 @@
     "provider": "openai",
     "bleu": 0.5580662229104153,
     "cosine_similarity": 0.9195646256187602,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_466",
@@ -3708,7 +3904,8 @@
     "provider": "openai",
     "bleu": 0.2094108425209914,
     "cosine_similarity": 0.8504751495898413,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_132",
@@ -3722,7 +3919,8 @@
     "provider": "openai",
     "bleu": 1.0,
     "cosine_similarity": 0.896949656759197,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_188",
@@ -3736,7 +3934,8 @@
     "provider": "openai",
     "bleu": 1.0,
     "cosine_similarity": 0.9210350350901912,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_32",
@@ -3763,7 +3962,9 @@
         },
         "data": "unexpected token ','; expected '\u21a6', '=>'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_109",
@@ -3790,7 +3991,9 @@
         },
         "data": "unexpected token ','; expected '\u21a6', '=>'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_236",
@@ -3804,7 +4007,8 @@
     "provider": "openai",
     "bleu": 0.5387551338654779,
     "cosine_similarity": 0.8954634120443947,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_24",
@@ -3831,7 +4035,9 @@
         },
         "data": "unexpected token ','; expected '\u21a6', '=>'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_257",
@@ -3870,7 +4076,9 @@
         },
         "data": "unknown identifier 'finset.range'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_200",
@@ -3884,7 +4092,8 @@
     "provider": "openai",
     "bleu": 0.53107253497887,
     "cosine_similarity": 0.865653633089235,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_45",
@@ -3898,7 +4107,8 @@
     "provider": "openai",
     "bleu": 1.0,
     "cosine_similarity": 0.9228362774474028,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_739",
@@ -3912,7 +4122,8 @@
     "provider": "openai",
     "bleu": 0.392814650900513,
     "cosine_similarity": 0.8837014520092458,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_543",
@@ -3936,7 +4147,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_335",
@@ -3950,7 +4163,8 @@
     "provider": "openai",
     "bleu": 0.43941109616202023,
     "cosine_similarity": 0.8847428330667267,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_35",
@@ -3974,7 +4188,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_102",
@@ -3988,7 +4204,8 @@
     "provider": "openai",
     "bleu": 0.5387551338654779,
     "cosine_similarity": 0.8801004230315926,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_81",
@@ -4002,7 +4219,8 @@
     "provider": "openai",
     "bleu": 1.0,
     "cosine_similarity": 0.8841086382349119,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_155",
@@ -4029,7 +4247,9 @@
         },
         "data": "invalid field notation, type is not of the form (C ...) where C is a constant\n  { n // 100 \u2264 n \u2227 n < 1000 \u2227 n % 19 = 7 }\nhas type\n  Type"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_42",
@@ -4056,7 +4276,9 @@
         },
         "data": "unexpected token ','; expected '\u21a6', '=>'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_numbertheory_sumkmulnckeqnmul2pownm1",
@@ -4095,7 +4317,9 @@
         },
         "data": "unknown identifier 'nat.choose'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_303",
@@ -4119,7 +4343,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_211",
@@ -4146,7 +4372,9 @@
         },
         "data": "failed to synthesize\n  Fintype \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_640",
@@ -4160,7 +4388,8 @@
     "provider": "openai",
     "bleu": 1.0,
     "cosine_similarity": 0.9138444738675369,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_43",
@@ -4174,7 +4403,8 @@
     "provider": "openai",
     "bleu": 0.11325008372337807,
     "cosine_similarity": 0.8983079634860058,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_284",
@@ -4188,7 +4418,8 @@
     "provider": "openai",
     "bleu": 0.10039350106526296,
     "cosine_similarity": 0.8418852582321844,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_709",
@@ -4239,7 +4470,9 @@
         },
         "data": "invalid field 'numDivisors', the environment does not contain 'Nat.numDivisors'\n  6 * n\nhas type\n  \u2115"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_461",
@@ -4266,7 +4499,9 @@
         },
         "data": "unexpected token ','; expected '\u21a6', '=>'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_numbertheory_sqmod3in01d",
@@ -4280,7 +4515,8 @@
     "provider": "openai",
     "bleu": 0.4342713064636021,
     "cosine_similarity": 0.8852819892650675,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_numbertheory_xsqpysqintdenomeq",
@@ -4307,7 +4543,9 @@
         },
         "data": "failed to synthesize\n  Membership \u211a Type\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_22",
@@ -4334,7 +4572,9 @@
         },
         "data": "unexpected token ','; expected '\u21a6', '=>'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_136",
@@ -4348,7 +4588,8 @@
     "provider": "openai",
     "bleu": 0.554791407310483,
     "cosine_similarity": 0.9341689315171133,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_198",
@@ -4362,7 +4603,8 @@
     "provider": "openai",
     "bleu": 0.144769886226851,
     "cosine_similarity": 0.8953692758281617,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_37",
@@ -4376,7 +4618,8 @@
     "provider": "openai",
     "bleu": 1.0,
     "cosine_similarity": 0.9261098697977523,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_458",
@@ -4390,7 +4633,8 @@
     "provider": "openai",
     "bleu": 0.8578928092681435,
     "cosine_similarity": 0.913950186141142,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_301",
@@ -4404,7 +4648,8 @@
     "provider": "openai",
     "bleu": 0.4138377804534518,
     "cosine_similarity": 0.9177728783514638,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_252",
@@ -4418,7 +4663,8 @@
     "provider": "openai",
     "bleu": 0.392814650900513,
     "cosine_similarity": 0.8758112152600352,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_numbertheory_nckeqnm1ckpnm1ckm1",
@@ -4432,7 +4678,8 @@
     "provider": "openai",
     "bleu": 0.7460331250180317,
     "cosine_similarity": 0.9225006736977552,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_403",
@@ -4459,7 +4706,9 @@
         },
         "data": "unexpected token ','; expected '\u21a6', '=>'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_269",
@@ -4473,7 +4722,8 @@
     "provider": "openai",
     "bleu": 0.24996242994869414,
     "cosine_similarity": 0.914122413372297,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_101",
@@ -4487,7 +4737,8 @@
     "provider": "openai",
     "bleu": 0.5452469119630863,
     "cosine_similarity": 0.8795294522072153,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_156",
@@ -4501,7 +4752,8 @@
     "provider": "openai",
     "bleu": 0.43434098825795264,
     "cosine_similarity": 0.906169521737282,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_232",
@@ -4552,7 +4804,9 @@
         },
         "data": "failed to synthesize\n  Inv \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_530",
@@ -4566,7 +4820,8 @@
     "provider": "openai",
     "bleu": 0.35669998303529715,
     "cosine_similarity": 0.9176638942519464,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_numbertheory_aneqprodakp4_anmsqrtanp1eq2",
@@ -4605,7 +4860,9 @@
         },
         "data": "unknown identifier 'nat.sqrt'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_690",
@@ -4619,7 +4876,8 @@
     "provider": "openai",
     "bleu": 0.6626156022797183,
     "cosine_similarity": 0.9012624741229025,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_405",
@@ -4633,7 +4891,8 @@
     "provider": "openai",
     "bleu": 0.3233888901102408,
     "cosine_similarity": 0.8892829700759746,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_110",
@@ -4647,7 +4906,8 @@
     "provider": "openai",
     "bleu": 0.598449731685384,
     "cosine_similarity": 0.9088416163078616,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_126",
@@ -4661,7 +4921,8 @@
     "provider": "openai",
     "bleu": 0.20294875243084157,
     "cosine_similarity": 0.9049795401404921,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_370",
@@ -4675,7 +4936,8 @@
     "provider": "openai",
     "bleu": 0.839587623092576,
     "cosine_similarity": 0.9218608753300205,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_326",
@@ -4689,7 +4951,8 @@
     "provider": "openai",
     "bleu": 0.29385109454936514,
     "cosine_similarity": 0.8777715710506666,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_numbertheory_prmdvsneqnsqmodpeq0",
@@ -4716,7 +4979,9 @@
         },
         "data": "application type mismatch\n  Nat.Prime p\nargument\n  p\nhas type\n  \u2124 : Type\nbut is expected to have type\n  \u2115 : Type"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_30",
@@ -4730,7 +4995,8 @@
     "provider": "openai",
     "bleu": 0.21184844649591497,
     "cosine_similarity": 0.912107932290238,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_961",
@@ -4744,7 +5010,8 @@
     "provider": "openai",
     "bleu": 1.0,
     "cosine_similarity": 0.8938911957506532,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_numbertheory_2dvd4expn",
@@ -4758,7 +5025,8 @@
     "provider": "openai",
     "bleu": 0.39510435123461274,
     "cosine_similarity": 0.9117724073888456,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_92",
@@ -4785,7 +5053,9 @@
         },
         "data": "type mismatch\n  5 * n\nhas type\n  \u2124 : outParam Type\nbut is expected to have type\n  \u2115 : Type"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_668",
@@ -4809,7 +5079,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_84",
@@ -4833,7 +5105,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "f2f_mathd_numbertheory_412",
@@ -4847,7 +5121,8 @@
     "provider": "openai",
     "bleu": 0.3072314509084722,
     "cosine_similarity": 0.9177483640366123,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_629",
@@ -4861,7 +5136,8 @@
     "provider": "openai",
     "bleu": 0.12729992303943352,
     "cosine_similarity": 0.8884229156255727,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "f2f_mathd_numbertheory_202",
@@ -4875,7 +5151,8 @@
     "provider": "openai",
     "bleu": 0.3906864844152217,
     "cosine_similarity": 0.9003381077483269,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "putnam_1992_a3",
@@ -4914,7 +5191,9 @@
         },
         "data": "unexpected token ':'; expected '}'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2000_b2",
@@ -4941,7 +5220,9 @@
         },
         "data": "failed to synthesize\n  Membership \u2115 Type\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2014_a1",
@@ -4965,7 +5246,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1976_a3",
@@ -5004,7 +5287,9 @@
         },
         "data": "unexpected token '|'; expected term"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2002_b6",
@@ -5028,7 +5313,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1977_a5",
@@ -5042,7 +5329,8 @@
     "provider": "openai",
     "bleu": 0.658512268936874,
     "cosine_similarity": 0.9378480352826793,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "putnam_2008_b1",
@@ -5117,7 +5405,9 @@
         },
         "data": "unexpected token '|'; expected '//' or '}'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1999_a4",
@@ -5141,7 +5431,9 @@
         "endPos": null,
         "data": "expected token"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2013_a3",
@@ -5155,7 +5447,8 @@
     "provider": "openai",
     "bleu": 0.4270469512913905,
     "cosine_similarity": 0.9467435567277691,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "putnam_1973_b2",
@@ -5179,7 +5472,9 @@
         "endPos": null,
         "data": "expected token"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1980_b6",
@@ -5203,7 +5498,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1973_a3",
@@ -5230,7 +5527,9 @@
         },
         "data": "unexpected token ','; expected '\u21a6', '=>'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2020_a5",
@@ -5254,7 +5553,9 @@
         "endPos": null,
         "data": "expected token"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1970_a3",
@@ -5353,7 +5654,9 @@
         },
         "data": "failed to synthesize\n  HMul \u2115 Nat (?m.934 n m k d l)\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2018_a4",
@@ -5380,7 +5683,9 @@
         },
         "data": "failed to synthesize\n  CommMonoid G\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2013_a2",
@@ -5394,7 +5699,8 @@
     "provider": "openai",
     "bleu": 7.18512332115973e-10,
     "cosine_similarity": 0.8887010073795987,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "putnam_2023_b2",
@@ -5457,7 +5763,9 @@
         },
         "data": "function expected at\n  k\nterm has type\n  ?m.99"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2008_b6",
@@ -5508,7 +5816,9 @@
         },
         "data": "function expected at\n  fin\nterm has type\n  ?m.81"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2022_a3",
@@ -5535,7 +5845,9 @@
         },
         "data": "unexpected token ','; expected '\u21a6', '=>'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1974_a1",
@@ -5562,7 +5874,9 @@
         },
         "data": "unexpected token '\u2208'; expected ','"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2012_b6",
@@ -5589,7 +5903,9 @@
         },
         "data": "unexpected token ','; expected '\u21a6', '=>'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1988_b1",
@@ -5603,7 +5919,8 @@
     "provider": "openai",
     "bleu": 0.3570224248177065,
     "cosine_similarity": 0.8941561346941771,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "putnam_2002_a6",
@@ -5639,7 +5956,9 @@
         "endPos": null,
         "data": "expected token"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2003_b4",
@@ -5678,7 +5997,9 @@
         },
         "data": "failed to synthesize\n  Membership \u2102 Type\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1975_a1",
@@ -5765,7 +6086,9 @@
         },
         "data": "failed to synthesize\n  HPow \u2124 Nat \u2124\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1981_b3",
@@ -5840,7 +6163,9 @@
         },
         "data": "failed to synthesize\n  HAdd \u2124 \u2124 \u2115\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1980_a2",
@@ -6167,7 +6492,9 @@
         },
         "data": "function expected at\n  lcm\nterm has type\n  ?m.172"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1994_b4",
@@ -6191,7 +6518,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2011_b2",
@@ -6230,7 +6559,9 @@
         },
         "data": "unexpected token '|'; expected '}'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1988_b6",
@@ -6257,7 +6588,9 @@
         },
         "data": "unexpected token ','; expected '\u21a6', '=>'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2018_a2",
@@ -6281,7 +6614,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1998_b6",
@@ -6295,7 +6630,8 @@
     "provider": "openai",
     "bleu": 0.38471697473345795,
     "cosine_similarity": 0.9320250185144591,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "putnam_2015_b6",
@@ -6322,7 +6658,9 @@
         },
         "data": "unexpected token ','; expected '\u21a6', '=>'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2016_a1",
@@ -6385,7 +6723,9 @@
         },
         "data": "function expected at\n  [j]\nterm has type\n  List \u2115"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2005_a1",
@@ -6412,7 +6752,9 @@
         },
         "data": "unknown identifier 'finset.range'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1995_a3",
@@ -6426,7 +6768,8 @@
     "provider": "openai",
     "bleu": 0.14083531029039678,
     "cosine_similarity": 0.9081228415010909,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "putnam_2017_b6",
@@ -6450,7 +6793,9 @@
         "endPos": null,
         "data": "expected token"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1998_b5",
@@ -6474,7 +6819,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1973_b3",
@@ -6501,7 +6848,9 @@
         },
         "data": "The `ExistsUnique` notation should not be used with more than one binder.\n\nThe reason for this is that `\u2203! (x : \u03b1), \u2203! (y : \u03b2), p x y` has a completely different meaning from `\u2203! q : \u03b1 \u00d7 \u03b2, p q.1 q.2`. To prevent confusion, this notation requires that you be explicit and use one with the correct interpretation."
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2000_a2",
@@ -6528,7 +6877,9 @@
         },
         "data": "unknown identifier 'filter.at_top'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2017_b3",
@@ -6542,7 +6893,8 @@
     "provider": "openai",
     "bleu": 0.17285010537127138,
     "cosine_similarity": 0.9275302705832895,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "putnam_1981_a1",
@@ -6569,7 +6921,9 @@
         },
         "data": "unexpected token ','; expected '\u21a6', '=>'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2010_a4",
@@ -6583,7 +6937,8 @@
     "provider": "openai",
     "bleu": 0.2648634566399074,
     "cosine_similarity": 0.937511796427162,
-    "repl_errors": []
+    "repl_errors": [],
+    "repl": 1
   },
   {
     "name": "putnam_1983_a3",
@@ -6622,7 +6977,9 @@
         },
         "data": "unknown identifier 'finset.range'"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2020_a1",
@@ -6646,7 +7003,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_2021_a6",
@@ -6757,7 +7116,9 @@
         },
         "data": "function expected at\n  Polynomial\nterm has type\n  ?m.7"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1982_b4",
@@ -6781,7 +7142,9 @@
         "endPos": null,
         "data": "expected token"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1996_a5",
@@ -6805,7 +7168,9 @@
         "endPos": null,
         "data": "expected ';' or line break"
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   },
   {
     "name": "putnam_1972_a5",
@@ -6832,6 +7197,8 @@
         },
         "data": "failed to synthesize\n  HPow \u2124 \u2124 ?m.103\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
       }
-    ]
+    ],
+    "repl": 0,
+    "beq": 0
   }
 ]
