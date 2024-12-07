@@ -15,7 +15,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from repl.server import LeanServer, RobustLeanServer
 
 from config import *
-from encoding import retrieve
+from encoding_retrieval import retrieve
 
 def load_few_shot_examples(filepath):
     examples = []

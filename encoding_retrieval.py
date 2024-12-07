@@ -11,7 +11,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
 
 @torch.no_grad()
-def encode(s: List[str]) -> torch.Tensor:
+def encode(s: List[str], tokenizer, model) -> torch.Tensor:
     tokenized_s = tokenizer(s, return_tensors="pt", padding=True, truncation=True).to(device)
     input_ids = tokenized_s.input_ids
     attention_mask = tokenized_s.attention_mask
@@ -40,20 +40,24 @@ def encode_premises(premises: List[str], filename: str, batch_size: int = 8):
     print(f"Premises and encodings saved to {filename}")
 
 @torch.no_grad()
-def retrieve(query: str, premises_file: str, k: int) -> List[str]:
-    """Retrieve the top-k premises given a query."""
+def get_premises_and_encodings(premises_file: str):
     with open(premises_file, 'rb') as f:
         data = pickle.load(f)
 
     premises = data['premises']
     encodings = torch.tensor(data['encodings'])
-    query_enc = encode(query)
+    return premises, encodings
+
+@torch.no_grad()
+def retrieve(query: str, premises, encodings, k: int, tokenizer, model) -> List[str]:
+    """Retrieve the top-k premises given a query."""
+    query_enc = encode(query, tokenizer, model)
 
     scores = (query_enc @ encodings.T)
-    topk = scores.topk(k).indices.tolist()
+    topk = scores.topk(k).indices.tolist()[0]
     return [premises[i] for i in topk]
 
-def main():
+if __name__ == "__main__":
     file_path = 'data/dependencies_mathlib_v4.14.0-rc1.jsonl'
     output_file = 'premises.pkl'
     batch_size = 32 # adjust to not crash
@@ -69,6 +73,3 @@ def main():
     model.to(device)
 
     encode_premises(all_premises, output_file, batch_size=batch_size)
-
-if __name__ == "__main__":
-    main()
