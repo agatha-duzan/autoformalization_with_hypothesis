@@ -4,7 +4,6 @@ from tqdm import tqdm
 from repl.server import RobustLeanServer
 
 from utils import bleu_eval, cos_similarity, get_repl_errors
-from beq_metric_cpu import BEqMetricCPU
 import config
 
 def load_checkpoint(checkpoint_file):
@@ -47,6 +46,8 @@ def evaluate_results(input_file, output_file, checkpoint_file, save_every=10):
         except Exception as e:
             repl_errors = str(e)
 
+        
+
         entry["bleu"] = bleu_score
         entry["cosine_similarity"] = cosine_sim
         entry["repl_errors"] = repl_errors
@@ -65,8 +66,8 @@ def evaluate_results(input_file, output_file, checkpoint_file, save_every=10):
 
 if __name__ == "__main__":
     input_file = os.path.join(config.RESULTS_DIR, f"{config.OUTPUT_NAME}_{config.DEFAULT_MODEL}.json")
-    output_file = os.path.join(config.EVAL_RESULTS_DIR, f"{config.OUTPUT_NAME}_{config.DEFAULT_MODEL}_evaluated.json")
-    checkpoint_file = os.path.join(config.EVAL_RESULTS_DIR, f"{config.OUTPUT_NAME}_{config.DEFAULT_MODEL}_checkpoint.json")
+    output_file = os.path.join(config.EVAL_RESULTS_DIR, f"{config.OUTPUT_NAME}_{config.DEFAULT_MODEL}_eval1.json")
+    checkpoint_file = os.path.join(config.CHECKPOINT_DIR, f"{config.OUTPUT_NAME}_{config.DEFAULT_MODEL}_checkpoint1.json")
 
     os.makedirs(config.EVAL_RESULTS_DIR, exist_ok=True)
     evaluate_results(input_file, output_file, checkpoint_file)

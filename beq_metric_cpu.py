@@ -455,9 +455,9 @@ open scoped BigOperators"""
 if __name__ == "__main__":
     NB_PROCESS = 6 # setup for my laptop's cpu (12 cores), increase if needed
 
-    input_file = os.path.join(config.RESULTS_DIR, f"{config.OUTPUT_NAME}_{config.DEFAULT_MODEL}.json")
-    output_file = os.path.join(config.EVAL_RESULTS_DIR, f"{config.OUTPUT_NAME}_{config.DEFAULT_MODEL}_evaluated.json")
-    checkpoint_file = os.path.join(config.EVAL_RESULTS_DIR, f"{config.OUTPUT_NAME}_{config.DEFAULT_MODEL}_checkpoint.json")
+    input_file = os.path.join(config.EVAL_RESULTS_DIR, f"{config.OUTPUT_NAME}_{config.DEFAULT_MODEL}_eval1.json")
+    output_file = os.path.join(config.EVAL_RESULTS_DIR, f"{config.OUTPUT_NAME}_{config.DEFAULT_MODEL}_eval2.json")
+    checkpoint_file = os.path.join(config.CHECKPOINT_DIR, f"{config.OUTPUT_NAME}_{config.DEFAULT_MODEL}_checkpoint2.json")
     os.makedirs(config.EVAL_RESULTS_DIR, exist_ok=True)
 
     with open(input_file, 'r') as f:
@@ -476,12 +476,12 @@ if __name__ == "__main__":
     beq_metric = BEqMetricCPU()
     print("BEq metric loaded!")
 
-    for i in range(0, len(data), NB_PROCESS):
+    for i in tqdm(range(0, len(data), NB_PROCESS)):
         batch = data[i:i + NB_PROCESS]
         batch = [entry for entry in batch if entry["name"] not in processed_entries]
         if not batch:
             continue
-        
+
         formalization_pairs = [
             (entry["formal_statement"], entry["generated_formal_statement"], entry["header"])
             for entry in batch
@@ -491,17 +491,14 @@ if __name__ == "__main__":
         res = [int(eval_result) for eval_result in res]
 
         for entry, result in zip(batch, res):
-            if entry["name"] not in processed_entries:
-                results.append({
-                    "name": entry["name"],
-                    "formalization_1": entry["formalization_1"],
-                    "formalization_2": entry["formalization_2"],
-                    "src_header": entry["src_header"],
-                    "equivalence_proven": result
-                })
+            entry["beq"] = result
+            results.append(entry)
+            processed_entries.add(entry["name"])
 
+        # save checkpoint
         save_checkpoint(results, checkpoint_file)
 
+    # Save final results to output file
     with open(output_file, 'w') as f:
         json.dump(results, f, indent=4)
 
