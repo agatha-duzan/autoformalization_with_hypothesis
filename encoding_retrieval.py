@@ -45,7 +45,10 @@ def get_premises_and_encodings(premises_file: str):
         data = pickle.load(f)
 
     premises = data['premises']
-    encodings = torch.tensor(data['encodings'])
+    encodings = data['encodings']
+
+
+    # encodings = torch.tensor(data['encodings'])
     return premises, encodings
 
 @torch.no_grad()
