@@ -2,6 +2,7 @@ import torch
 import pickle
 import pandas as pd
 import multiprocessing
+import requests
 
 from tqdm import tqdm
 from typing import List
@@ -45,10 +46,9 @@ def get_premises_and_encodings(premises_file: str):
         data = pickle.load(f)
 
     premises = data['premises']
-    encodings = data['encodings']
-
-
-    # encodings = torch.tensor(data['encodings'])
+    # encodings = data['encodings']
+    encodings = torch.tensor(data['encodings'])
+    
     return premises, encodings
 
 @torch.no_grad()
@@ -59,6 +59,15 @@ def retrieve(query: str, premises, encodings, k: int, tokenizer, model) -> List[
     scores = (query_enc @ encodings.T)
     topk = scores.topk(k).indices.tolist()[0]
     return [premises[i] for i in topk]
+
+def leansearch(query, k=1):
+    x = requests.get(rf"https://leansearch.net/api/search?query={query}&num_results={k+5}")
+    res = list(x.json())
+
+    results = [r for r in res if r['kind'] != 'theorem']
+    return results[:k]
+
+
 
 if __name__ == "__main__":
     file_path = 'data/dependencies_mathlib_v4.14.0-rc1.jsonl'
