@@ -64,7 +64,14 @@ def leansearch(query, k=1):
     x = requests.get(rf"https://leansearch.net/api/search?query={query}&num_results={k+5}")
     res = list(x.json())
 
-    results = [r for r in res if r['kind'] != 'theorem']
+    desired_keys = ['formal_name', 'formal_type', 'file_name', 'docstring']
+    results = [
+        {key: item[key] for key in desired_keys}
+        for item in res
+        if item.get('kind') != 'theorem'
+    ]
+
+    # results = [r for r in res if r['kind'] != 'theorem']
     return results[:k]
 
 
