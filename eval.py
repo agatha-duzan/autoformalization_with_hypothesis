@@ -17,7 +17,7 @@ def save_checkpoint(results, checkpoint_file):
         json.dump(results, f, indent=2)
     print(f"Checkpoint saved to {checkpoint_file}")
 
-def evaluate_results(input_file, output_file, checkpoint_file, save_every=10):
+def evaluate_results(input_file, output_file, checkpoint_file, save_every=5):
     with open(input_file, 'r') as f:
         data = json.load(f)
         
@@ -56,9 +56,10 @@ def evaluate_results(input_file, output_file, checkpoint_file, save_every=10):
             repl = 0  # an exception occurred
         else:
             repl = 0 if any(error["severity"] == "error" for error in repl_errors) else 1
+        entry["repl"] = repl
 
         # type check is a necessary condition for equivalence
-        if entry['repl'] == 0:
+        if repl == 0:
             entry['beq'] = 0
         
         results.append(entry)
