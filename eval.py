@@ -17,7 +17,7 @@ def save_checkpoint(results, checkpoint_file):
         json.dump(results, f, indent=2)
     print(f"Checkpoint saved to {checkpoint_file}")
 
-def evaluate_results(input_file, output_file, checkpoint_file, save_every=5):
+def evaluate_results(input_file, output_file, checkpoint_file, save_every=1):
     with open(input_file, 'r') as f:
         data = json.load(f)
         
