@@ -1,6 +1,7 @@
 import json
 import re
 import os
+import ast
 import config
 
 os.environ['OPENAI_API_KEY'] = config.OPENAI_API_KEY
@@ -22,33 +23,43 @@ def load_few_shot_examples(filepath):
     with open(filepath, 'r') as f:
         for line in f:
             data = json.loads(line)
-            examples.append({
+            example = {
                 'formal_statement': data['formal_statement'],
                 'nl_statement': data['nl_statement']
-            })
+            }
+            if 'decomp' in filepath and 'hyp_decomp' in data:
+                example['hyp_decomp'] = data['hyp_decomp']
+            examples.append(example)
     return examples
 
-def generate_prompt(informal_statement, few_shot_examples, hypothesis_decomp):
+def generate_prompt(informal_statement, few_shot_examples, hypothesis_decomp=None, retrieved=None):
     examples_text = ""
     for example in few_shot_examples:
-        examples_text += f"Informal statement:\n{example['nl_statement']}\n\nFormal statement in Lean 4:\n{example['formal_statement']} sorry\n\n"
+        examples_text += f"Informal statement:\n{example['nl_statement']}\nFormal statement in Lean 4:\n{example['formal_statement']} sorry\n\n"
     
     instruction = f"You are an expert in formalizing mathematical statements in Lean 4. Given the following informal mathematical statement, write the corresponding formal statement in Lean 4 syntax.\nOutput format: The translated LEAN 4 theorem should be provided as a single cohesive code block, displaying the correct syntax and formatting expected for a LEAN 4 theorem statement. Do not enclose the code block in backticks. write sorry as the proof."
     
     prompt = f"{instruction}\n\n"
 
     if few_shot_examples:
+        prompt += f"Some examples:\n"
         prompt += f"{examples_text}\n\n"
         
-    prompt += f"Informal statement:\n{informal_statement}\n\n"
+    prompt += f"Now it's your turn: \nInformal statement:\n{informal_statement}\n\n"
     
     if hypothesis_decomp:
         prompt += f"Identified premisces and goal of the statement:\n{str(hypothesis_decomp)}\n\n"
 
-    prompt += "Formal statement in Lean 4:"
+    if retrieved:
+        prompt += f"Here are some snippets from the Lean documentation that could be useful:\n"
+        for snippet in retrieved:
+            if snippet:
+                prompt += f"{snippet}\n"
+    
+    prompt += f"\nFormal statement in Lean 4:"
     return prompt
 
-def translate_statement(informal_statement, few_shot_examples= [], hypothesis_decomp=None, model=DEFAULT_MODEL, **kwargs):
+def translate_statement(informal_statement, few_shot_examples= [], hypothesis_decomp=None, retrieved = None, model=DEFAULT_MODEL, **kwargs):
     prompt = generate_prompt(informal_statement, few_shot_examples, hypothesis_decomp)
     messages = [{"role": "user", "content": prompt}]
     
@@ -107,12 +118,46 @@ def informal_hypothesis_decomp(informal_statement, model=DEFAULT_MODEL, **kwargs
 
     return decomp
 
+# TODO
 def formal_hypothesis_decomp(informal_statement, model=DEFAULT_MODEL, **kwargs):
     # generate first try
     # extract hypothesis from it
     # for each hypothesis, retrieve top k premises from corpora
     # second pass: retieval augmented generation
     return
+
+def leansearch_hypothesis_decomp(informal_statement, few_shot_examples, model=DEFAULT_MODEL, **kwargs):
+    instruction = f'''You are a helpful assistant specializing in mathematical reasoning. You will be given a mathematical statement in natural language. Your task is to:
+
+1. Break down the statement into separate premises or components.
+2. For each premise, propose a natural language query that will be used by a documentation search tool (Leansearch) to retrieve relevant Lean documentation or definitions.
+3. Present the result as a dictionary in the following format, do not enclose your answer in backticks:
+
+{{<premise in plain language>: <Leansearch query>,...,<premise in plain language>: <Leansearch query>}}
+
+Make sure to:
+- Identify all important objects, functions, sets, properties, and relationships within the statement.
+- Generate a short natural language query for each premise. 
+- Do not attempt to formalize the statement in Lean yet. Only provide the premises and corresponding queries.
+
+Below are some examples:
+'''
+    for item in few_shot_examples:
+        instruction += f"natural language statement: {item['nl_statement']} \n"
+        instruction += f"hyp_decomp: {item['hyp_decomp']} \n\n"
+
+    instruction += f"Now it's your turn: \nnatural language statement: {informal_statement} \nhyp_decomp: "
+
+    messages = [{"role": "user", "content": instruction}]
+    response = completion(
+        messages=messages,
+        model=model,
+        **kwargs
+    )
+
+    decomp = response.choices[0].message.content
+    decomp_dict = ast.literal_eval(decomp)
+    return decomp_dict
 
 def clean_theorem_string(theorem_string: str, new_theorem_name: str = "dummy") -> str | None:
     try:

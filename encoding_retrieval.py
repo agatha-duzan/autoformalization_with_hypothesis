@@ -71,7 +71,6 @@ def leansearch(query, k=1):
         if item.get('kind') != 'theorem'
     ]
 
-    # results = [r for r in res if r['kind'] != 'theorem']
     return results[:k]
 
 

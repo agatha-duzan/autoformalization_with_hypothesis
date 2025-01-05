@@ -16,10 +16,10 @@ DEFAULT_PROVIDER = 'openai'
 
 # Process
 FEWSHOT = True
-HYPOTHESIS_DECOMP = 'informal'
+HYPOTHESIS_DECOMP = 'leansearch'
 
 # Output config
 RESULTS_DIR = '/home/agatha/Desktop/MA3/sem proj/autoformalization_with_hypothesis/results/generations'
-OUTPUT_NAME = 'informal_hyp_decomp_leansearch'
+OUTPUT_NAME = 'hyp_decomp_leansearch'
 EVAL_RESULTS_DIR = '/home/agatha/Desktop/MA3/sem proj/autoformalization_with_hypothesis/results/evaluations'
 CHECKPOINT_DIR = '/home/agatha/Desktop/MA3/sem proj/autoformalization_with_hypothesis/results/checkpoints'

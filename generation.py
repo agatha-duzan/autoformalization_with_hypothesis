@@ -5,7 +5,8 @@ from tqdm import tqdm
 from datasets import load_dataset, concatenate_datasets
 
 import config
-from utils import load_few_shot_examples, translate_statement, informal_hypothesis_decomp
+from utils import load_few_shot_examples, translate_statement, informal_hypothesis_decomp, leansearch_hypothesis_decomp
+from encoding_retrieval import *
 
 os.environ['OPENAI_API_KEY'] = config.OPENAI_API_KEY
 
@@ -33,19 +34,21 @@ for item in tqdm(all_data):
             temperature=0.0,
             max_tokens=1000,
             )
+        elif config.HYPOTHESIS_DECOMP == 'leansearch':
+            decomp = leansearch_hypothesis_decomp(informal_statement, few_shot_examples)
+            retrieved = [leansearch(query) for query in decomp.values()]
+                
         else:
             decomp = None
 
         formal_statement = translate_statement(
             informal_statement,
             few_shot_examples,
-            hypothesis_decomp=decomp,
+            retrieved = retrieved,
             model=config.DEFAULT_MODEL,
             temperature=0.0,
             max_tokens=1000,
             )
-
-        # other passes: hypothesis decomp, REPL feedback, etc
         
         results.append({
             'name': item['name'],
@@ -53,6 +56,7 @@ for item in tqdm(all_data):
             'generated_formal_statement': formal_statement,
             'formal_statement': item['formal_statement'],
             'hypothesis_decomp': decomp, # OPTIONAL
+            'retrieved': retrieved, #OPTIONAL
             'tags': item['tags'],
             'header': item['header'],
             'split': item['split'],
