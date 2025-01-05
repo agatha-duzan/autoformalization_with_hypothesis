@@ -1,5 +1,6 @@
 import os
 import json
+import psutil
 from tqdm import tqdm
 from repl.server import RobustLeanServer
 
@@ -17,7 +18,7 @@ def save_checkpoint(results, checkpoint_file):
         json.dump(results, f, indent=2)
     print(f"Checkpoint saved to {checkpoint_file}")
 
-def evaluate_results(input_file, output_file, checkpoint_file, save_every=1):
+def evaluate_results(input_file, output_file, checkpoint_file, save_every=1, memory_threshold=80):
     with open(input_file, 'r') as f:
         data = json.load(f)
         
@@ -30,6 +31,12 @@ def evaluate_results(input_file, output_file, checkpoint_file, save_every=1):
     print("Lean server ready!")
     
     for i, entry in enumerate(tqdm(data, desc="Evaluating entries"), 1):
+        # if memrory usage is too high we restart the lean server (had too many crashes before)
+        mem_info = psutil.virtual_memory()
+        if mem_info.percent > memory_threshold:
+            print(f"Memory usage is {mem_info.percent}%, exceeding threshold of {memory_threshold}%. Restarting Lean server...")
+            lean_server.restart()
+
         entry_name = entry.get("name")
 
         if entry_name in processed_entries:
