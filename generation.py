@@ -40,7 +40,7 @@ for item in tqdm(all_data):
                 
         else:
             decomp = None
-            retrieved = leansearch(informal_statement, k=5)
+            retrieved = leansearch(informal_statement, k=3)
 
         formal_statement = translate_statement(
             informal_statement,
