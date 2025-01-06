@@ -36,16 +36,15 @@ for item in tqdm(all_data):
             )
         elif config.HYPOTHESIS_DECOMP == 'leansearch':
             decomp = leansearch_hypothesis_decomp(informal_statement, few_shot_examples)
-            retrieved = [leansearch(query) for query in decomp.values()]
-                
+            retrieved = [leansearch(query) for query in decomp.values()]       
         else:
             decomp = None
-            retrieved = leansearch(informal_statement, k=3)
+            # retrieved = leansearch(informal_statement, k=5)
 
         formal_statement = translate_statement(
             informal_statement,
             few_shot_examples,
-            retrieved = retrieved,
+            # retrieved = retrieved,
             model=config.DEFAULT_MODEL,
             temperature=0.0,
             max_tokens=1000,
@@ -56,8 +55,8 @@ for item in tqdm(all_data):
             'informal_statement': informal_statement,
             'generated_formal_statement': formal_statement,
             'formal_statement': item['formal_statement'],
-            'hypothesis_decomp': decomp, # OPTIONAL
-            'retrieved': retrieved, #OPTIONAL
+            # 'hypothesis_decomp': decomp, # OPTIONAL
+            # 'retrieved': retrieved, #OPTIONAL
             'tags': item['tags'],
             'header': item['header'],
             'split': item['split'],
