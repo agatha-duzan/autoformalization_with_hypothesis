@@ -11959,6 +11959,46 @@
         "beq": 0
     },
     {
+        "name": "f2f_mathd_numbertheory_142",
+        "informal_statement": "Determin the remainder of 54 (mod 6). Show that it is 0.",
+        "generated_formal_statement": "theorem mod_remainder_54_6 : 54 % 6 = 0 := sorry",
+        "formal_statement": "theorem mathd_numbertheory_142 : 54 % 6 = 0 := by\n",
+        "hypothesis_decomp": {
+            "54 mod 6 represents the remainder when 54 is divided by 6": "definition modulo operation",
+            "Calculate the remainder of 54 (mod 6)": "how to compute modulo operation",
+            "The remainder is 0": "definition of remainder being zero"
+        },
+        "retrieved": [
+            [
+                {
+                    "formal_name": "Mod.mod",
+                    "formal_type": "{\u03b1 : Type u} \u2192 [self : Mod \u03b1] \u2192 \u03b1 \u2192 \u03b1 \u2192 \u03b1",
+                    "file_name": "Init.Data.Char.Basic",
+                    "docstring": ""
+                }
+            ],
+            [
+                {
+                    "formal_name": "Fin.modn",
+                    "formal_type": "{n : Nat} \u2192 Fin n \u2192 Nat \u2192 Fin n",
+                    "file_name": "Init.Tactics",
+                    "docstring": ""
+                }
+            ],
+            []
+        ],
+        "tags": "['number_theory']",
+        "header": "import Mathlib\nimport Aesop\n\nset_option maxHeartbeats 0\n\nopen BigOperators Real Nat Topology Rat\n\n",
+        "split": "test",
+        "model": "gpt-4o-2024-11-20",
+        "provider": "openai",
+        "bleu": 1.0,
+        "cosine_similarity": 0.8946334469472839,
+        "repl_errors": [],
+        "repl": 1,
+        "beq": 1
+    },
+    {
         "name": "putnam_2009_b6",
         "informal_statement": "Prove that for every positive integer $n$, there is a sequence of integers $a_0, a_1, \\dots, a_{2009}$ with $a_0 = 0$ and $a_{2009} = n$ such that each term after $a_0$ is either an earlier term plus $2^k$ for some nonnegative integer $k$, or of the form $b\\,\\mathrm{mod}\\,c$ for some earlier positive terms $b$ and $c$. [Here $b\\,\\mathrm{mod}\\,c$ denotes the remainder when $b$ is divided by $c$, so $0 \\leq (b\\,\\mathrm{mod}\\,c) < c$.]",
         "generated_formal_statement": "theorem exists_sequence_of_operations {n : \u2115} (hn : 0 < n) :\n  \u2203 (a : Fin 2010 \u2192 \u2124), \n    a 0 = 0 \u2227 \n    a 2009 = n \u2227 \n    \u2200 i : Fin 2009, \n      \u2203 (j : Fin 2010) (k : \u2115) (b c : Fin 2010), \n        (a (i + 1) = a j + 2 ^ k \u2228 \n         (0 < a b \u2227 0 < a c \u2227 a (i + 1) = a b % a c)) := sorry",
