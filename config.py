@@ -14,11 +14,11 @@ DEFAULT_MODEL = 'gpt-4o-2024-11-20'
 DEFAULT_PROVIDER = 'openai'
 
 # Process
-FEWSHOT = False
-HYPOTHESIS_DECOMP = None
+FEWSHOT = True
+HYPOTHESIS_DECOMP = 'leansearch'
 
 # Output config
-OUTPUT_NAME = 'ADV_baseline_leansearch_top5'
+OUTPUT_NAME = 'ADV_direct_translation_with_general_fewshot'
 RESULTS_DIR = '/home/agatha/Desktop/MA3/sem proj/autoformalization_with_hypothesis/results/generations'
 EVAL_RESULTS_DIR = '/home/agatha/Desktop/MA3/sem proj/autoformalization_with_hypothesis/results/evaluations'
 CHECKPOINT_DIR = '/home/agatha/Desktop/MA3/sem proj/autoformalization_with_hypothesis/results/checkpoints'

@@ -44,7 +44,7 @@ for item in tqdm(all_data):
         formal_statement = translate_statement(
             informal_statement,
             few_shot_examples,
-            # retrieved = retrieved,
+            retrieved = retrieved,
             model=config.DEFAULT_MODEL,
             temperature=0.0,
             max_tokens=1000,
@@ -55,8 +55,8 @@ for item in tqdm(all_data):
             'informal_statement': informal_statement,
             'generated_formal_statement': formal_statement,
             'formal_statement': item['formal_statement'],
-            # 'hypothesis_decomp': decomp, # OPTIONAL
-            # 'retrieved': retrieved, #OPTIONAL
+            'hypothesis_decomp': decomp, # ADAPT
+            'retrieved': retrieved, # ADAPT
             'tags': item['tags'],
             'header': item['header'],
             'split': item['split'],
