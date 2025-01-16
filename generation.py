@@ -5,7 +5,7 @@ from tqdm import tqdm
 from datasets import load_dataset, concatenate_datasets
 
 import config
-from utils import load_few_shot_examples, translate_statement, informal_hypothesis_decomp, leansearch_hypothesis_decomp
+from utils import *
 from encoding_retrieval import *
 
 os.environ['OPENAI_API_KEY'] = config.OPENAI_API_KEY
@@ -13,6 +13,16 @@ os.environ['OPENAI_API_KEY'] = config.OPENAI_API_KEY
 dataset = load_dataset(config.DATASET_NAME)
 all_data = concatenate_datasets([dataset['test'], dataset['validation']])
 few_shot_examples = load_few_shot_examples(config.FEW_SHOT_EXAMPLES_PATH) if config.FEWSHOT else []
+
+# for leandojo retrieval only: setup LeanDojo model and tokenizer
+if config.METHOD == 'leandojo':
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    print(f"Using device: {device}")
+    premises, encodings = get_premises_and_encodings(premises_file = "/home/agatha/Desktop/MA3/sem proj/autoformalization_with_hypothesis/data/premises_defs.pkl")
+    leandojo_tokenizer = AutoTokenizer.from_pretrained("kaiyuy/leandojo-lean4-retriever-byt5-small")
+    leandojo_model = AutoModelForTextEncoding.from_pretrained("kaiyuy/leandojo-lean4-retriever-byt5-small")
+    leandojo_model.eval()
+    leandojo_model.to(device)
 
 # create results dir if it doesn't exist
 os.makedirs(config.RESULTS_DIR, exist_ok=True)
@@ -22,19 +32,28 @@ for item in tqdm(all_data):
     informal_statement = item['informal_statement']
     
     try:
-        if config.HYPOTHESIS_DECOMP == 'informal':
+        if config.METHOD == 'informal_decomp':
             decomp = informal_hypothesis_decomp(informal_statement, 
                                            model=config.DEFAULT_MODEL, 
                                            max_tokens=1000,)
-        elif config.HYPOTHESIS_DECOMP == 'formal':
-            formal_try = formal_statement = translate_statement(
+        elif config.METHOD == 'leandojo':
+            formal_try = translate_statement(
             informal_statement,
             few_shot_examples,
             model=config.DEFAULT_MODEL,
             temperature=0.0,
             max_tokens=1000,
             )
-        elif config.HYPOTHESIS_DECOMP == 'leansearch':
+            query = proof_state_query(formal_try)
+            retrieved = retrieve(
+                query = proof_state_query, 
+                premises=premises, 
+                encodings=encodings, 
+                k=5, 
+                tokenizer=leandojo_tokenizer, 
+                model = leandojo_model
+            )
+        elif config.METHOD == 'leansearch':
             decomp = leansearch_hypothesis_decomp(informal_statement, few_shot_examples)
             retrieved = [leansearch(query) for query in decomp.values()]       
         else:
@@ -44,6 +63,7 @@ for item in tqdm(all_data):
         formal_statement = translate_statement(
             informal_statement,
             few_shot_examples,
+            # hypothesis_decomp=decomp,
             retrieved = retrieved,
             model=config.DEFAULT_MODEL,
             temperature=0.0,
@@ -55,7 +75,7 @@ for item in tqdm(all_data):
             'informal_statement': informal_statement,
             'generated_formal_statement': formal_statement,
             'formal_statement': item['formal_statement'],
-            'hypothesis_decomp': decomp, # ADAPT
+            # 'hypothesis_decomp': decomp, # ADAPT
             'retrieved': retrieved, # ADAPT
             'tags': item['tags'],
             'header': item['header'],

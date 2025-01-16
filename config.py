@@ -14,7 +14,7 @@ DEFAULT_PROVIDER = 'openai'
 
 # Process
 FEWSHOT = True
-HYPOTHESIS_DECOMP = 'leansearch'
+METHOD = 'leandojo'
 
 # Output config
 OUTPUT_NAME = 'ADV_direct_translation_with_general_fewshot'

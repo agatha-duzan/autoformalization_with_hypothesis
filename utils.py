@@ -1,5 +1,6 @@
 import json
 import re
+import itertools
 import os
 import ast
 import config
@@ -118,13 +119,292 @@ def informal_hypothesis_decomp(informal_statement, model=DEFAULT_MODEL, **kwargs
 
     return decomp
 
-# TODO
-def formal_hypothesis_decomp(informal_statement, model=DEFAULT_MODEL, **kwargs):
-    # generate first try
-    # extract hypothesis from it
-    # for each hypothesis, retrieve top k premises from corpora
-    # second pass: retieval augmented generation
-    return
+# We'll create a helper function to extract these bracketed segments in order
+# from left to right, while removing them from the remainder.
+def extract_segments(text):
+        """
+        Return a list of (kind, content) in the order found, where kind in {'curly','square','paren'}.
+        Also return the leftover text with those segments removed.
+        """
+        # We do a simple repeated find from left to right, searching for the earliest bracket match.
+        pattern_combined = re.compile(
+            r"(?P<curly>\{([^{}]*)\})|(?P<square>\[([^]]*)\])|(?P<paren>\(([^)]*)\))"
+        )
+        segments = []
+        start_idx = 0
+        result_text = ""
+        
+        for match in pattern_combined.finditer(text):
+            # text from start_idx to match.start() is "outside" brackets
+            outside = text[start_idx:match.start()]
+            result_text += outside
+
+            if match.lastgroup == 'curly':
+                # group(0) is the entire bracketed substring, group(2) is the content
+                content = match.group(2)
+                segments.append(('curly', content.strip()))
+            elif match.lastgroup == 'square':
+                content = match.group(4)
+                segments.append(('square', content.strip()))
+            elif match.lastgroup == 'paren':
+                content = match.group(6)
+                segments.append(('paren', content.strip()))
+
+            start_idx = match.end()
+
+        # leftover after the last match
+        result_text += text[start_idx:]
+        return segments, result_text.strip()
+
+def proof_state_query(formal_statement: str) -> str:
+    """
+    Naive parser that tries to convert a Lean theorem statement into a Lean proof-state-like format.
+
+    1. Extracts the theorem name and its parameters from curly braces `{}`, square brackets `[]`,
+       and round parentheses `()`.
+    2. Converts leading universal quantifiers (∀) from the main statement into context parameters.
+    3. Outputs the context lines (x : Type, etc.), followed by the goal line:
+         ⊢ <remaining_statement>
+    """
+
+    # Remove newlines and extra spaces
+    stmt = " ".join(line.strip() for line in formal_statement.splitlines())
+    # Remove leading/trailing spaces
+    stmt = stmt.strip()
+
+    # A very naive approach to detect the 'theorem' or 'lemma' heading and remove it
+    # e.g. "theorem name { ... } [ ... ] ( ... ) : statement := ..." 
+    # or   "lemma name ... : statement := ..."
+    # We'll remove everything up to and including the theorem name.
+    # Then we'll parse out the part after that.
+
+    # Regex to capture something like "theorem THM_NAME" or "lemma THM_NAME"
+    #   group(1) => theorem/lemma
+    #   group(2) => name
+    #   group(3) => the remainder
+    pattern_header = r"^(?:theorem|lemma)\s+([A-Za-z0-9_']+)\s+(.*)$"
+    m = re.search(pattern_header, stmt)
+    if not m:
+        # If we can't find a recognized pattern, return the original statement
+        return f"Could not parse theorem header in:\n{formal_statement}"
+
+    theorem_name = m.group(1)
+    remainder = m.group(2).strip()
+
+    # We'll parse out all bracket groups: { ... }, [ ... ], ( ... )
+    # We will store them in a list that includes whether it came from curly, bracket, or paren
+    # so that we can guess how to name them if needed.
+    # Then we will remove them from the remainder and figure out the part after the colon.
+    curly_pattern  = r"\{([^{}]*)\}"
+    square_pattern = r"\[([^]]*)\]"
+    paren_pattern  = r"\(([^)]*)\)"
+
+    # Extract bracketed segments in order
+    segments, remainder_no_brackets = extract_segments(remainder)
+
+    # Now remainder_no_brackets should look like: 
+    #   ": ∀ (H : Subgroup G), H.Normal := sorry"
+    # or possibly: ": ∃ ... := sorry"
+    # or maybe just ": <statement> := sorry"
+
+    # We want to find what's after the first colon but before " := " or " sorry"
+    # We'll do a quick parse:
+    colon_index = remainder_no_brackets.find(':')
+    if colon_index == -1:
+        return f"Could not find ':' in the remainder:\n{remainder_no_brackets}"
+
+    # Everything before the colon might be extra stuff (in Lean, sometimes there is no extra stuff).
+    # We typically want everything after the colon and before ":=" or "sorry".
+    # e.g. "∀ (H : Subgroup G), H.Normal := sorry"
+    statement_part = remainder_no_brackets[colon_index+1:].strip()
+
+    # We can remove any trailing ":= sorry", ":=sorry", "sorry", etc.
+    # We'll do it gently:
+    statement_part = re.sub(r":=\s*sorry.*$", "", statement_part)
+    statement_part = re.sub(r"sorry\s*$", "", statement_part)
+    statement_part = statement_part.strip()
+
+    # Now statement_part might be "∀ (H : Subgroup G), H.Normal" or
+    # "(q : ℚ) (hq : 0 < q) : ∃ ..."
+    #
+    # Meanwhile, segments might contain e.g.
+    #   [('curly', 'G : Type _'), ('square', 'CommGroup G')]
+    #   or [('paren', 'q : ℚ'), ('paren', 'hq : 0 < q')]
+    #
+    # We'll parse them into context assumptions. 
+    # For curly braces and square brackets, if there's no variable name, we guess something
+    # like `_inst_1`, `_inst_2`, etc.  
+
+    # Regex to capture a variable with a possible name, e.g. "G : Type _"
+    # or "CommGroup G"
+    # or "x y : Nat"
+    # We'll do a naive approach: "^(.*?)\s*:\s*(.*)$"
+    # We might have multiple names on the left: "x y z : SomeType"
+    # We'll handle that by splitting on spaces if we see them.
+
+    typeclass_counter = itertools.count(1)
+
+    context_lines = []
+
+    def parse_declaration(content: str, kind: str):
+        """
+        Given something like 'G : Type _' or 'CommGroup G' and the bracket kind,
+        produce one or more lines of 'identifier : type'.
+        If no identifier is found for a bracket-type that *should* have it,
+        we generate `_inst_1 : content`.
+        For curly braces, we do similarly (they can be implicit variables).
+        For parentheses, we require an explicit variable (like (x : ℕ)).
+        """
+        content = content.strip()
+        # If there's a colon, we treat it as 'x : Type'
+        if ':' in content:
+            # Could be multiple variables: "x y : SomeType"
+            # We'll do a naive parse:
+            left, right = content.split(':', 1)
+            left_vars = left.split()
+            type_ = right.strip()
+            return [f"{v} : {type_}" for v in left_vars]
+        else:
+            # There's no colon. Possibly something like "CommGroup G".
+            # We'll treat that as a typeclass argument, so we guess a name.
+            if kind in ['square', 'curly']:
+                idx = next(typeclass_counter)
+                return [f"_inst_{idx} : {content}"]
+            else:
+                # For parentheses with no colon, we can't do much else.
+                # We'll guess a name as well, though it's weird to do so for a parenthesized argument.
+                idx = next(typeclass_counter)
+                return [f"_inst_{idx} : {content}"]
+
+    # Convert each segment into one or more lines
+    for (kind, seg_content) in segments:
+        # skip empty segments
+        if not seg_content.strip():
+            continue
+        decls = parse_declaration(seg_content, kind)
+        context_lines.extend(decls)
+
+    # Now we handle the possibility that the main statement after the colon
+    # has leading ∀ ( ... ) or a sugar version (x : T) ...
+    # 
+    # We will repeatedly parse:
+    #   "∀ (x : T), rest"
+    # or
+    #   "(x : T) (y : U) ... -> rest"
+    # 
+    # until no more are found, collecting them into context.
+
+    # We'll do a small loop that tries to detect patterns:
+    #   "∀ (x : T), STMT" or "(x : T) -> STMT" or "(x : T) (y : U) -> STMT"
+    # In Lean, `(x : T) (y : U) : final` is the same as `(x : T) → (y : U) → final`
+    # We'll treat them as repeated context, so that eventually the leftover is the goal.
+
+    # A small helper to extract leading parentheses of the form (x : T).
+    # We'll reuse the same pattern for the "segments" approach:
+
+    def extract_paren_params(text):
+        """
+        Extract leading (x : T) or (x y : T) from the front of text repeatedly,
+        returning a list of 'x : T' context lines, plus the leftover text.
+        """
+        pattern = re.compile(r'^\(\s*([^)]*)\)\s*(.*)$')
+        collected = []
+        leftover = text.strip()
+        while True:
+            match = pattern.match(leftover)
+            if not match:
+                break
+            inside = match.group(1).strip()
+            leftover = match.group(2).strip()
+            # parse the inside
+            decls = parse_declaration(inside, 'paren')
+            collected.extend(decls)
+        return collected, leftover
+
+    # We'll define a loop to handle repeated "∀ ..." or repeated parenthesis.
+    def extract_foralls(text):
+        """
+        Repeatedly parse '∀ (x : T), ...' from the front of 'text'.
+        Return (list_of_context_lines, leftover).
+        """
+        # pattern for ∀ (x : T), ...
+        # We'll do a naive approach:  ^∀\s*\(([^)]*)\)\s*,\s*(.*)
+        pattern = re.compile(r'^∀\s*\(\s*([^)]*)\)\s*,\s*(.*)$')
+        cxts = []
+        leftover = text.strip()
+        while True:
+            match = pattern.match(leftover)
+            if not match:
+                break
+            inside = match.group(1).strip()  # e.g. "H : Subgroup G"
+            leftover = match.group(2).strip()
+            decls = parse_declaration(inside, 'paren')
+            cxts.extend(decls)
+        return cxts, leftover
+
+    # First, parse leading ∀ (x : T), ...
+    new_ctx, statement_part = extract_foralls(statement_part)
+    context_lines.extend(new_ctx)
+
+    # Then parse leading repeated parentheses as function arguments
+    # e.g. (q : ℚ) (hq : 0 < q) ...
+    new_ctx, statement_part = extract_paren_params(statement_part)
+    context_lines.extend(new_ctx)
+
+    # It's also possible the statement uses arrow -> notation, e.g. (x : T) -> (y : U) -> final
+    # We'll do a small loop: if statement_part looks like something of the form
+    # (x : T) -> rest, we keep extracting.
+    def extract_arrow_parens(text):
+        """
+        Extract sequences like (x : T) -> ...
+        Return (list_of_context_lines, leftover).
+        """
+        pattern = re.compile(r'^\(\s*([^)]*)\)\s*->\s*(.*)$')
+        cxts = []
+        leftover = text.strip()
+        while True:
+            match = pattern.match(leftover)
+            if not match:
+                break
+            inside = match.group(1).strip()
+            leftover = match.group(2).strip()
+            decls = parse_declaration(inside, 'paren')
+            cxts.extend(decls)
+        return cxts, leftover
+
+    new_ctx, statement_part = extract_arrow_parens(statement_part)
+    context_lines.extend(new_ctx)
+
+    # Now if there's still a leading '∀ (x : T), ...' we should parse again
+    # because sometimes Lean has multiple Pi's. We'll just call extract_foralls again:
+    new_ctx, statement_part = extract_foralls(statement_part)
+    context_lines.extend(new_ctx)
+
+    # The leftover is presumably the goal
+    goal = statement_part.strip()
+
+    # Build the final proof-state-like string
+    # Each context line on its own line. Then "⊢ goal".
+    # We will also do a small cleanup if it is something like "Type _" => "Type ?"
+    # purely to mimic Lean's display in your example.
+    context_lines_cleaned = []
+    for line in context_lines:
+        # purely aesthetic replacement: "Type _" -> "Type ?"
+        # (since Lean often shows "Type ?")
+        line = re.sub(r"Type\s*_[^,]*", "Type ?", line)
+        context_lines_cleaned.append(line)
+
+    # Deduplicate lines if needed (not always desirable, but sometimes helpful).
+    # Let's skip dedup because different braces might declare the same variable with different roles.
+
+    # Now produce the final string
+    # If no context, we just show "⊢ goal"
+    if not context_lines_cleaned:
+        return f"⊢ {goal}"
+
+    context_part = "\n".join(context_lines_cleaned)
+    return f"{context_part}\n⊢ {goal}"
+
 
 def leansearch_hypothesis_decomp(informal_statement, few_shot_examples, model=DEFAULT_MODEL, **kwargs):
     instruction = f'''You are a helpful assistant specializing in mathematical reasoning. You will be given a mathematical statement in natural language. Your task is to:
