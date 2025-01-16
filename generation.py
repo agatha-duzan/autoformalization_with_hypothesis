@@ -19,10 +19,12 @@ if config.METHOD == 'leandojo':
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Using device: {device}")
     premises, encodings = get_premises_and_encodings(premises_file = "/home/agatha/Desktop/MA3/sem proj/autoformalization_with_hypothesis/data/premises_defs.pkl")
+    print("Premises and encodings loaded!")
     leandojo_tokenizer = AutoTokenizer.from_pretrained("kaiyuy/leandojo-lean4-retriever-byt5-small")
     leandojo_model = AutoModelForTextEncoding.from_pretrained("kaiyuy/leandojo-lean4-retriever-byt5-small")
     leandojo_model.eval()
     leandojo_model.to(device)
+    print("LeanDojo model and tokenizer loaded!")
 
 # create results dir if it doesn't exist
 os.makedirs(config.RESULTS_DIR, exist_ok=True)
@@ -44,15 +46,17 @@ for item in tqdm(all_data):
             temperature=0.0,
             max_tokens=1000,
             )
+
             query = proof_state_query(formal_try)
             retrieved = retrieve(
-                query = proof_state_query, 
+                query = query, 
                 premises=premises, 
                 encodings=encodings, 
                 k=5, 
                 tokenizer=leandojo_tokenizer, 
                 model = leandojo_model
             )
+
         elif config.METHOD == 'leansearch':
             decomp = leansearch_hypothesis_decomp(informal_statement, few_shot_examples)
             retrieved = [leansearch(query) for query in decomp.values()]       

@@ -119,43 +119,6 @@ def informal_hypothesis_decomp(informal_statement, model=DEFAULT_MODEL, **kwargs
 
     return decomp
 
-# We'll create a helper function to extract these bracketed segments in order
-# from left to right, while removing them from the remainder.
-def extract_segments(text):
-        """
-        Return a list of (kind, content) in the order found, where kind in {'curly','square','paren'}.
-        Also return the leftover text with those segments removed.
-        """
-        # We do a simple repeated find from left to right, searching for the earliest bracket match.
-        pattern_combined = re.compile(
-            r"(?P<curly>\{([^{}]*)\})|(?P<square>\[([^]]*)\])|(?P<paren>\(([^)]*)\))"
-        )
-        segments = []
-        start_idx = 0
-        result_text = ""
-        
-        for match in pattern_combined.finditer(text):
-            # text from start_idx to match.start() is "outside" brackets
-            outside = text[start_idx:match.start()]
-            result_text += outside
-
-            if match.lastgroup == 'curly':
-                # group(0) is the entire bracketed substring, group(2) is the content
-                content = match.group(2)
-                segments.append(('curly', content.strip()))
-            elif match.lastgroup == 'square':
-                content = match.group(4)
-                segments.append(('square', content.strip()))
-            elif match.lastgroup == 'paren':
-                content = match.group(6)
-                segments.append(('paren', content.strip()))
-
-            start_idx = match.end()
-
-        # leftover after the last match
-        result_text += text[start_idx:]
-        return segments, result_text.strip()
-
 def proof_state_query(formal_statement: str) -> str:
     """
     Naive parser that tries to convert a Lean theorem statement into a Lean proof-state-like format.
@@ -198,6 +161,44 @@ def proof_state_query(formal_statement: str) -> str:
     curly_pattern  = r"\{([^{}]*)\}"
     square_pattern = r"\[([^]]*)\]"
     paren_pattern  = r"\(([^)]*)\)"
+
+    # We'll create a helper function to extract these bracketed segments in order
+    # from left to right, while removing them from the remainder.
+    
+    def extract_segments(text):
+        """
+        Return a list of (kind, content) in the order found, where kind in {'curly','square','paren'}.
+        Also return the leftover text with those segments removed.
+        """
+        # We do a simple repeated find from left to right, searching for the earliest bracket match.
+        pattern_combined = re.compile(
+            r"(?P<curly>\{([^{}]*)\})|(?P<square>\[([^]]*)\])|(?P<paren>\(([^)]*)\))"
+        )
+        segments = []
+        start_idx = 0
+        result_text = ""
+        
+        for match in pattern_combined.finditer(text):
+            # text from start_idx to match.start() is "outside" brackets
+            outside = text[start_idx:match.start()]
+            result_text += outside
+
+            if match.lastgroup == 'curly':
+                # group(0) is the entire bracketed substring, group(2) is the content
+                content = match.group(2)
+                segments.append(('curly', content.strip()))
+            elif match.lastgroup == 'square':
+                content = match.group(4)
+                segments.append(('square', content.strip()))
+            elif match.lastgroup == 'paren':
+                content = match.group(6)
+                segments.append(('paren', content.strip()))
+
+            start_idx = match.end()
+
+        # leftover after the last match
+        result_text += text[start_idx:]
+        return segments, result_text.strip()
 
     # Extract bracketed segments in order
     segments, remainder_no_brackets = extract_segments(remainder)
@@ -404,7 +405,6 @@ def proof_state_query(formal_statement: str) -> str:
 
     context_part = "\n".join(context_lines_cleaned)
     return f"{context_part}\n⊢ {goal}"
-
 
 def leansearch_hypothesis_decomp(informal_statement, few_shot_examples, model=DEFAULT_MODEL, **kwargs):
     instruction = f'''You are a helpful assistant specializing in mathematical reasoning. You will be given a mathematical statement in natural language. Your task is to:
