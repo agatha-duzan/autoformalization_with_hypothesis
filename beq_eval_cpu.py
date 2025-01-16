@@ -372,88 +372,8 @@ def _extract_proof(
     return None
 
 
-def toy_example():
-    # clean_cache()
-    beq_metric = BEqMetricCPU()
-
-    # src_header = "import Mathlib"
-    src_header = """import Mathlib
-
-open Fintype Group Monoid
-open Set Real Ideal Polynomial
-open scoped BigOperators"""
-
-    formalization_pairs = [
-        (
-            "theorem random_name_1 {G : Type*} [Group G] [Fintype G] (h : Fintype.card G % 2 = 0) :\n  ∃ a : G, a ≠ 1 ∧ a = a⁻¹ :=",
-            "theorem random_name_2 {G : Type*} [Group G] [Fintype G] (hG2 : Even (card G)) :\n  ∃ (a : G), a ≠ 1 ∧ a = a⁻¹ :=",
-            src_header,
-        ),
-        (
-            "theorem sP : Infinite {p : Nat.Primes // p ≡ -1 [ZMOD 6]} :=",
-            "theorem sQ : Set.Infinite {p : ℕ | Nat.Prime p ∧ p % 6 = 5} :=",
-            src_header,
-        ),
-        (
-            "theorem sP {R : Type u_1} [Ring R] (h : ∀ (x : R), x ^ 3 = x) (x : R) (y : R) : x * y = y * x :=",
-            "theorem sQ {R : Type*} [Ring R] (h : ∀ x : R, x ^ 3 = x) : Nonempty (CommRing R) :=",
-            src_header,
-        ),
-        (
-            "theorem sPpp {G : Type*} [Group G] [Fintype G] {p q : ℕ} (hp : Prime p) (hq : Prime q) (hG : card G = p*q) :  IsSimpleGroup G → False :=",
-            "theorem sQqq (p q : ℕ) (hp : Nat.Prime p) (hq : Nat.Prime q) (G : Type _) [Group G] [Fintype G] (hG : Fintype.card G = p * q) : ¬ IsSimpleGroup G :=",
-            src_header,
-        ),
-        (
-            "theorem sPppp {f : ℝ → ℝ} (hf : ∀ x y, |f x - f y| ≤ |x - y| ^ 2) : ∃ c, f = λ x => c :=",
-            "theorem sQqqq (f : ℝ → ℝ) (h : ∀ (t x : ℝ), |f t - f x| ≤ |t - x| ^ 2) (x : ℝ) (y : ℝ) : f x = f y :=",
-            src_header,
-        ),
-        (
-            "theorem dummy (n : ℕ) (hn : n % 2 = 1) : 8 ∣ n^2 - 1 :=",
-            "theorem dummy {n : ℕ} (hn : Odd n) : 8 ∣ (n^2 - 1) :=",
-            src_header,
-        ),
-        (
-            "theorem dumssmy {G : Type*} [Group G] (x : G) : x ^ 2 = 1 ↔ orderOf x = 1 ∨ orderOf x = 2 :=",
-            "theorem dumssfmy {G : Type*} [Group G] : ∀ (x : G), orderOf x = 1 ∨ orderOf x = 2 ↔ x ^ 2 = 1 :=",
-            src_header,
-        ),
-        (
-            "theorem dummy83 : Irreducible (Polynomial.C (12 : ℚ) + Polynomial.C (6 : ℚ) * Polynomial.X + Polynomial.X ^ 3) :=",
-            "theorem dummy84 : Irreducible (12 + 6 * X + X ^ 3 : Polynomial ℚ) :=",
-            src_header,
-        ),
-        # (
-        #     "theorem dummy90 {p : ℕ} (hp : Nat.Prime p) (n : ℕ) (hn : 0 < n) : Irreducible (Polynomial.C (1 : ℚ) * Polynomial.X ^ n - Polynomial.C (p : ℚ)) :=",
-        #     "theorem dummy91 (p : ℕ) (hp : Prime p) (n : ℕ) (hn : n > 0) : Irreducible (X ^ n - (p : Polynomial ℚ) : Polynomial ℚ) :=",
-        #     src_header,
-        # ),
-        # (
-        #     "theorem dummy64 {X X' : Type*} [TopologicalSpace X] [TopologicalSpace X'] (π₁ : X × X' → X) (π₂ : X × X' → X') (h₁ : π₁ = Prod.fst) (h₂ : π₂ = Prod.snd) : IsOpenMap π₁ ∧ IsOpenMap π₂ :=",
-        #     "theorem dummy63 {X X' : Type*} [TopologicalSpace X] [TopologicalSpace X'] : (∀ U : Set (X × X'), IsOpen U → IsOpen (Prod.fst '' U)) ∧ (∀ U : Set (X × X'), IsOpen U → IsOpen (Prod.snd '' U)) :=",
-        #     src_header,
-        # ),
-        # (
-        #     "theorem dummy {x : ℝ} (r : ℚ) (hr : r ≠ 0) (hx : Irrational x) : Irrational (r + x) :=",
-        #     "theorem dummy (x : ℝ) (y : ℚ) (hy : y ≠ 0) : ( Irrational x ) -> Irrational ( x + y ) :=",
-        #     src_header,
-        # ),
-    ]
-
-    res = beq_metric(formalization_pairs, verbose=True, nb_process=8)
-
-    console.print("BEq metric results:")
-    for (formalization_1, formalization_2, _), result in zip(formalization_pairs, res):
-        console.print()
-        console.rule()
-        console.print("Comparing formalizations:")
-        console.print(Syntax(formalization_1, "lean4"))
-        console.print(Syntax(formalization_2, "lean4"))
-        console.print(f"Result: {'[green]Equivalent[/green]' if result else '[yellow]Not conclusive[/yellow]'}")
-
 if __name__ == "__main__":
-    NB_PROCESS = 6 # setup for my laptop's cpu (12 cores), increase if you can
+    NB_PROCESS = 4 # setup for my laptop's cpu (12 cores), increase if you can
 
     input_file = os.path.join(config.EVAL_RESULTS_DIR, f"{config.OUTPUT_NAME}_{config.DEFAULT_MODEL}_eval1.json")
     output_file = os.path.join(config.EVAL_RESULTS_DIR, f"{config.OUTPUT_NAME}_{config.DEFAULT_MODEL}_eval2.json")
