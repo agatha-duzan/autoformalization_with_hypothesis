@@ -5,7 +5,7 @@ This repository contains the code and data for a semester project on **autoforma
 The [`project report`](pdfs/Report.pdf) contains a detailed discussion of:
 
 - The autoformalization problem and its challenges
-- Related work in theorem proving and retrieval
+- Related work in automated theorem proving and autoformalization
 - Our hypothesis decomposition and retrieval pipeline designs
 - Experiments, results, and lessons learned
 
@@ -13,18 +13,18 @@ The [`project report`](pdfs/Report.pdf) contains a detailed discussion of:
 
 ## Key Structure
 - **`data/`**  
-  Contains the curated datasets of informal–formal pairs, the retrieval corpora, and the code used to create them
+  Curated datasets of informal–formal pairs, retrieval corpus, and the code used to create them
   
 - **`pdfs/`**  
   Final report and figures. Refer to this for a detailed explanation of the project’s methodology, experiments, and findings
 
 - **`repl/`**  
-  A submodule used for the type-checking evaluation
+  Submodule used for the type-checking evaluation
 
 - **`results/`**  
-  - `checkpoints/` – Important because the Lean server crashes easily, so we save our progress in evals  
-  - `evaluations/` – Detailed evaluation results, including type-checking, TC-BLEU, and BEq scores  
-  - `generations/` – Raw outputs from our different methods
+  - `checkpoints/` the Lean server crashes easily, so we save our progress in evals  
+  - `evaluations/` detailed evaluation results, including type-checking, TC-BLEU, and BEq scores  
+  - `generations/` raw outputs from our different methods
 
 ## Usage
 
@@ -64,7 +64,7 @@ Two evaluation steps are available:
    ```bash
    python beq_eval_cpu.py
    ```
-   Designed to run on CPU but can be intensive, adjust `NB_PROCESS` inside the script depending on your setup.
+   This eval is designed to run on CPU but can be intensive, adjust `NB_PROCESS` inside the script depending on your setup.
 
 ### 4. Analyze Results
 
